@@ -1,16 +1,37 @@
-## Hi there 👋
+# Hi there, I'm Martin 👋
 
-<!--
-**kaiser-data/kaiser-data** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## 🚀 About Me  
+I'm a passionate **Software Engineer** with a background in **Physics**, specializing in **Data Science, AI/ML, and Generative AI**.  
+Currently, I'm enhancing my skill set in the **Masterschool Engineering Program**, focusing on the **Generative AI** role.  
 
-Here are some ideas to get you started:
+## 💡 Skills & Technologies  
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### Programming Languages  
+- 🐍 Python  
+- 📜 SQL  
+- 🌐 HTML & CSS  
+
+### Data Science & Machine Learning  
+- 📊 Data Analysis & Visualization (**Pandas, Matplotlib, Seaborn**)  
+- 🤖 Machine Learning (**Scikit-Learn, TensorFlow, PyTorch**)  
+- 🏛️ Deep Learning & Neural Networks  
+- 📈 Statistical Modeling & Hypothesis Testing  
+
+### Tools & Platforms  
+- 🐙 Git & GitHub  
+- 🔢 Jupyter Notebook  
+- 🏗️ Docker  
+
+### Web Development  
+- ⚡ Flask  
+- 🚀 FastAPI  
+
+## 📊 GitHub Stats  
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=your-github-username&show_icons=true&theme=radical)  
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=your-github-username&layout=compact&theme=radical)  
+
+## 🔗 Connect With Me  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/your-profile)  
+
+
