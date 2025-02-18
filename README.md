@@ -1,6 +1,6 @@
 # Hi, I'm Martin 👋  
 
-🚀 **Software Engineer** | **Physics & AI Enthusiast** | **Generative AI @ Masterschool**  
+🚀 **Aspiring Software Engineer** | **Physics & AI Enthusiast** | **Generative AI @ Masterschool**  
 
 ### 🎭 Community & Leadership  
 - 🎤 **VP PR, Toastmasters Club**  
