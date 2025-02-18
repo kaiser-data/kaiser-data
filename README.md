@@ -1,13 +1,5 @@
 # Hi, I'm Martin 👋  
 
-🚀 **Software Engineer** | **Physics & AI Enthusiast** | **Software Engineering Student @ Masterschool**  
-
-### 🎭 Community & Leadership  
-- 🎤 **VP PR, Toastmasters Club**  
-- ♟️ **Team Championship Organizer, Local Chess Club**  
-
-# Hi, I'm Martin 👋  
-
 🚀 **Software Engineer** | **Physics & AI Enthusiast** | **Generative AI @ Masterschool**  
 
 ### 🎭 Community & Leadership  
