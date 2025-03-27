@@ -38,7 +38,7 @@
 
 
 ## 🔗 Connect  
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/martin-kaiser-phd-691930170)  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/martin-kaiser-ai)  
 
 ## 📊 GitHub Stats  
 
