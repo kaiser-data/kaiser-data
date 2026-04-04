@@ -29,17 +29,25 @@ Curious mind with a passion for AI, automation, and building things that work. I
 - Open source collaboration
 - Startups & innovative projects
 
-## 🏆 Hackathon Wins 2025
+## 🏆 Hackathon Results
 
-| Event | Category | Place |
-|-------|----------|-------|
-| ElevenLabs Hackathon | n8n Category | 🥇 1st |
-| NEAR AI Hackathon | Shade AI-Agent | 🥇 1st |
-| AI Hardcore Hackathon | LLM Prediction | 🥇 1st |
-| Masterschool Hackathon | SMS-Service | 🥇 1st |
-| Distributed AI Hack Berlin | Open Track | 🥈 2nd |
-| IronHack DevOps Hackashow | DevOps | 🥈 2nd |
+### 2026
 
+| Place | Event | Track / Category |
+|------|-------|-------------------|
+| 🥈 2nd | AI Builders Open Claw Hackathon | Open Claw |
+| 🥉 3rd | Needle Hackathon | General |
+
+### 2025
+
+| Place | Event | Track / Category |
+|------|-------|-------------------|
+| 🥇 1st | ElevenLabs Hackathon | n8n Category |
+| 🥇 1st | NEAR AI Hackathon | Shade AI-Agent |
+| 🥇 1st | AI Hardcore Hackathon | LLM Prediction |
+| 🥇 1st | Masterschool Hackathon | SMS-Service |
+| 🥈 2nd | Distributed AI Hack Berlin | Open Track |
+| 🥈 2nd | IronHack DevOps Hackashow | DevOps |
 ## 💡 Tech Stack
 
 ### 💻 Core
