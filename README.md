@@ -27,7 +27,6 @@ PhD in Physics. 3+ years in LLMs. 6 hackathon wins in 2025.
 role:        AI/ML Engineer
 location:    Berlin, Germany 🇩🇪
 focus:       LLMs · Agents · Automation · Document Processing
-background:  PhD in Physics — building from first principles
 status:      Open to projects, collaborations & hackathons
 ```
 
