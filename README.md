@@ -5,7 +5,7 @@
 ### `AI/ML Engineer` · `Physicist` · `Berlin 📍`
 
 Curious mind building production-grade AI, automation, and tools that actually work.<br/>
-PhD in Physics. 3+ years in LLMs. 6 hackathon wins in 2025 — and counting.
+PhD in Physics. 3+ years in LLMs. 6 hackathon wins in 2025.
 
 <br/>
 
