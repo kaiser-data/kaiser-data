@@ -48,7 +48,7 @@ status:      Open to projects, collaborations & hackathons
 &nbsp;&nbsp;🥇 &nbsp;**Agentic FinAI Hackathon Berlin** &nbsp;—&nbsp; *Dify Open Track*<br/>
 &nbsp;&nbsp;🥈 &nbsp;**AI Builders Open Claw Hackathon** &nbsp;—&nbsp; *Open Claw*<br/>
 &nbsp;&nbsp;🥉 &nbsp;**Needle Hackathon** &nbsp;—&nbsp; *Main Track*<br/>
-&nbsp;&nbsp;4️⃣ &nbsp;**Superchat × Needle AI Builder Event** &nbsp;—&nbsp; *LinkedIn Profile Optimizer*
+&nbsp;&nbsp;4️⃣ &nbsp;**Superchat × Needle AI Builder Event** &nbsp;—&nbsp; *Salesbot*
 
 **2025** &nbsp;·&nbsp; *6 wins · 8 podiums*
 
