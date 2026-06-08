@@ -91,23 +91,17 @@ status:      Open to projects, collaborations & hackathons
 
 <br/>
 
+
 ## 📊 &nbsp;GitHub
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=kaiser-data&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00ff88&icon_color=00ff88&text_color=c9d1d9" height="180" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=kaiser-data&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00ff88&text_color=c9d1d9" height="180" />
+<a href="https://github.com/kaiser-data">
+  <img src="https://github-readme-stats.vercel.app/api?username=kaiser-data&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00ff88&icon_color=00ff88&text_color=c9d1d9&cache_seconds=86400" height="180" alt="GitHub Stats" />
+</a>
 
-<br/><br/>
-
-<img src="https://github-profile-trophy.vercel.app/?username=kaiser-data&theme=matrix&no-bg=true&no-frame=true&column=7&margin-w=10" />
-
-</div>
-
-<br/>
-
-<div align="center">
-
-*Let's build something great together.* 🚀
+<a href="https://github.com/kaiser-data">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=kaiser-data&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00ff88&text_color=c9d1d9&cache_seconds=86400" height="180" alt="Top Languages" />
+</a>
 
 </div>
