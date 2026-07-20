@@ -56,7 +56,7 @@ building:    108 public repos across agents, MCP, edge AI & automation
 
 ## 🤖 How I Work with Claude Code
 
-Claude Code is my daily driver. I run a **Pro subscription** and squeeze roughly **30× the usual mileage** out of it by spending tokens deliberately — pairing the agent with memory frameworks like **[claude-mem](https://github.com/thedaviddias/claude-mem)** and modern agent harnesses like **ECC** and **superpowers** to reuse context, cut redundant re-reads, and keep long sessions cheap. Effective spend over raw spend.
+Claude Code is my daily driver. I run a **Pro subscription** and squeeze roughly **30× the usual mileage** out of it by spending tokens deliberately — pairing the agent with memory frameworks like **[claude-mem](https://github.com/thedaviddias/claude-mem)** and modern agent harnesses like **ECC** and **[superpowers](https://github.com/obra/superpowers)** to reuse context, cut redundant re-reads, and keep long sessions cheap. Effective spend over raw spend.
 
 I instrument my own sessions with [`claude-code-langfuse-tracing`](https://github.com/kaiser-data/claude-code-langfuse-tracing), so these are real numbers from the last 30 days:
 
