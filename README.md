@@ -56,7 +56,7 @@ building:    108 public repos across agents, MCP, edge AI & automation
 
 ## 🤖 How I Work with Claude Code
 
-Claude Code is my daily driver. I run a **Pro subscription** and squeeze roughly **30× the usual mileage** out of it by spending tokens deliberately — pairing the agent with memory frameworks like **[claude-mem](https://github.com/thedaviddias/claude-mem)** and modern agent harnesses like **ECC** and **[superpowers](https://github.com/obra/superpowers)** to reuse context, cut redundant re-reads, and keep long sessions cheap. Effective spend over raw spend.
+Claude Code is my daily driver. I run a **Pro subscription** and squeeze roughly **30× the usual mileage** out of it by spending tokens deliberately — pairing the agent with memory frameworks like **[claude-mem](https://github.com/thedaviddias/claude-mem)** and modern agent harnesses like **ECC** and **superpowers** to reuse context, cut redundant re-reads, and keep long sessions cheap. Effective spend over raw spend.
 
 I instrument my own sessions with [`claude-code-langfuse-tracing`](https://github.com/kaiser-data/claude-code-langfuse-tracing), so these are real numbers from the last 30 days:
 
@@ -74,7 +74,7 @@ I instrument my own sessions with [`claude-code-langfuse-tracing`](https://githu
 - 🔭 [`claude-code-langfuse-tracing`](https://github.com/kaiser-data/claude-code-langfuse-tracing) — zero-intrusion observability; a Stop hook replays transcripts into Langfuse as backdated, session-grouped traces with token/cost
 - 📡 [`claude-A2A-Comm`](https://github.com/kaiser-data/claude-A2A-Comm) — A2A-protocol messaging between Claude Code sessions, local or over a Pi/VPS hub
 - 🧰 [`marty-skills`](https://github.com/kaiser-data/marty-skills) · [`kogitsune`](https://github.com/kaiser-data/kogitsune) — personal skills, commands & harness for Claude Code
-- 🧠 [`claude-superpower-agent`](https://github.com/kaiser-data/claude-superpower-agent) — memory & automation stack: n8n + Supabase pgvector + Dify + Langfuse
+- 🦸 [`superpowers`](https://github.com/obra/superpowers) — the official Claude Code agent-skills harness (by obra) I build with daily
 
 <br/>
 
@@ -180,26 +180,23 @@ I instrument my own sessions with [`claude-code-langfuse-tracing`](https://githu
 <br/><br/>
 
 <!--
-  NOTE: The two cards below are served by the shared github-readme-stats.vercel.app
-  instance, which is frequently rate-limited (HTTP 503) and can render as broken.
-  Permanent fix: deploy your own free Vercel instance and repoint these URLs —
-  see https://github.com/anuraghazra/github-readme-stats#deploy-on-your-own-vercel-instance
+  Stat cards use github-profile-summary-cards (separately hosted, well-maintained)
+  instead of the chronically rate-limited (503) github-readme-stats.vercel.app.
+  https://github.com/vn7n24fzkq/github-profile-summary-cards
 -->
 
 <a href="https://github.com/kaiser-data">
-  <img
-    height="180"
-    alt="Martin's GitHub stats"
-    src="https://github-readme-stats.vercel.app/api?username=kaiser-data&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00ff88&icon_color=00ff88&text_color=c9d1d9&cache_seconds=86400"
-  />
+  <img width="80%" alt="Martin's GitHub profile summary" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=kaiser-data&theme=tokyonight" />
 </a>
 
-<a href="https://github.com/kaiser-data">
-  <img
-    height="180"
-    alt="Martin's top languages"
-    src="https://github-readme-stats.vercel.app/api/top-langs/?username=kaiser-data&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00ff88&text_color=c9d1d9&langs_count=8&cache_seconds=86400"
-  />
-</a>
+<br/>
+
+<img height="180" alt="Repos per language" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=kaiser-data&theme=tokyonight" />
+<img height="180" alt="Most used languages" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=kaiser-data&theme=tokyonight" />
+
+<br/>
+
+<img height="180" alt="Contribution stats" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=kaiser-data&theme=tokyonight" />
+<img height="180" alt="Productive time" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=kaiser-data&theme=tokyonight&utcOffset=1" />
 
 </div>
