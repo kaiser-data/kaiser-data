@@ -180,23 +180,20 @@ I instrument my own sessions with [`claude-code-langfuse-tracing`](https://githu
 <br/><br/>
 
 <!--
-  Stat cards use github-profile-summary-cards (separately hosted, well-maintained)
-  instead of the chronically rate-limited (503) github-readme-stats.vercel.app.
-  https://github.com/vn7n24fzkq/github-profile-summary-cards
+  Stat cards are STATIC SVGs generated daily by a GitHub Action
+  (.github/workflows/profile-summary-cards.yml) and committed to this repo,
+  so they never hit the live-render rate limits that broke the old cards.
+  Theme: chartreuse_dark (matches the neon-green accent).
 -->
 
 <a href="https://github.com/kaiser-data">
-  <img width="80%" alt="Martin's GitHub profile summary" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=kaiser-data&theme=tokyonight" />
+  <img width="82%" alt="Martin Kaiser — GitHub profile summary" src="https://raw.githubusercontent.com/kaiser-data/kaiser-data/main/profile-summary-card-output/chartreuse_dark/0-profile-details.svg" />
 </a>
 
 <br/>
 
-<img height="180" alt="Repos per language" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=kaiser-data&theme=tokyonight" />
-<img height="180" alt="Most used languages" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=kaiser-data&theme=tokyonight" />
-
-<br/>
-
-<img height="180" alt="Contribution stats" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=kaiser-data&theme=tokyonight" />
-<img height="180" alt="Productive time" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=kaiser-data&theme=tokyonight&utcOffset=1" />
+<img height="185" alt="Top languages by repository" src="https://raw.githubusercontent.com/kaiser-data/kaiser-data/main/profile-summary-card-output/chartreuse_dark/1-repos-per-language.svg" />
+<img height="185" alt="Top languages by commit" src="https://raw.githubusercontent.com/kaiser-data/kaiser-data/main/profile-summary-card-output/chartreuse_dark/2-most-commit-language.svg" />
+<img height="185" alt="Contribution & PR stats" src="https://raw.githubusercontent.com/kaiser-data/kaiser-data/main/profile-summary-card-output/chartreuse_dark/3-stats.svg" />
 
 </div>
