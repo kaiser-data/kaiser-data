@@ -47,34 +47,10 @@ query($login:String!){
   }
 }`;
 
-// ---- exact github-readme-stats rank formula (src/calculateRank.js) ----
-const exp_cdf = (x) => 1 - 2 ** -x;
-const log_normal_cdf = (x) => x / (1 + x);
-
-function calculateRank({ commits, prs, issues, reviews, stars, followers }) {
-  const COMMITS_MEDIAN = 250, COMMITS_WEIGHT = 2;
-  const PRS_MEDIAN = 50, PRS_WEIGHT = 3;
-  const ISSUES_MEDIAN = 25, ISSUES_WEIGHT = 1;
-  const REVIEWS_MEDIAN = 2, REVIEWS_WEIGHT = 1;
-  const STARS_MEDIAN = 50, STARS_WEIGHT = 4;
-  const FOLLOWERS_MEDIAN = 10, FOLLOWERS_WEIGHT = 1;
-  const TOTAL_WEIGHT =
-    COMMITS_WEIGHT + PRS_WEIGHT + ISSUES_WEIGHT + REVIEWS_WEIGHT + STARS_WEIGHT + FOLLOWERS_WEIGHT;
-  const THRESHOLDS = [1, 12.5, 25, 37.5, 50, 62.5, 75, 87.5, 100];
-  const LEVELS = ["S", "A+", "A", "A-", "B+", "B", "B-", "C+", "C"];
-  const rank =
-    1 -
-    (COMMITS_WEIGHT * exp_cdf(commits / COMMITS_MEDIAN) +
-      PRS_WEIGHT * exp_cdf(prs / PRS_MEDIAN) +
-      ISSUES_WEIGHT * exp_cdf(issues / ISSUES_MEDIAN) +
-      REVIEWS_WEIGHT * exp_cdf(reviews / REVIEWS_MEDIAN) +
-      STARS_WEIGHT * log_normal_cdf(stars / STARS_MEDIAN) +
-      FOLLOWERS_WEIGHT * log_normal_cdf(followers / FOLLOWERS_MEDIAN)) /
-      TOTAL_WEIGHT;
-  const percentile = rank * 100;
-  const level = LEVELS[THRESHOLDS.findIndex((t) => percentile <= t)];
-  return { level, percentile };
-}
+// No synthetic "grade / Top N%" — github-readme-stats' rank is a hardcoded-median
+// score with no real population behind it, and it caps commits at 2/12 weight, so
+// it badly undersells a high-volume solo builder. We show honest raw figures instead
+// and lead with the commit count (public + private).
 
 const fmt = (n) =>
   n >= 1000 ? (n / 1000).toFixed(n >= 10000 ? 0 : 1).replace(/\.0$/, "") + "k" : String(n);
@@ -109,19 +85,11 @@ async function main() {
   const repos = u.repositories.totalCount;
   const stars = u.repositories.nodes.reduce((a, r) => a + r.stargazerCount, 0);
 
-  const { level, percentile } = calculateRank({
-    commits: commitsTotal,
-    prs: prsTotal,
-    issues,
-    reviews,
-    stars,
-    followers,
-  });
-
   const svg = renderCard({
     name: u.name || USERNAME,
-    level,
-    percentile,
+    hero: fmt(commitsTotal),
+    heroLabel: "commits",
+    heroSub: "incl. private",
     stats: [
       { icon: "star", label: "Total Stars Earned", value: fmt(stars) },
       { icon: "commit", label: "Commits (incl. private)", value: fmt(commitsTotal) },
@@ -135,7 +103,7 @@ async function main() {
   mkdirSync(dirname(OUT), { recursive: true });
   writeFileSync(OUT, svg);
   console.log(
-    `Wrote ${OUT}  grade=${level} (top ${percentile.toFixed(0)}%)  ` +
+    `Wrote ${OUT}  ` +
       `stars=${stars} commits=${commitsTotal} prs=${prsTotal}/${prsMerged} followers=${followers} repos=${repos}`,
   );
 }
@@ -150,7 +118,7 @@ const ICONS = {
   repo: '<path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.707A2.5 2.5 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/>',
 };
 
-function renderCard({ name, level, percentile, stats }) {
+function renderCard({ name, hero, heroLabel, heroSub, stats }) {
   const W = 500, H = 210, ACCENT = "#00ff88", TEXT = "#c9d1d9", MUTED = "#8b949e", BG = "#0d1117";
   const rowH = 22, x0 = 28, y0 = 80, VX = 340;
 
@@ -167,22 +135,22 @@ function renderCard({ name, level, percentile, stats }) {
     })
     .join("");
 
-  // Rank ring — fuller ring = better rank (lower percentile).
-  const r = 44, cx = W - 68, cy = 130;
+  // Hero medallion — a full decorative ring around the standout raw figure
+  // (commits, public + private). Not a percentage: the ring is always complete.
+  const r = 44, cx = W - 68, cy = 128;
   const circ = 2 * Math.PI * r;
-  const fill = (100 - percentile) / 100; // portion of ring filled
-  const offset = circ * (1 - fill);
 
-  return `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${esc(name)} GitHub stats, grade ${level}">
+  return `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${esc(name)} GitHub stats — ${esc(hero)} ${esc(heroLabel)}">
   <style>
     text { font-family: 'Segoe UI', Ubuntu, system-ui, sans-serif; }
     .title { font: 700 20px 'Segoe UI', system-ui, sans-serif; fill: ${ACCENT}; }
     .lbl { font-size: 14px; fill: ${TEXT}; }
     .val { font-size: 14px; font-weight: 700; fill: ${ACCENT}; text-anchor: end; }
-    .grade { font: 800 34px 'Segoe UI', system-ui, sans-serif; fill: ${ACCENT}; text-anchor: middle; }
-    .gradeSub { font-size: 12px; fill: ${MUTED}; text-anchor: middle; }
+    .hero { font: 800 30px 'Segoe UI', system-ui, sans-serif; fill: ${ACCENT}; text-anchor: middle; }
+    .heroLbl { font-size: 12px; font-weight: 700; fill: ${TEXT}; text-anchor: middle; letter-spacing: .5px; }
+    .heroSub { font-size: 11px; fill: ${MUTED}; text-anchor: middle; }
     .row { animation: fadein 0.6s ease backwards; }
-    .ring { stroke-dasharray: ${circ.toFixed(1)}; stroke-dashoffset: ${offset.toFixed(1)}; animation: draw 1.3s ease-out backwards 0.3s; }
+    .ring { stroke-dasharray: ${circ.toFixed(1)}; animation: draw 1.3s ease-out backwards 0.3s; }
     @keyframes fadein { from { opacity: 0; transform: translateX(-6px); } }
     @keyframes draw { from { stroke-dashoffset: ${circ.toFixed(1)}; } }
   </style>
@@ -199,8 +167,9 @@ function renderCard({ name, level, percentile, stats }) {
     <circle r="${r}" fill="none" stroke="${ACCENT}" stroke-opacity="0.13" stroke-width="7"/>
     <circle class="ring" r="${r}" fill="none" stroke="${ACCENT}" stroke-width="7"
             stroke-linecap="round" transform="rotate(-90)"/>
-    <text y="4" class="grade">${esc(level)}</text>
-    <text y="24" class="gradeSub">Top ${Math.max(1, Math.round(percentile))}%</text>
+    <text y="-4" class="hero">${esc(hero)}</text>
+    <text y="15" class="heroLbl">${esc(heroLabel)}</text>
+    <text y="30" class="heroSub">${esc(heroSub)}</text>
   </g>
 </svg>`;
 }
