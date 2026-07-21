@@ -1,13 +1,14 @@
-<svg width="500" height="210" viewBox="0 0 500 210" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Martin Kaiser GitHub stats, grade B+">
+<svg width="500" height="210" viewBox="0 0 500 210" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Martin Kaiser GitHub stats — 2.4k commits">
   <style>
     text { font-family: 'Segoe UI', Ubuntu, system-ui, sans-serif; }
     .title { font: 700 20px 'Segoe UI', system-ui, sans-serif; fill: #00ff88; }
     .lbl { font-size: 14px; fill: #c9d1d9; }
     .val { font-size: 14px; font-weight: 700; fill: #00ff88; text-anchor: end; }
-    .grade { font: 800 34px 'Segoe UI', system-ui, sans-serif; fill: #00ff88; text-anchor: middle; }
-    .gradeSub { font-size: 12px; fill: #8b949e; text-anchor: middle; }
+    .hero { font: 800 30px 'Segoe UI', system-ui, sans-serif; fill: #00ff88; text-anchor: middle; }
+    .heroLbl { font-size: 12px; font-weight: 700; fill: #c9d1d9; text-anchor: middle; letter-spacing: .5px; }
+    .heroSub { font-size: 11px; fill: #8b949e; text-anchor: middle; }
     .row { animation: fadein 0.6s ease backwards; }
-    .ring { stroke-dasharray: 276.5; stroke-dashoffset: 132.3; animation: draw 1.3s ease-out backwards 0.3s; }
+    .ring { stroke-dasharray: 276.5; animation: draw 1.3s ease-out backwards 0.3s; }
     @keyframes fadein { from { opacity: 0; transform: translateX(-6px); } }
     @keyframes draw { from { stroke-dashoffset: 276.5; } }
   </style>
@@ -50,11 +51,12 @@
         <text x="312" y="0" class="val">108</text>
       </g>
 
-  <g transform="translate(432, 130)">
+  <g transform="translate(432, 128)">
     <circle r="44" fill="none" stroke="#00ff88" stroke-opacity="0.13" stroke-width="7"/>
     <circle class="ring" r="44" fill="none" stroke="#00ff88" stroke-width="7"
             stroke-linecap="round" transform="rotate(-90)"/>
-    <text y="4" class="grade">B+</text>
-    <text y="24" class="gradeSub">Top 48%</text>
+    <text y="-4" class="hero">2.4k</text>
+    <text y="15" class="heroLbl">commits</text>
+    <text y="30" class="heroSub">incl. private</text>
   </g>
 </svg>
