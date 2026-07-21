@@ -38,7 +38,7 @@ building:    108 public repos across agents, MCP, edge AI & automation
 > **Generative AI & LLM applications** — agents, RAG, document pipelines<br/>
 > **Agent & MCP tooling** — MCP hubs, A2A messaging, observability, memory stacks<br/>
 > **Automation workflows** — n8n, LangGraph, Dify, custom orchestration<br/>
-> **Edge & self-hosted AI** — Jetson Orin, Raspberry Pi, Tailscale meshes<br/>
+> **Edge & self-hosted AI** — local-first inference across a private device mesh<br/>
 > **End-to-end products** — from idea → prototype → production
 
 <br/>
@@ -50,13 +50,13 @@ building:    108 public repos across agents, MCP, edge AI & automation
 - 🦊 Built **[`kitsune-mcp`](https://github.com/kaiser-data/kitsune-mcp)** — a shape-shifting MCP hub reaching 10,000+ servers at runtime
 - 🔭 Built **[`claude-code-langfuse-tracing`](https://github.com/kaiser-data/claude-code-langfuse-tracing)** — full observability for Claude Code sessions
 - 📈 **[`github-stars-analyzer`](https://github.com/kaiser-data/github-stars-analyzer)** → **[live demo: hot-repos.netlify.app](https://hot-repos.netlify.app/)** — analyzes GitHub repos to surface trends and map interests across the ecosystem
-- ⚡ Ship across the stack — Python, TypeScript & Go; cloud (AWS/Azure/Terraform) to edge (Jetson Orin, Raspberry Pi, Tailscale)
+- ⚙️ Daily-drive the **[ECC](https://github.com/affaan-m/ECC)** agent harness *(230k+ ⭐)* on Claude Code — skills, memory & instincts for research-first, token-efficient development
 
 <br/>
 
 ## 🤖 How I Work with Claude Code
 
-Claude Code is my daily driver. I run a **Pro subscription** and squeeze roughly **30× the usual mileage** out of it by spending tokens deliberately — pairing the agent with memory frameworks like **[claude-mem](https://github.com/thedaviddias/claude-mem)** and modern agent harnesses like **ECC** and **superpowers** to reuse context, cut redundant re-reads, and keep long sessions cheap. Effective spend over raw spend.
+Claude Code is my daily driver. I run a **Pro subscription** and squeeze roughly **30× the usual mileage** out of it by spending tokens deliberately — pairing the agent with memory frameworks like **[claude-mem](https://github.com/thedaviddias/claude-mem)** and modern agent harnesses like **[ECC](https://github.com/affaan-m/ECC)** and **superpowers** to reuse context, cut redundant re-reads, and keep long sessions cheap. Effective spend over raw spend.
 
 I instrument my own sessions with [`claude-code-langfuse-tracing`](https://github.com/kaiser-data/claude-code-langfuse-tracing), so these are real numbers from the last 30 days:
 
@@ -182,8 +182,9 @@ I instrument my own sessions with [`claude-code-langfuse-tracing`](https://githu
 <!--
   All stat cards are STATIC SVGs committed to this repo (never live-rendered),
   so they can't hit the rate limits that broke the old cards:
-   - stats-card.svg : custom card, letter grade + private-inclusive commits/PRs,
-     refreshed daily by .github/workflows/stats-card.yml (needs the STATS_TOKEN secret).
+   - stats-card.svg : custom card, private-inclusive commits/PRs + raw stats
+     (no synthetic grade), refreshed daily by .github/workflows/stats-card.yml
+     (needs the STATS_TOKEN secret).
    - language donuts : github-profile-summary-cards, theme chartreuse_dark,
      refreshed daily by .github/workflows/profile-summary-cards.yml.
 -->
