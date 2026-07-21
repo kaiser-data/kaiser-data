@@ -180,20 +180,21 @@ I instrument my own sessions with [`claude-code-langfuse-tracing`](https://githu
 <br/><br/>
 
 <!--
-  Stat cards are STATIC SVGs generated daily by a GitHub Action
-  (.github/workflows/profile-summary-cards.yml) and committed to this repo,
-  so they never hit the live-render rate limits that broke the old cards.
-  Theme: chartreuse_dark (matches the neon-green accent).
+  All stat cards are STATIC SVGs committed to this repo (never live-rendered),
+  so they can't hit the rate limits that broke the old cards:
+   - stats-card.svg : custom card, letter grade + private-inclusive commits/PRs,
+     refreshed daily by .github/workflows/stats-card.yml (needs the STATS_TOKEN secret).
+   - language donuts : github-profile-summary-cards, theme chartreuse_dark,
+     refreshed daily by .github/workflows/profile-summary-cards.yml.
 -->
 
 <a href="https://github.com/kaiser-data">
-  <img width="82%" alt="Martin Kaiser — GitHub profile summary" src="https://raw.githubusercontent.com/kaiser-data/kaiser-data/main/profile-summary-card-output/chartreuse_dark/0-profile-details.svg" />
+  <img width="78%" alt="Martin Kaiser — GitHub stats & grade" src="https://raw.githubusercontent.com/kaiser-data/kaiser-data/main/assets/stats-card.svg" />
 </a>
 
 <br/>
 
 <img height="185" alt="Top languages by repository" src="https://raw.githubusercontent.com/kaiser-data/kaiser-data/main/profile-summary-card-output/chartreuse_dark/1-repos-per-language.svg" />
 <img height="185" alt="Top languages by commit" src="https://raw.githubusercontent.com/kaiser-data/kaiser-data/main/profile-summary-card-output/chartreuse_dark/2-most-commit-language.svg" />
-<img height="185" alt="Contribution & PR stats" src="https://raw.githubusercontent.com/kaiser-data/kaiser-data/main/profile-summary-card-output/chartreuse_dark/3-stats.svg" />
 
 </div>
