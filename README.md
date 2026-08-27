@@ -5,8 +5,7 @@
 ### `AI/ML Engineer` · `Physicist` · `Berlin 📍`
 
 Curious mind building production-grade AI, automation, and tools that actually work.<br/>
-PhD in Physics. 3+ years in LLMs. 6 hackathon wins in 2025 — now building on that with 2026 wins, podiums & finalist placements.
-
+PhD in Physics.
 <br/>
 
 <a href="https://linkedin.com/in/martin-kaiser-ai">
