@@ -5,7 +5,8 @@
 ### `AI/ML Engineer` · `Physicist` · `Berlin 📍`
 
 **I turn AI research into things that ship.**<br/>
-PhD in Physics · 3+ years building with LLMs · **9 hackathon wins** across 2025–2026 · 110 public repos
+PhD in Physics · 3+ years shipping LLM systems · **9 hackathon wins · 14 podiums** (2025–2026)<br/>
+**mloda open-source plugin grant** winner · 110 public repos
 
 <br/>
 
@@ -16,6 +17,10 @@ PhD in Physics · 3+ years building with LLMs · **9 hackathon wins** across 202
   <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0d1117" alt="Email" />
 </a>
 <img src="https://img.shields.io/badge/Open_to_Roles_&_Collabs-00FF88?style=for-the-badge&logo=handshake&logoColor=0d1117&labelColor=0d1117" alt="Open to roles and collaborations" />
+
+<br/><br/>
+
+<sub>🎯 **Looking for:** AI/ML engineering roles · agent & LLM product teams · contract work — Berlin or remote</sub>
 
 </div>
 
@@ -42,45 +47,51 @@ role:        AI/ML Engineer
 location:    Berlin, Germany 🇩🇪
 focus:       LLMs · Agents · Automation · Document Processing · Edge AI
 status:      Open to roles, projects, collaborations & hackathons
-building:    110 public repos across agents, MCP, edge AI & automation
 background:  PhD Physics → 3+ years shipping LLM systems
 ```
 
 <br/>
 
-## 🏆 Hackathon Record
+## 🏆 Hackathon Wins & Grants
 
 <div align="center">
 
-**9 wins · 13 podiums · 2025–2026**
+**9 wins · 14 podiums · 2025–2026**
 
 </div>
 
-### 2026
+### 🌸 Open-source grant
 
-| | Event | Track / Result |
-|:--:|:--|:--|
-| 🥇 | **[Cognee × Qdrant Hack Night](https://luma.com/cognee-m078)** Berlin | *[reaction-dynamics](https://github.com/kaiser-data/reaction-dynamics)* — solo entry |
-| 🥇 | **Agentic FinAI Hackathon** Berlin | Dify Open Track |
-| 🏆 | **AI Agents Hackathon** Berlin | Blockchain for Good Alliance Bonus Track |
-| 🥈 | **AI Builders Open Claw Hackathon** | Open Claw |
-| 🥉 | **Needle Hackathon** | Main Track |
-| 4️⃣ | **Superchat × Needle AI Builder Event** | Salesbot |
-| 🏅 | **Cognee AI-Memory Hackathon** | Top 7 Finalist |
+| Result | Programme | Project |
+|:--|:--|:--|
+| 🏅 **Grant winner** | **[mloda](https://mloda.ai) monthly plugin grant** · Sept 2026 | *[mloda-gdpdu-provenance](https://github.com/kaiser-data/mloda-gdpdu-provenance)* — provenance-carrying aggregation: a total that names its rows, or no total |
+
+### 2026 — 3 wins · 6 podiums
+
+| Result | Event | Project / Track |
+|:--|:--|:--|
+| 🥇 **1st place** | **[Cognee × Qdrant Hack Night](https://luma.com/cognee-m078)** · Berlin | *[reaction-dynamics](https://github.com/kaiser-data/reaction-dynamics)* — solo entry |
+| 🥇 **1st place** | **Agentic FinAI Hackathon** · Berlin | Dify Open Track |
+| 🏆 **Track winner** | **AI Agents Hackathon** · Berlin | Blockchain for Good Alliance Bonus Track |
+| 🥈 **2nd place** | **AI Builders Open Claw Hackathon** | Open Claw |
+| 🥉 **3rd place** | **[Collaborative Agent Hackathon](https://github.com/kaiser-data/Soteria)** · Flower Labs, Berlin | *[Soteria](https://github.com/kaiser-data/Soteria)* — privacy-preserving multi-party incident response on Flower |
+| 🥉 **3rd place** | **Needle Hackathon** | Main Track |
+
+<sub>Also in 2026: 4th place — Superchat × Needle AI Builder Event (Salesbot) · Top-7 finalist — Cognee AI-Memory Hackathon</sub>
 
 <details>
 <summary><b>2025 — 6 wins · 8 podiums</b> <sub>(click to expand)</sub></summary>
 
 <br/>
 
-| | Event | Track / Result |
-|:--:|:--|:--|
-| 🥇 | **ElevenLabs Hackathon** | n8n Category |
-| 🥇 | **NEAR AI Hackathon** | Shade AI-Agent |
-| 🥇 | **AI Hardcore Hackathon** | LLM Prediction |
-| 🥇 | **Masterschool Hackathon** | SMS-Service |
-| 🥈 | **Distributed AI Hack Berlin** | Open Track |
-| 🥈 | **IronHack DevOps Hackashow** | DevOps |
+| Result | Event | Project / Track |
+|:--|:--|:--|
+| 🥇 **1st place** | **ElevenLabs Hackathon** | n8n Category |
+| 🥇 **1st place** | **NEAR AI Hackathon** | Shade AI-Agent |
+| 🥇 **1st place** | **AI Hardcore Hackathon** | LLM Prediction |
+| 🥇 **1st place** | **Masterschool Hackathon** | SMS-Service |
+| 🥈 **2nd place** | **Distributed AI Hack Berlin** | Open Track |
+| 🥈 **2nd place** | **IronHack DevOps Hackashow** | DevOps |
 
 </details>
 
@@ -102,6 +113,7 @@ background:  PhD Physics → 3+ years shipping LLM systems
 
 **🧩 Agents & LLM apps**
 - [`reaction-dynamics`](https://github.com/kaiser-data/reaction-dynamics) — 🥇 team-behavior analytics from live Slack reaction timing; KS-test classifier + Cognee/Qdrant knowledge graph
+- [`Soteria`](https://github.com/kaiser-data/Soteria) — 🥉 federated multi-party incident response (Flower ServerApp + ClientApp + AgentApp); parties answer with traffic lights, never raw values; tiered measures, two-key human approval, chained receipts
 - [`AngebotsBot`](https://github.com/kaiser-data/AngebotsBot) — AI deal scanner: kaufda.de + Qwen VL 32B + Supabase + LangGraph + Chainlit + Telegram
 - [`fraudmind`](https://github.com/kaiser-data/fraudmind) — deterministic fraud-hunting over GDPdU audit dossiers; 22 rule families + Cognee knowledge graph, "no number without a source"
 - [`carlover`](https://github.com/kaiser-data/carlover) — multi-agent automotive assistant (LangGraph + ADAC data + Featherless AI)
@@ -123,6 +135,7 @@ background:  PhD Physics → 3+ years shipping LLM systems
 - [`berlin25-eurosat`](https://github.com/kaiser-data/berlin25-eurosat) — federated learning (Flower) on EuroSAT satellite imagery
 
 **🔁 Automation & infra**
+- [`mloda-gdpdu-provenance`](https://github.com/kaiser-data/mloda-gdpdu-provenance) — 🏅 grant-funded mloda plugins: row-level citations survive aggregation over German GDPdU tax dossiers; a number that can't be sourced isn't returned
 - [`inbox-inferno-n8n`](https://github.com/kaiser-data/inbox-inferno-n8n-community-challenge) — AI email agent with LLM-as-judge — scored **20/20**
 - [`free-llm-proxy-router`](https://github.com/kaiser-data/free-llm-proxy-router) — Go OpenAI-compatible proxy routing across free-tier providers (Groq, Gemini, OpenRouter, Cerebras…)
 - [`aws-terraform-devops-infrastructure`](https://github.com/kaiser-data/aws-terraform-devops-infrastructure) — production-grade AWS VPC architecture with Terraform IaC
