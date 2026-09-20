@@ -64,7 +64,7 @@ background:  PhD Physics → 3+ years shipping LLM systems
 
 | Result | Programme | Project |
 |:--|:--|:--|
-| 🏅 **Grant winner** | **[mloda](https://mloda.ai) monthly plugin grant** · Sept 2026 | *[mloda-gdpdu-provenance](https://github.com/kaiser-data/mloda-gdpdu-provenance)* — provenance-carrying aggregation: a total that names its rows, or no total |
+| 🏅 **Grant winner** | **[mloda](https://mloda.ai) monthly plugin grant** · Sept 2026 | *mloda-gdpdu-provenance* *(private)* — provenance-carrying aggregation: a total that names its rows, or no total |
 
 ### 2026 — 3 wins · 6 podiums
 
@@ -135,7 +135,7 @@ background:  PhD Physics → 3+ years shipping LLM systems
 - [`berlin25-eurosat`](https://github.com/kaiser-data/berlin25-eurosat) — federated learning (Flower) on EuroSAT satellite imagery
 
 **🔁 Automation & infra**
-- [`mloda-gdpdu-provenance`](https://github.com/kaiser-data/mloda-gdpdu-provenance) — 🏅 grant-funded mloda plugins: row-level citations survive aggregation over German GDPdU tax dossiers; a number that can't be sourced isn't returned
+- `mloda-gdpdu-provenance` *(private)* — 🏅 grant-funded mloda plugins: row-level citations survive aggregation over German GDPdU tax dossiers; a number that can't be sourced isn't returned
 - [`inbox-inferno-n8n`](https://github.com/kaiser-data/inbox-inferno-n8n-community-challenge) — AI email agent with LLM-as-judge — scored **20/20**
 - [`free-llm-proxy-router`](https://github.com/kaiser-data/free-llm-proxy-router) — Go OpenAI-compatible proxy routing across free-tier providers (Groq, Gemini, OpenRouter, Cerebras…)
 - [`aws-terraform-devops-infrastructure`](https://github.com/kaiser-data/aws-terraform-devops-infrastructure) — production-grade AWS VPC architecture with Terraform IaC
