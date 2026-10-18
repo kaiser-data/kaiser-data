@@ -128,7 +128,10 @@ async function main() {
     // which GitHub does not split by type, so it is shown separately, never added.
     commits: cc.totalCommitContributions,
     privateContribs: cc.restrictedContributionsCount,
-    contributions: cc.contributionCalendar.totalContributions,
+    // Sum of the daily cells, not contributionCalendar.totalContributions: GitHub's
+    // headline runs ~1% higher than its own days, and the card, heatmap and monthly
+    // chart must add up to the same number.
+    contributions: days.reduce((n, d) => n + d.contributionCount, 0),
     issues: cc.totalIssueContributions,
     mergedPRs: json.data.mergedPRs.issueCount,
     mergedAllTime: u.mergedAllTime.totalCount,
@@ -274,14 +277,14 @@ function renderCard({ name, updated, g, m, weeks, figures }) {
   <text x="${W - 28}" y="44" class="meta">last 12 months · public + private · updated ${esc(updated)}</text>
   <line x1="28" y1="58" x2="${W - 28}" y2="58" stroke="${ACCENT}" stroke-opacity="0.15"/>
 
-  <text x="${cx}" y="80" class="sect" text-anchor="middle">GRADE</text>
+  <text x="${cx}" y="80" class="sect" text-anchor="middle">ACTIVITY GRADE</text>
   <g transform="translate(${cx}, ${cy})">
     <circle r="${r}" fill="none" stroke="${ACCENT}" stroke-opacity="0.12" stroke-width="8"/>
     <circle class="ring" r="${r}" fill="none" stroke="${ACCENT}" stroke-width="8" stroke-linecap="round" transform="rotate(-90)"/>
     <text y="10" class="grade">${esc(g.letter)}</text>
     <text y="30" class="score">${g.total} / 100</text>
   </g>
-  <text x="${cx}" y="${cy + r + 22}" class="gradeSub">4 × 25 pts vs fixed targets</text>
+  <text x="${cx}" y="${cy + r + 22}" class="gradeSub">self-defined · 4 × 25 pts</text>
 
   <text x="${bx}" y="80" class="sect">BREAKDOWN</text>
   ${bars}

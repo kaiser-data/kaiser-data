@@ -1,10 +1,11 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=28&duration=3000&pause=1000&color=00FF88&center=true&vCenter=true&width=600&lines=Hi%2C+I'm+Martin+%F0%9F%91%8B;AI%2FML+Engineer;Physicist;9%C3%97+Hackathon+Winner;Claude+Code+Power+User" alt="Typing SVG" />
+# Martin Kaiser
 
-### `AI/ML Engineer` · `Physicist` · `Berlin 📍`
+### AI/ML Engineer · PhD Physics · Berlin
 
-**I turn AI research into things that ship.**<br/>
+**I build LLM applications, agents and document pipelines.**<br/>
+Featured: **[Büchli](https://github.com/kaiser-data/hack-apertus-booklet-nli)** — 0.930 macro-F1 on 976 held-out claims from 14 unseen vote dates<br/><br/>
 PhD in Physics · 3+ years shipping LLM systems · **9 hackathon wins · 14 podiums** (2025–2026)<br/>
 **mloda open-source plugin grant** winner · 3,100+ contributions in the last 12 months · 117 public repos
 
@@ -263,6 +264,8 @@ Four sub-scores of 25 points, each measured against a fixed target, so anyone ca
 | **Consistency** | days with at least one contribution | 250 / year |
 | **Collaboration** | merged PRs and repos contributed to (averaged) | 100 PRs · 20 repos |
 | **Reach** | stars on own public repos + followers | 500 |
+
+Targets are selected by me. Each sub-score is rounded down; Reach uses current stars and followers.
 
 Bands: **S** ≥ 90 · **A+** ≥ 80 · **A** ≥ 70 · **B+** ≥ 60 · **B** ≥ 50 · **C** below. The weakest part right now is reach (stars and followers).
 
