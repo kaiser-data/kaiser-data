@@ -6,7 +6,7 @@
 
 **I build LLM applications, agents and document pipelines.**<br/>
 Featured: **[Büchli](https://github.com/kaiser-data/hack-apertus-booklet-nli)** — 0.930 macro-F1 on 976 held-out claims from 14 unseen vote dates<br/><br/>
-PhD in Physics · 3+ years shipping LLM systems · **9 hackathon wins · 14 podiums** (2025–2026)<br/>
+PhD in Physics · 3+ years shipping LLM systems · **7 hackathon wins · 12 podiums** (2025–2026)<br/>
 **mloda open-source plugin grant** winner · 3,100+ contributions in the last 12 months · 117 public repos
 
 <br/>
@@ -72,7 +72,7 @@ background:  PhD Physics → 3+ years shipping LLM systems
 
 <div align="center">
 
-**9 wins · 14 podiums · 2025–2026**
+**7 wins · 12 podiums · 2025–2026**
 
 </div>
 
@@ -96,7 +96,7 @@ background:  PhD Physics → 3+ years shipping LLM systems
 <sub>Also in 2026: 4th place — Superchat × Needle AI Builder Event (Salesbot) · Top-7 finalist — Cognee AI-Memory Hackathon</sub>
 
 <details>
-<summary><b>2025 — 6 wins · 8 podiums</b> <sub>(click to expand)</sub></summary>
+<summary><b>2025 — 4 wins · 6 podiums</b> <sub>(click to expand)</sub></summary>
 
 <br/>
 
