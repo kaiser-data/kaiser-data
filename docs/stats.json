@@ -2,60 +2,120 @@
  "name": "Martin Kaiser",
  "updated": "2026-10-18",
  "metrics": {
-  "commits": 1732,
-  "privateContribs": 1265,
-  "contributions": 3117,
+  "commits": 1734,
+  "privateContribs": 1269,
+  "contributions": 3125,
   "issues": 44,
   "mergedPRs": 58,
+  "prs": 79,
+  "issuesAllTime": 45,
+  "reviews": 0,
+  "starsAll": 45,
   "mergedAllTime": 66,
-  "contributedTo": 14,
+  "contributedTo": 15,
   "followers": 146,
   "repos": 94,
-  "stars": 43,
+  "stars": 44,
   "activeDays": 253,
   "longest": 53,
-  "last30": 410,
+  "last30": 419,
   "best": {
-   "date": "2026-08-17",
-   "contributionCount": 70
+   "date": "2026-10-18",
+   "contributionCount": 73
   }
  },
- "targets": {
-  "contributions": 3000,
-  "activeDays": 250,
-  "mergedPRs": 100,
-  "contributedTo": 20,
-  "reach": 500
- },
+ "rankParts": [
+  {
+   "key": "Commits",
+   "in": "commits",
+   "median": 250,
+   "weight": 2,
+   "cdf": "exp"
+  },
+  {
+   "key": "Pull requests",
+   "in": "prs",
+   "median": 50,
+   "weight": 3,
+   "cdf": "exp"
+  },
+  {
+   "key": "Issues",
+   "in": "issuesAllTime",
+   "median": 25,
+   "weight": 1,
+   "cdf": "exp"
+  },
+  {
+   "key": "Reviews",
+   "in": "reviews",
+   "median": 2,
+   "weight": 1,
+   "cdf": "exp"
+  },
+  {
+   "key": "Stars",
+   "in": "starsAll",
+   "median": 50,
+   "weight": 4,
+   "cdf": "lognormal"
+  },
+  {
+   "key": "Followers",
+   "in": "followers",
+   "median": 10,
+   "weight": 1,
+   "cdf": "lognormal"
+  }
+ ],
  "grade": {
   "parts": [
    {
-    "key": "Output",
-    "detail": "3,117 contributions",
-    "s": 1,
-    "pts": 25
+    "key": "Commits",
+    "detail": "1,734 · median 250",
+    "s": 0.9918331242171472,
+    "w": 2,
+    "pts": 1.9836662484342944
    },
    {
-    "key": "Consistency",
-    "detail": "253 active days",
-    "s": 1,
-    "pts": 25
+    "key": "Pull requests",
+    "detail": "79 · median 50",
+    "s": 0.665518111303472,
+    "w": 3,
+    "pts": 1.9965543339104161
    },
    {
-    "key": "Collaboration",
-    "detail": "58 merged PRs · 14 repos",
-    "s": 0.8864998778750512,
-    "pts": 22
+    "key": "Issues",
+    "detail": "45 · median 25",
+    "s": 0.7128254112507413,
+    "w": 1,
+    "pts": 0.7128254112507413
    },
    {
-    "key": "Reach",
-    "detail": "43 stars · 146 followers",
-    "s": 0.844033542875561,
-    "pts": 21
+    "key": "Reviews",
+    "detail": "0 · median 2",
+    "s": 0,
+    "w": 1,
+    "pts": 0
+   },
+   {
+    "key": "Stars",
+    "detail": "45 · median 50",
+    "s": 0.4736842105263158,
+    "w": 4,
+    "pts": 1.8947368421052633
+   },
+   {
+    "key": "Followers",
+    "detail": "146 · median 10",
+    "s": 0.9358974358974359,
+    "w": 1,
+    "pts": 0.9358974358974359
    }
   ],
-  "total": 93,
-  "letter": "S"
+  "percentile": 37.30266440334874,
+  "total": 63,
+  "letter": "A-"
  },
  "days": [
   {
@@ -236,7 +296,7 @@
   },
   {
    "date": "2025-12-02",
-   "contributionCount": 2
+   "contributionCount": 1
   },
   {
    "date": "2025-12-03",
@@ -1516,7 +1576,7 @@
   },
   {
    "date": "2026-10-18",
-   "contributionCount": 64
+   "contributionCount": 73
   }
  ]
 }

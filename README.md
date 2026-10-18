@@ -235,8 +235,8 @@ I instrument my own sessions with [`claude-code-langfuse-tracing`](https://githu
 <!--
   All stat cards are STATIC SVGs committed to this repo (never live-rendered),
   so they can't hit the rate limits that broke the old cards:
-   - stats-card.svg : custom card, last 12 months incl. private: transparent grade
-     (4 x 25 pts vs fixed targets, see scripts/generate-stats-card.mjs), key figures
+   - stats-card.svg : custom card: github-readme-stats rank (formula ported 1:1 in
+     scripts/generate-stats-card.mjs), key figures
      and a 52-week heatmap. Refreshed daily by .github/workflows/stats-card.yml
      (needs the STATS_TOKEN secret).
    - language donuts : github-profile-summary-cards, theme chartreuse_dark,
@@ -249,25 +249,25 @@ I instrument my own sessions with [`claude-code-langfuse-tracing`](https://githu
 
 </div>
 
-<p align="center"><sub>Hover every day, change the targets and watch the grade move: <b><a href="https://kaiser-data.github.io/kaiser-data/">interactive version</a></b></sub></p>
+<p align="center"><sub>Hover every day and drag the inputs to see how the rank responds: <b><a href="https://kaiser-data.github.io/kaiser-data/">interactive version</a></b></sub></p>
 
 <details>
-<summary><b>How the grade is computed</b> <sub>(click to expand)</sub></summary>
+<summary><b>How the rank is computed</b> <sub>(click to expand)</sub></summary>
 
 <br/>
 
-Four sub-scores of 25 points, each measured against a fixed target, so anyone can recompute the grade from the numbers on the card. Counts that grow multiplicatively use a log scale; active days are linear.
+The rank uses the formula from [github-readme-stats](https://github.com/anuraghazra/github-readme-stats/blob/master/src/calculateRank.js), ported unchanged. Each input is scored against a fixed median and weighted; the weighted share sets the percentile and the letter.
 
-| Sub-score | Measures | Full marks at |
-|:--|:--|:--|
-| **Output** | contributions, public + private (commits, PRs, issues, repos) | 3,000 / year |
-| **Consistency** | days with at least one contribution | 250 / year |
-| **Collaboration** | merged PRs and repos contributed to (averaged) | 100 PRs · 20 repos |
-| **Reach** | stars on own public repos + followers | 500 |
+| Input | Median | Weight |
+|:--|--:|--:|
+| Commits, last 12 months | 250 | 2 |
+| Pull requests, all time | 50 | 3 |
+| Issues, all time | 25 | 1 |
+| PR reviews, last 12 months | 2 | 1 |
+| Stars on owned repos | 50 | 4 |
+| Followers | 10 | 1 |
 
-Targets are selected by me. Each sub-score is rounded down; Reach uses current stars and followers.
-
-Bands: **S** ≥ 90 · **A+** ≥ 80 · **A** ≥ 70 · **B+** ≥ 60 · **B** ≥ 50 · **C** below. The weakest part right now is reach (stars and followers).
+Levels by percentile: **S** ≤ 1 · **A+** ≤ 12.5 · **A** ≤ 25 · **A-** ≤ 37.5 · **B+** ≤ 50 · **B** ≤ 62.5 · **B-** ≤ 75 · **C+** ≤ 87.5 · **C** otherwise.
 
 </details>
 

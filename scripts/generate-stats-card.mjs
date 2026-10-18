@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-// Generates a static GitHub stats card with a transparent grade, fully on GitHub Actions.
+// Generates a static GitHub stats card with the github-readme-stats rank, fully on GitHub Actions.
 // Fetches public + private stats via the GitHub GraphQL API using a PAT and renders a
-// neon-green SVG: grade medallion, four sub-scores, key figures and a 52-week heatmap.
+// neon-green SVG: rank medallion, weighted breakdown, key figures and a 52-week heatmap.
 //
 // Env:
 //   STATS_TOKEN  Personal Access Token with `repo` scope (reads private stats).
@@ -36,6 +36,7 @@ query($login:String!, $mergedQuery:String!){
     contributionsCollection{
       totalCommitContributions
       totalIssueContributions
+      totalPullRequestReviewContributions
       restrictedContributionsCount
       contributionCalendar{
         totalContributions
@@ -43,6 +44,12 @@ query($login:String!, $mergedQuery:String!){
       }
     }
     mergedAllTime:pullRequests(states:MERGED){totalCount}
+    pullRequests{totalCount}
+    openIssues:issues(states:OPEN){totalCount}
+    closedIssues:issues(states:CLOSED){totalCount}
+    ownedRepos:repositories(first:100,ownerAffiliations:OWNER,orderBy:{field:STARGAZERS,direction:DESC}){
+      nodes{stargazerCount}
+    }
     repositoriesContributedTo(contributionTypes:[COMMIT,PULL_REQUEST,REPOSITORY,PULL_REQUEST_REVIEW]){totalCount}
     repositories(first:100,ownerAffiliations:OWNER,isFork:false,privacy:PUBLIC,orderBy:{field:STARGAZERS,direction:DESC}){
       totalCount
@@ -52,29 +59,34 @@ query($login:String!, $mergedQuery:String!){
   mergedPRs:search(query:$mergedQuery, type:ISSUE){issueCount}
 }`;
 
-// ---- Grade ----
-// Not github-readme-stats' rank (hardcoded medians, commits capped at 2/12 weight).
-// Four sub-scores of 25 points each, every one against a fixed, published target, so
-// the grade is reproducible from the numbers on the card. Log scale for counts that
-// grow multiplicatively (commits, PRs, stars), linear for active days.
-const logScore = (x, target) => Math.min(1, Math.log1p(x) / Math.log1p(target));
-const TARGETS = { contributions: 3000, activeDays: 250, mergedPRs: 100, contributedTo: 20, reach: 500 };
-const BANDS = [[90, "S"], [80, "A+"], [70, "A"], [60, "B+"], [50, "B"], [0, "C"]];
+// ---- Rank ----
+// The github-readme-stats rank, ported 1:1 from anuraghazra/github-readme-stats
+// src/calculateRank.js (default mode, all_commits=false). Each input is scored against
+// a fixed median with a CDF and weighted; the weighted share decides the percentile.
+// Inputs mirror src/fetchers/stats.js: commits in the last year, PRs/issues all time,
+// reviews in the last year, stars on all owned repos, followers.
+const exponential_cdf = (x) => 1 - 2 ** -x;
+const log_normal_cdf = (x) => x / (1 + x);
+const RANK_PARTS = [
+  { key: "Commits", in: "commits", median: 250, weight: 2, cdf: exponential_cdf },
+  { key: "Pull requests", in: "prs", median: 50, weight: 3, cdf: exponential_cdf },
+  { key: "Issues", in: "issuesAllTime", median: 25, weight: 1, cdf: exponential_cdf },
+  { key: "Reviews", in: "reviews", median: 2, weight: 1, cdf: exponential_cdf },
+  { key: "Stars", in: "starsAll", median: 50, weight: 4, cdf: log_normal_cdf },
+  { key: "Followers", in: "followers", median: 10, weight: 1, cdf: log_normal_cdf },
+];
+const THRESHOLDS = [1, 12.5, 25, 37.5, 50, 62.5, 75, 87.5, 100];
+const LEVELS = ["S", "A+", "A", "A-", "B+", "B", "B-", "C+", "C"];
+const TOTAL_WEIGHT = RANK_PARTS.reduce((a, p) => a + p.weight, 0);
 
 function grade(m) {
-  const parts = [
-    { key: "Output", detail: `${fmtFull(m.contributions)} contributions`, s: logScore(m.contributions, TARGETS.contributions) },
-    { key: "Consistency", detail: `${m.activeDays} active days`, s: Math.min(1, m.activeDays / TARGETS.activeDays) },
-    {
-      key: "Collaboration",
-      detail: `${m.mergedPRs} merged PRs · ${m.contributedTo} repos`,
-      s: (logScore(m.mergedPRs, TARGETS.mergedPRs) + logScore(m.contributedTo, TARGETS.contributedTo)) / 2,
-    },
-    { key: "Reach", detail: `${m.stars} stars · ${m.followers} followers`, s: logScore(m.stars + m.followers, TARGETS.reach) },
-  ].map((p) => ({ ...p, pts: Math.floor(p.s * 25) })); // floor: full marks only at the target
-  const total = parts.reduce((a, p) => a + p.pts, 0);
-  const letter = BANDS.find(([min]) => total >= min)[1];
-  return { parts, total, letter };
+  const parts = RANK_PARTS.map((p) => {
+    const s = p.cdf(m[p.in] / p.median);
+    return { key: p.key, detail: `${fmtFull(m[p.in])} · median ${p.median}`, s, w: p.weight, pts: p.weight * s };
+  });
+  const percentile = (1 - parts.reduce((a, p) => a + p.pts, 0) / TOTAL_WEIGHT) * 100;
+  const letter = LEVELS[THRESHOLDS.findIndex((t) => percentile <= t)];
+  return { parts, percentile, total: Math.round(100 - percentile), letter };
 }
 
 // ---- Calendar ----
@@ -134,6 +146,10 @@ async function main() {
     contributions: days.reduce((n, d) => n + d.contributionCount, 0),
     issues: cc.totalIssueContributions,
     mergedPRs: json.data.mergedPRs.issueCount,
+    prs: u.pullRequests.totalCount,
+    issuesAllTime: u.openIssues.totalCount + u.closedIssues.totalCount,
+    reviews: cc.totalPullRequestReviewContributions,
+    starsAll: u.ownedRepos.nodes.reduce((a, r) => a + r.stargazerCount, 0),
     mergedAllTime: u.mergedAllTime.totalCount,
     contributedTo: u.repositoriesContributedTo.totalCount,
     followers: u.followers.totalCount,
@@ -165,12 +181,12 @@ async function main() {
     const { best, ...rest } = m;
     writeFileSync(
       JSON_OUT,
-      JSON.stringify({ name: u.name || USERNAME, updated: days[days.length - 1].date, metrics: { ...rest, best }, targets: TARGETS, grade: g, days }, null, 1),
+      JSON.stringify({ name: u.name || USERNAME, updated: days[days.length - 1].date, metrics: { ...rest, best }, rankParts: RANK_PARTS.map(({ cdf, ...p }) => ({ ...p, cdf: cdf === exponential_cdf ? "exp" : "lognormal" })), grade: g, days }, null, 1),
     );
   }
   console.log(
-    `Wrote ${OUT}  grade=${g.letter} (${g.total}/100) ` +
-      g.parts.map((p) => `${p.key}=${p.pts}`).join(" ") +
+    `Wrote ${OUT}  rank=${g.letter} (top ${g.percentile.toFixed(2)}%) ` +
+      g.parts.map((p) => `${p.key}=${p.pts.toFixed(2)}/${p.w}`).join(" ") +
       `  contributions=${m.contributions} private=${m.privateContribs} commits=${m.commits} active=${m.activeDays} streak=${m.longest} prs=${m.mergedPRs} stars=${m.stars} followers=${m.followers}`,
   );
 }
@@ -194,17 +210,17 @@ function renderCard({ name, updated, g, m, weeks, figures }) {
   const ringOffset = circ * (1 - g.total / 100);
 
   // Sub-score bars
-  const bx = 232, bw = 300, by0 = 106, bStep = 42;
+  const bx = 232, bw = 300, by0 = 96, bStep = 28;
   const bars = g.parts
     .map((p, i) => {
-      const y = by0 + i * bStep, d = (0.35 + i * 0.12).toFixed(2);
+      const y = by0 + i * bStep, d = (0.35 + i * 0.08).toFixed(2);
       return `
     <g transform="translate(${bx}, ${y})">
       <text x="0" y="0" class="lbl">${esc(p.key)}</text>
-      <text x="${bw - 46}" y="0" class="sub" text-anchor="end">${esc(p.detail)}</text>
-      <text x="${bw}" y="0" class="pts">${p.pts}<tspan class="ptsMax">/25</tspan></text>
-      <rect x="0" y="9" width="${bw}" height="7" rx="3.5" fill="${EMPTY}"/>
-      <rect class="bar" style="animation-delay:${d}s" x="0" y="9" width="${(bw * p.s).toFixed(1)}" height="7" rx="3.5" fill="${ACCENT}"/>
+      <text x="${bw - 52}" y="0" class="sub" text-anchor="end">${esc(p.detail)}</text>
+      <text x="${bw}" y="0" class="pts">${p.pts.toFixed(1)}<tspan class="ptsMax">/${p.w}</tspan></text>
+      <rect x="0" y="7" width="${bw}" height="5" rx="2.5" fill="${EMPTY}"/>
+      <rect class="bar" style="animation-delay:${d}s" x="0" y="7" width="${(bw * p.s).toFixed(1)}" height="5" rx="2.5" fill="${ACCENT}"/>
     </g>`;
     })
     .join("");
@@ -244,13 +260,13 @@ function renderCard({ name, updated, g, m, weeks, figures }) {
   const heatW = weeks.length * (cell + gap) - gap;
   const legendX = hx + heatW + 24;
 
-  return `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${esc(name)} GitHub stats — grade ${esc(g.letter)}, ${g.total} of 100; ${fmtFull(m.contributions)} contributions, ${m.activeDays} active days in the last 12 months">
+  return `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${esc(name)} GitHub stats — rank ${esc(g.letter)} (github-readme-stats formula, top ${g.percentile.toFixed(1)} percent); ${fmtFull(m.contributions)} contributions, ${m.activeDays} active days in the last 12 months">
   <style>
     text { font-family: 'Segoe UI', Ubuntu, system-ui, sans-serif; }
     .title { font: 700 20px 'Segoe UI', system-ui, sans-serif; fill: ${ACCENT}; }
     .meta { font-size: 12px; fill: ${MUTED}; text-anchor: end; }
     .sect { font-size: 11px; font-weight: 700; fill: ${MUTED}; letter-spacing: 1.2px; }
-    .lbl { font-size: 14px; font-weight: 600; fill: ${TEXT}; }
+    .lbl { font-size: 13px; font-weight: 600; fill: ${TEXT}; }
     .pts { font-size: 14px; font-weight: 700; fill: ${ACCENT}; text-anchor: end; }
     .ptsMax { font-weight: 400; fill: ${MUTED}; font-size: 12px; }
     .sub { font-size: 12px; fill: ${MUTED}; }
@@ -277,16 +293,16 @@ function renderCard({ name, updated, g, m, weeks, figures }) {
   <text x="${W - 28}" y="44" class="meta">last 12 months · public + private · updated ${esc(updated)}</text>
   <line x1="28" y1="58" x2="${W - 28}" y2="58" stroke="${ACCENT}" stroke-opacity="0.15"/>
 
-  <text x="${cx}" y="80" class="sect" text-anchor="middle">ACTIVITY GRADE</text>
+  <text x="${cx}" y="80" class="sect" text-anchor="middle">RANK</text>
   <g transform="translate(${cx}, ${cy})">
     <circle r="${r}" fill="none" stroke="${ACCENT}" stroke-opacity="0.12" stroke-width="8"/>
     <circle class="ring" r="${r}" fill="none" stroke="${ACCENT}" stroke-width="8" stroke-linecap="round" transform="rotate(-90)"/>
     <text y="10" class="grade">${esc(g.letter)}</text>
-    <text y="30" class="score">${g.total} / 100</text>
+    <text y="30" class="score">top ${g.percentile.toFixed(1)} %</text>
   </g>
-  <text x="${cx}" y="${cy + r + 22}" class="gradeSub">self-defined · 4 × 25 pts</text>
+  <text x="${cx}" y="${cy + r + 22}" class="gradeSub">github-readme-stats formula</text>
 
-  <text x="${bx}" y="80" class="sect">BREAKDOWN</text>
+  <text x="${bx}" y="80" class="sect">WEIGHTED SCORE · ${g.parts.reduce((a, p) => a + p.pts, 0).toFixed(1)} / ${TOTAL_WEIGHT}</text>
   ${bars}
 
   <text x="${fx}" y="80" class="sect">KEY FIGURES</text>
