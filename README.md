@@ -6,7 +6,7 @@
 
 **I turn AI research into things that ship.**<br/>
 PhD in Physics · 3+ years shipping LLM systems · **9 hackathon wins · 14 podiums** (2025–2026)<br/>
-**mloda open-source plugin grant** winner · 110 public repos
+**mloda open-source plugin grant** winner · 3,100+ contributions in the last 12 months · 117 public repos
 
 <br/>
 
@@ -20,23 +20,38 @@ PhD in Physics · 3+ years shipping LLM systems · **9 hackathon wins · 14 podi
 
 <br/><br/>
 
-<sub>🎯 **Looking for:** AI/ML engineering roles · agent & LLM product teams · contract work — Berlin or remote</sub>
+**🎯 Looking for:** AI/ML engineering roles · agent & LLM product teams · contract work — Berlin or remote
 
 </div>
 
 <br/>
 
-## ⚡ See it running — no setup required
+## ⚡ Demos & code
 
 <div align="center">
 
-| Live | What it is |
+| Link | What it is |
 |:--|:--|
 | **[hot-repos.netlify.app](https://hot-repos.netlify.app/)** | GitHub landscape analyzer — surfaces trends across a starred corpus |
 | **[github.com/kaiser-data/kitsune-mcp](https://github.com/kaiser-data/kitsune-mcp)** | MCP hub that `shapeshift()`s into 10,000+ servers at runtime |
+| **[sayproof.vercel.app](https://sayproof.vercel.app)** | Fact-check a talk before the audience does: every verdict quotes its source word for word, or it says "can't verify" |
 | **[reaction-dynamics-berlin.netlify.app](https://reaction-dynamics-berlin.netlify.app)** | Team-behavior evidence dashboard + [interactive knowledge graph](https://reaction-dynamics-berlin.netlify.app/graph.html) |
+| **[fraudmind.netlify.app](https://fraudmind.netlify.app)** | Fraud hunting over GDPdU audit dossiers: 22 rule families, no number without a source |
+| **[soteria-monad-rho.vercel.app](https://soteria-monad-rho.vercel.app)** | Soteria on Monad: incident receipts on chain, no place, company or goods name ever written |
 
 </div>
+
+<br/>
+
+## 🆕 Latest — autumn 2026
+
+| | Project | Result |
+|:--|:--|:--|
+| 🇨🇭 | **[Büchli](https://github.com/kaiser-data/hack-apertus-booklet-nli)** · Hack Apertus 2026, Track 2A | Checks campaign claims against the official Swiss voting booklet in DE/FR/IT with Apertus 70B. **0.930 macro-F1** on 976 held-out claims from 14 unseen vote dates, at a ninth of the tokens of whole-booklet prompting |
+| 🎤 | **[Sayproof](https://github.com/kaiser-data/sayproof)** · Nebius × NVIDIA Global AI Hackathon | Nemotron 120B + Tavily. A quote guard downgrades any verdict whose evidence isn't verbatim in the source. [Live](https://sayproof.vercel.app) |
+| 🧩 | **[mloda-community-german-ledger](https://github.com/mloda-ai/mloda-registry/pulls?q=author%3Akaiser-data)** · open-source PR | Follow-up to the mloda grant: cited, admissible totals from GDPdU and DATEV exports, proposed to the official mloda registry (PR open) |
+| 🧠 | **[Coherence Without Content](https://github.com/kaiser-data/do_models_have_minds)** · Apart Research sprint | Replace every outcome in a values benchmark with an invented word and the coherence score barely moves: a missing control for LLM preference metrics |
+| ♟️ | **[Zwischenzug](https://github.com/kaiser-data/zwischenzug)** · personal | Calculation-training dossier for a 2171-FIDE player chasing titles: write the whole line before the engine is allowed to speak |
 
 <br/>
 
@@ -97,19 +112,9 @@ background:  PhD Physics → 3+ years shipping LLM systems
 
 <br/>
 
-## 🎯 What I Build
-
-> **Generative AI & LLM applications** — agents, RAG, document pipelines<br/>
-> **Agent & MCP tooling** — MCP hubs, A2A messaging, observability, memory stacks<br/>
-> **Automation workflows** — n8n, LangGraph, Dify, custom orchestration<br/>
-> **Edge & self-hosted AI** — local-first inference across a private device mesh<br/>
-> **End-to-end products** — from idea → prototype → production
-
-<br/>
-
 ## 🗂️ Selected Projects
 
-<sub>A slice of 110 repos — grouped to show the range.</sub>
+<sub>A slice of 160+ repos (117 public) — grouped to show the range.</sub>
 
 **🧩 Agents & LLM apps**
 - [`reaction-dynamics`](https://github.com/kaiser-data/reaction-dynamics) — 🥇 team-behavior analytics from live Slack reaction timing; KS-test classifier + Cognee/Qdrant knowledge graph
@@ -118,6 +123,12 @@ background:  PhD Physics → 3+ years shipping LLM systems
 - [`fraudmind`](https://github.com/kaiser-data/fraudmind) — deterministic fraud-hunting over GDPdU audit dossiers; 22 rule families + Cognee knowledge graph, "no number without a source"
 - [`carlover`](https://github.com/kaiser-data/carlover) — multi-agent automotive assistant (LangGraph + ADAC data + Featherless AI)
 - [`multi-agent-research`](https://github.com/kaiser-data/multi-agent-research) — research automation with LangGraph + Claude + SerpAPI
+
+**🔬 Evaluation & safety research**
+- [`hack-apertus-booklet-nli`](https://github.com/kaiser-data/hack-apertus-booklet-nli) — multilingual NLI with evidence: 16 retrieved passages beat the whole booklet on accuracy *and* cost; bootstrapped CIs over vote dates
+- [`do_models_have_minds`](https://github.com/kaiser-data/do_models_have_minds) — content control for preference-coherence metrics (Apart Digital Minds Sprint)
+- [`secret-localities-strategies`](https://github.com/kaiser-data/secret-localities-strategies) — activation-forensics pipeline for model organisms with hidden loyalties (Apart Secret Loyalties hackathon)
+- [`sayproof`](https://github.com/kaiser-data/sayproof) — "no source, no verdict": verbatim-quote guard on LLM fact-checking
 
 **⚡ Edge & self-hosted AI**
 - [`jetson-headless-inference`](https://github.com/kaiser-data/jetson-headless-inference) — Jetson Orin 8GB headless AI API with model switching & power management
@@ -138,7 +149,7 @@ background:  PhD Physics → 3+ years shipping LLM systems
 - `mloda-gdpdu-provenance` *(private)* — 🏅 grant-funded mloda plugins: row-level citations survive aggregation over German GDPdU tax dossiers; a number that can't be sourced isn't returned
 - [`inbox-inferno-n8n`](https://github.com/kaiser-data/inbox-inferno-n8n-community-challenge) — AI email agent with LLM-as-judge — scored **20/20**
 - [`free-llm-proxy-router`](https://github.com/kaiser-data/free-llm-proxy-router) — Go OpenAI-compatible proxy routing across free-tier providers (Groq, Gemini, OpenRouter, Cerebras…)
-- [`aws-terraform-devops-infrastructure`](https://github.com/kaiser-data/aws-terraform-devops-infrastructure) — production-grade AWS VPC architecture with Terraform IaC
+- [`aws-terraform-devops-infrastructure`](https://github.com/kaiser-data/aws-terraform-devops-infrastructure) — AWS VPC infrastructure defined with Terraform
 - [`kaiser-echo`](https://github.com/kaiser-data/kaiser-echo) — bilingual voice agent with memory (React + Cloudflare Workers)
 
 </details>
@@ -147,9 +158,9 @@ background:  PhD Physics → 3+ years shipping LLM systems
 
 ## 🤖 How I Work with Claude Code
 
-Claude Code is my daily driver. I run a **Pro subscription** and squeeze roughly **30× the usual mileage** out of it by spending tokens deliberately — pairing the agent with memory frameworks like **[claude-mem](https://github.com/thedotmack/claude-mem)** and modern agent harnesses like **[ECC](https://github.com/affaan-m/ECC)** and **[superpowers](https://github.com/obra/superpowers)** to reuse context, cut redundant re-reads, and keep long sessions cheap. Effective spend over raw spend.
+Claude Code is my daily driver. I pair it with memory frameworks like **[claude-mem](https://github.com/thedotmack/claude-mem)** and agent harnesses like **[ECC](https://github.com/affaan-m/ECC)** and **[superpowers](https://github.com/obra/superpowers)** to reuse context and cut redundant re-reads, and I measure the result instead of guessing.
 
-I instrument my own sessions with [`claude-code-langfuse-tracing`](https://github.com/kaiser-data/claude-code-langfuse-tracing), so these are real numbers from the last 30 days:
+I instrument my own sessions with [`claude-code-langfuse-tracing`](https://github.com/kaiser-data/claude-code-langfuse-tracing); these are the numbers from that tracing for 30 days up to September 2026:
 
 <div align="center">
 
@@ -215,7 +226,7 @@ I instrument my own sessions with [`claude-code-langfuse-tracing`](https://githu
 <!-- Reliable badges (always render) -->
 <img src="https://komarev.com/ghpvc/?username=kaiser-data&label=Profile+views&color=00ff88&style=for-the-badge&labelColor=0d1117" alt="Profile views" />
 <img src="https://img.shields.io/github/followers/kaiser-data?style=for-the-badge&logo=github&label=Followers&color=00ff88&labelColor=0d1117" alt="Followers" />
-<img src="https://img.shields.io/badge/Public_Repos-110-00ff88?style=for-the-badge&logo=github&labelColor=0d1117" alt="Public repos" />
+<img src="https://img.shields.io/badge/Public_Repos-117-00ff88?style=for-the-badge&logo=github&labelColor=0d1117" alt="Public repos" />
 <img src="https://img.shields.io/badge/Primary-Python_·_TypeScript_·_Go-00ff88?style=for-the-badge&logo=python&logoColor=white&labelColor=0d1117" alt="Languages" />
 
 <br/><br/>
@@ -223,16 +234,41 @@ I instrument my own sessions with [`claude-code-langfuse-tracing`](https://githu
 <!--
   All stat cards are STATIC SVGs committed to this repo (never live-rendered),
   so they can't hit the rate limits that broke the old cards:
-   - stats-card.svg : custom card, private-inclusive commits/PRs + raw stats
-     (no synthetic grade), refreshed daily by .github/workflows/stats-card.yml
+   - stats-card.svg : custom card, last 12 months incl. private: transparent grade
+     (4 x 25 pts vs fixed targets, see scripts/generate-stats-card.mjs), key figures
+     and a 52-week heatmap. Refreshed daily by .github/workflows/stats-card.yml
      (needs the STATS_TOKEN secret).
    - language donuts : github-profile-summary-cards, theme chartreuse_dark,
      refreshed daily by .github/workflows/profile-summary-cards.yml.
 -->
 
 <a href="https://github.com/kaiser-data">
-  <img width="78%" alt="Martin Kaiser — GitHub stats" src="https://raw.githubusercontent.com/kaiser-data/kaiser-data/main/assets/stats-card.svg" />
+  <img width="100%" alt="Martin Kaiser — GitHub stats: grade, breakdown, key figures and 52-week activity" src="https://raw.githubusercontent.com/kaiser-data/kaiser-data/main/assets/stats-card.svg" />
 </a>
+
+</div>
+
+<p align="center"><sub>Hover every day, change the targets and watch the grade move: <b><a href="https://kaiser-data.github.io/kaiser-data/">interactive version</a></b></sub></p>
+
+<details>
+<summary><b>How the grade is computed</b> <sub>(click to expand)</sub></summary>
+
+<br/>
+
+Four sub-scores of 25 points, each measured against a fixed target, so anyone can recompute the grade from the numbers on the card. Counts that grow multiplicatively use a log scale; active days are linear.
+
+| Sub-score | Measures | Full marks at |
+|:--|:--|:--|
+| **Output** | contributions, public + private (commits, PRs, issues, repos) | 3,000 / year |
+| **Consistency** | days with at least one contribution | 250 / year |
+| **Collaboration** | merged PRs and repos contributed to (averaged) | 100 PRs · 20 repos |
+| **Reach** | stars on own public repos + followers | 500 |
+
+Bands: **S** ≥ 90 · **A+** ≥ 80 · **A** ≥ 70 · **B+** ≥ 60 · **B** ≥ 50 · **C** below. The weakest part right now is reach (stars and followers).
+
+</details>
+
+<div align="center">
 
 <br/>
 

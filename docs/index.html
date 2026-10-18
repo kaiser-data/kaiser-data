@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Martin Kaiser · Portfolio</title>
+<meta name="description" content="Martin Kaiser — AI/ML engineer in Berlin. Selected work, hackathon results and live GitHub activity.">
+<style>
+:root{
+  --bg:#ffffff; --surface:#f6f8fa; --border:#d0d7de; --ink:#1f2328; --ink2:#59636e; --muted:#6e7781;
+  --accent:#00875a; --accent-ink:#00663f; --empty:#ebeef1; --tip:#1f2328; --tip-ink:#ffffff;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0d1117; --surface:#161b22; --border:#30363d; --ink:#e6edf3; --ink2:#c9d1d9; --muted:#8b949e;
+    --accent:#00ff88; --accent-ink:#00ff88; --empty:#1c2229; --tip:#e6edf3; --tip-ink:#0d1117;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0d1117; --surface:#161b22; --border:#30363d; --ink:#e6edf3; --ink2:#c9d1d9; --muted:#8b949e;
+  --accent:#00ff88; --accent-ink:#00ff88; --empty:#1c2229; --tip:#e6edf3; --tip-ink:#0d1117;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;overflow-x:hidden;background:var(--bg);color:var(--ink);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif}
+a{color:var(--accent-ink);text-decoration:none} a:hover{text-decoration:underline}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+header.top{padding:56px 0 28px;border-bottom:1px solid var(--border)}
+.eyebrow{font:600 12px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+h1{font-size:clamp(32px,6vw,52px);line-height:1.05;margin:14px 0 10px;letter-spacing:-.02em}
+h1 .dot{color:var(--accent)}
+.lede{font-size:clamp(17px,2.4vw,21px);color:var(--ink2);max-width:760px;margin:0 0 18px}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px;padding:0;list-style:none}
+.facts li{border:1px solid var(--border);border-radius:999px;padding:4px 12px;font-size:14px;color:var(--ink2)}
+.facts b{color:var(--ink)}
+.cta{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);border-radius:8px;padding:9px 16px;font-weight:600;font-size:15px;color:var(--ink);background:var(--surface)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#0d1117}
+.btn:hover{text-decoration:none;border-color:var(--accent)}
+section{padding:44px 0;border-bottom:1px solid var(--border)}
+h2{font-size:24px;margin:0 0 6px;letter-spacing:-.01em}
+.sub{color:var(--muted);margin:0 0 22px;font-size:15px}
+/* Selected work */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px}
+.chip{border:1px solid var(--border);background:transparent;color:var(--ink2);border-radius:999px;padding:6px 14px;font:inherit;font-size:14px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip:focus-visible,.btn:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(300px,100%),1fr));gap:14px}
+.card{border:1px solid var(--border);border-radius:12px;padding:18px;background:var(--surface);display:flex;flex-direction:column;gap:8px;transition:border-color .15s}
+.card:hover{border-color:var(--accent)}
+.card h3{margin:0;font-size:17px}
+.card .ctx{font-size:13px;color:var(--muted)}
+.card p{margin:0;font-size:14.5px;color:var(--ink2)}
+.card .proof{font:600 13px ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--accent-ink)}
+.card .links{margin-top:auto;display:flex;gap:14px;font-size:14px;font-weight:600}
+.tag{display:inline-block;font-size:12px;color:var(--muted);border:1px solid var(--border);border-radius:6px;padding:1px 7px;margin-right:4px}
+/* Activity */
+.act{display:grid;grid-template-columns:260px minmax(0,1fr);gap:28px;align-items:start}
+.act>*{min-width:0}
+@media (max-width:820px){.act{grid-template-columns:1fr}}
+.panel{border:1px solid var(--border);border-radius:12px;padding:20px;background:var(--surface)}
+.gradeWrap{display:flex;flex-direction:column;align-items:center;gap:6px}
+.gradeWrap svg{display:block}
+.gscore{font-size:14px;color:var(--muted)}
+.sliders{margin-top:14px;display:flex;flex-direction:column;gap:14px;width:100%}
+.sl label{display:flex;justify-content:space-between;font-size:13.5px;color:var(--ink2)}
+.sl label b{color:var(--ink);font-variant-numeric:tabular-nums}
+.sl .meter{height:6px;border-radius:3px;background:var(--empty);margin:6px 0 4px;overflow:hidden}
+.sl .meter i{display:block;height:100%;background:var(--accent);border-radius:3px;transition:width .25s}
+.sl input{width:100%;accent-color:var(--accent)}
+.sl .hint{font-size:12px;color:var(--muted)}
+.reset{margin-top:6px;font:inherit;font-size:13px;background:none;border:0;color:var(--accent-ink);cursor:pointer;padding:0}
+.kpis{display:grid;grid-template-columns:repeat(auto-fill,minmax(108px,1fr));gap:12px;margin-bottom:22px}
+.kpi{border:1px solid var(--border);border-radius:10px;padding:12px 14px}
+.kpi .v{font-size:26px;font-weight:800;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.kpi .l{font-size:12.5px;color:var(--muted)}
+.chartHead{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin:4px 0 10px}
+.chartHead h3{margin:0;font-size:15px}
+.toggle{font:inherit;font-size:13px;background:none;border:1px solid var(--border);border-radius:6px;color:var(--ink2);padding:3px 10px;cursor:pointer}
+.heatScroll{overflow-x:auto;padding-bottom:4px}
+#heat rect.d{shape-rendering:geometricPrecision}
+#heat rect.d:hover,#months rect.m:hover{stroke:var(--ink);stroke-width:1.5}
+.legend{display:flex;align-items:center;gap:4px;font-size:12px;color:var(--muted);justify-content:flex-end;margin-top:6px}
+.legend i{width:11px;height:11px;border-radius:2px;display:inline-block}
+.axis{font-size:11px;fill:var(--muted)}
+.tip{position:fixed;pointer-events:none;background:var(--tip);color:var(--tip-ink);font-size:13px;padding:6px 10px;border-radius:6px;white-space:nowrap;opacity:0;transform:translate(-50%,-120%);transition:opacity .08s;z-index:10}
+.tip b{font-variant-numeric:tabular-nums}
+table.data{width:100%;border-collapse:collapse;font-size:14px;margin-top:10px}
+table.data th,table.data td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--border)}
+table.data td.n{text-align:right;font-variant-numeric:tabular-nums}
+/* Awards */
+.awards{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.awards li{display:grid;grid-template-columns:110px 1fr;gap:14px;padding:10px 0;border-bottom:1px solid var(--border);font-size:15px}
+.awards .r{font-weight:700}
+.awards .r.win{color:var(--accent-ink)}
+.awards .e{color:var(--ink2)} .awards .e span{color:var(--muted);font-size:13.5px}
+footer{padding:32px 0 56px;color:var(--muted);font-size:14px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="tip" id="tip" role="tooltip"></div>
+
+<header class="top">
+  <div class="wrap">
+    <div class="eyebrow">AI/ML Engineer · Berlin</div>
+    <h1>Martin Kaiser<span class="dot">.</span></h1>
+    <p class="lede">I turn AI research into things that ship: LLM applications, agents and document pipelines, with an evaluation behind every claim.</p>
+    <ul class="facts">
+      <li><b>PhD</b> Physics</li>
+      <li><b>3+ years</b> shipping LLM systems</li>
+      <li><b>9 wins · 14 podiums</b> at hackathons, 2025–2026</li>
+      <li><b>mloda</b> open-source plugin grant</li>
+    </ul>
+    <div class="cta">
+      <a class="btn primary" href="mailto:martinkaiser.bln@gmail.com">Email me</a>
+      <a class="btn" href="https://linkedin.com/in/martin-kaiser-ai">LinkedIn</a>
+      <a class="btn" href="https://github.com/kaiser-data">GitHub</a>
+    </div>
+    <p class="sub" style="margin:18px 0 0">Open to AI/ML engineering roles, agent &amp; LLM product teams and contract work, in Berlin or remote.</p>
+  </div>
+</header>
+
+<main>
+<section>
+  <div class="wrap">
+    <h2>Selected work</h2>
+    <p class="sub">Filter by what you are hiring for. Every card links to code, a live demo or both.</p>
+    <div class="filters" id="filters" role="group" aria-label="Filter projects"></div>
+    <div class="grid" id="projects"></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>GitHub activity</h2>
+    <p class="sub" id="actSub">Last 12 months, public and private repositories.</p>
+    <div class="act">
+      <div class="panel">
+        <div class="gradeWrap">
+          <svg id="ring" width="168" height="168" viewBox="0 0 168 168" role="img" aria-label="Grade"></svg>
+          <div class="gscore">4 × 25 points against fixed targets</div>
+        </div>
+        <div class="sliders" id="sliders"></div>
+        <button class="reset" id="reset" type="button">Reset to published targets</button>
+      </div>
+      <div>
+        <div class="kpis" id="kpis"></div>
+        <div class="chartHead">
+          <h3>Contributions per day</h3>
+          <button class="toggle" id="tableToggle" type="button" aria-expanded="false">Show as table</button>
+        </div>
+        <div class="heatScroll"><svg id="heat" role="img" aria-label="Contribution heatmap, last 52 weeks"></svg></div>
+        <div class="legend">less <i data-l="0"></i><i data-l="1"></i><i data-l="2"></i><i data-l="3"></i><i data-l="4"></i> more</div>
+        <div class="chartHead" style="margin-top:24px"><h3>Contributions per month</h3></div>
+        <svg id="months" role="img" aria-label="Contributions per month" style="width:100%;height:auto"></svg>
+        <div id="tableWrap" hidden></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Hackathon results</h2>
+    <p class="sub">Placements as published by the organisers. Track wins are labelled as such.</p>
+    <ul class="awards" id="awards"></ul>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">Activity data refreshes daily from the GitHub API · <a href="https://github.com/kaiser-data/kaiser-data">source of this page</a></div>
+</footer>
+
+<script id="stats" type="application/json">{"name":"Martin Kaiser","updated":"2026-10-18","metrics":{"commits":1731,"privateContribs":1235,"contributions":3108,"issues":44,"mergedPRs":58,"mergedAllTime":66,"contributedTo":14,"followers":146,"repos":94,"stars":43,"activeDays":252,"longest":51,"last30":379,"best":{"date":"2026-08-17","contributionCount":70}},"targets":{"contributions":3000,"activeDays":250,"mergedPRs":100,"contributedTo":20,"reach":500},"grade":{"parts":[{"key":"Output","detail":"3,108 contributions","s":1,"pts":25},{"key":"Consistency","detail":"252 active days","s":1,"pts":25},{"key":"Collaboration","detail":"58 merged PRs · 14 repos","s":0.8864998778750512,"pts":22},{"key":"Reach","detail":"43 stars · 146 followers","s":0.844033542875561,"pts":21}],"total":93,"letter":"S"},"days":[{"date":"2025-10-19","contributionCount":0},{"date":"2025-10-20","contributionCount":0},{"date":"2025-10-21","contributionCount":17},{"date":"2025-10-22","contributionCount":0},{"date":"2025-10-23","contributionCount":14},{"date":"2025-10-24","contributionCount":0},{"date":"2025-10-25","contributionCount":1},{"date":"2025-10-26","contributionCount":20},{"date":"2025-10-27","contributionCount":17},{"date":"2025-10-28","contributionCount":10},{"date":"2025-10-29","contributionCount":14},{"date":"2025-10-30","contributionCount":20},{"date":"2025-10-31","contributionCount":20},{"date":"2025-11-01","contributionCount":0},{"date":"2025-11-02","contributionCount":0},{"date":"2025-11-03","contributionCount":0},{"date":"2025-11-04","contributionCount":12},{"date":"2025-11-05","contributionCount":5},{"date":"2025-11-06","contributionCount":14},{"date":"2025-11-07","contributionCount":5},{"date":"2025-11-08","contributionCount":0},{"date":"2025-11-09","contributionCount":0},{"date":"2025-11-10","contributionCount":0},{"date":"2025-11-11","contributionCount":0},{"date":"2025-11-12","contributionCount":10},{"date":"2025-11-13","contributionCount":3},{"date":"2025-11-14","contributionCount":11},{"date":"2025-11-15","contributionCount":38},{"date":"2025-11-16","contributionCount":0},{"date":"2025-11-17","contributionCount":10},{"date":"2025-11-18","contributionCount":14},{"date":"2025-11-19","contributionCount":0},{"date":"2025-11-20","contributionCount":0},{"date":"2025-11-21","contributionCount":0},{"date":"2025-11-22","contributionCount":0},{"date":"2025-11-23","contributionCount":0},{"date":"2025-11-24","contributionCount":0},{"date":"2025-11-25","contributionCount":0},{"date":"2025-11-26","contributionCount":0},{"date":"2025-11-27","contributionCount":0},{"date":"2025-11-28","contributionCount":0},{"date":"2025-11-29","contributionCount":3},{"date":"2025-11-30","contributionCount":51},{"date":"2025-12-01","contributionCount":3},{"date":"2025-12-02","contributionCount":2},{"date":"2025-12-03","contributionCount":0},{"date":"2025-12-04","contributionCount":2},{"date":"2025-12-05","contributionCount":11},{"date":"2025-12-06","contributionCount":0},{"date":"2025-12-07","contributionCount":0},{"date":"2025-12-08","contributionCount":0},{"date":"2025-12-09","contributionCount":0},{"date":"2025-12-10","contributionCount":0},{"date":"2025-12-11","contributionCount":0},{"date":"2025-12-12","contributionCount":27},{"date":"2025-12-13","contributionCount":19},{"date":"2025-12-14","contributionCount":15},{"date":"2025-12-15","contributionCount":0},{"date":"2025-12-16","contributionCount":0},{"date":"2025-12-17","contributionCount":0},{"date":"2025-12-18","contributionCount":0},{"date":"2025-12-19","contributionCount":0},{"date":"2025-12-20","contributionCount":14},{"date":"2025-12-21","contributionCount":0},{"date":"2025-12-22","contributionCount":0},{"date":"2025-12-23","contributionCount":2},{"date":"2025-12-24","contributionCount":9},{"date":"2025-12-25","contributionCount":4},{"date":"2025-12-26","contributionCount":3},{"date":"2025-12-27","contributionCount":0},{"date":"2025-12-28","contributionCount":0},{"date":"2025-12-29","contributionCount":0},{"date":"2025-12-30","contributionCount":1},{"date":"2025-12-31","contributionCount":1},{"date":"2026-01-01","contributionCount":3},{"date":"2026-01-02","contributionCount":0},{"date":"2026-01-03","contributionCount":0},{"date":"2026-01-04","contributionCount":0},{"date":"2026-01-05","contributionCount":0},{"date":"2026-01-06","contributionCount":1},{"date":"2026-01-07","contributionCount":0},{"date":"2026-01-08","contributionCount":1},{"date":"2026-01-09","contributionCount":0},{"date":"2026-01-10","contributionCount":0},{"date":"2026-01-11","contributionCount":1},{"date":"2026-01-12","contributionCount":0},{"date":"2026-01-13","contributionCount":0},{"date":"2026-01-14","contributionCount":0},{"date":"2026-01-15","contributionCount":0},{"date":"2026-01-16","contributionCount":0},{"date":"2026-01-17","contributionCount":0},{"date":"2026-01-18","contributionCount":0},{"date":"2026-01-19","contributionCount":0},{"date":"2026-01-20","contributionCount":0},{"date":"2026-01-21","contributionCount":0},{"date":"2026-01-22","contributionCount":0},{"date":"2026-01-23","contributionCount":0},{"date":"2026-01-24","contributionCount":0},{"date":"2026-01-25","contributionCount":33},{"date":"2026-01-26","contributionCount":6},{"date":"2026-01-27","contributionCount":12},{"date":"2026-01-28","contributionCount":14},{"date":"2026-01-29","contributionCount":14},{"date":"2026-01-30","contributionCount":8},{"date":"2026-01-31","contributionCount":2},{"date":"2026-02-01","contributionCount":2},{"date":"2026-02-02","contributionCount":8},{"date":"2026-02-03","contributionCount":16},{"date":"2026-02-04","contributionCount":12},{"date":"2026-02-05","contributionCount":16},{"date":"2026-02-06","contributionCount":20},{"date":"2026-02-07","contributionCount":0},{"date":"2026-02-08","contributionCount":0},{"date":"2026-02-09","contributionCount":2},{"date":"2026-02-10","contributionCount":0},{"date":"2026-02-11","contributionCount":0},{"date":"2026-02-12","contributionCount":4},{"date":"2026-02-13","contributionCount":20},{"date":"2026-02-14","contributionCount":2},{"date":"2026-02-15","contributionCount":0},{"date":"2026-02-16","contributionCount":0},{"date":"2026-02-17","contributionCount":2},{"date":"2026-02-18","contributionCount":0},{"date":"2026-02-19","contributionCount":0},{"date":"2026-02-20","contributionCount":5},{"date":"2026-02-21","contributionCount":0},{"date":"2026-02-22","contributionCount":7},{"date":"2026-02-23","contributionCount":6},{"date":"2026-02-24","contributionCount":0},{"date":"2026-02-25","contributionCount":4},{"date":"2026-02-26","contributionCount":5},{"date":"2026-02-27","contributionCount":0},{"date":"2026-02-28","contributionCount":16},{"date":"2026-03-01","contributionCount":2},{"date":"2026-03-02","contributionCount":17},{"date":"2026-03-03","contributionCount":26},{"date":"2026-03-04","contributionCount":22},{"date":"2026-03-05","contributionCount":23},{"date":"2026-03-06","contributionCount":11},{"date":"2026-03-07","contributionCount":0},{"date":"2026-03-08","contributionCount":0},{"date":"2026-03-09","contributionCount":5},{"date":"2026-03-10","contributionCount":2},{"date":"2026-03-11","contributionCount":12},{"date":"2026-03-12","contributionCount":4},{"date":"2026-03-13","contributionCount":24},{"date":"2026-03-14","contributionCount":2},{"date":"2026-03-15","contributionCount":15},{"date":"2026-03-16","contributionCount":16},{"date":"2026-03-17","contributionCount":0},{"date":"2026-03-18","contributionCount":0},{"date":"2026-03-19","contributionCount":0},{"date":"2026-03-20","contributionCount":1},{"date":"2026-03-21","contributionCount":0},{"date":"2026-03-22","contributionCount":0},{"date":"2026-03-23","contributionCount":12},{"date":"2026-03-24","contributionCount":0},{"date":"2026-03-25","contributionCount":0},{"date":"2026-03-26","contributionCount":0},{"date":"2026-03-27","contributionCount":2},{"date":"2026-03-28","contributionCount":0},{"date":"2026-03-29","contributionCount":0},{"date":"2026-03-30","contributionCount":6},{"date":"2026-03-31","contributionCount":0},{"date":"2026-04-01","contributionCount":0},{"date":"2026-04-02","contributionCount":0},{"date":"2026-04-03","contributionCount":1},{"date":"2026-04-04","contributionCount":6},{"date":"2026-04-05","contributionCount":24},{"date":"2026-04-06","contributionCount":0},{"date":"2026-04-07","contributionCount":18},{"date":"2026-04-08","contributionCount":14},{"date":"2026-04-09","contributionCount":3},{"date":"2026-04-10","contributionCount":7},{"date":"2026-04-11","contributionCount":28},{"date":"2026-04-12","contributionCount":0},{"date":"2026-04-13","contributionCount":1},{"date":"2026-04-14","contributionCount":0},{"date":"2026-04-15","contributionCount":0},{"date":"2026-04-16","contributionCount":0},{"date":"2026-04-17","contributionCount":20},{"date":"2026-04-18","contributionCount":20},{"date":"2026-04-19","contributionCount":5},{"date":"2026-04-20","contributionCount":4},{"date":"2026-04-21","contributionCount":8},{"date":"2026-04-22","contributionCount":0},{"date":"2026-04-23","contributionCount":0},{"date":"2026-04-24","contributionCount":0},{"date":"2026-04-25","contributionCount":0},{"date":"2026-04-26","contributionCount":0},{"date":"2026-04-27","contributionCount":0},{"date":"2026-04-28","contributionCount":1},{"date":"2026-04-29","contributionCount":3},{"date":"2026-04-30","contributionCount":0},{"date":"2026-05-01","contributionCount":0},{"date":"2026-05-02","contributionCount":9},{"date":"2026-05-03","contributionCount":9},{"date":"2026-05-04","contributionCount":1},{"date":"2026-05-05","contributionCount":16},{"date":"2026-05-06","contributionCount":10},{"date":"2026-05-07","contributionCount":0},{"date":"2026-05-08","contributionCount":14},{"date":"2026-05-09","contributionCount":17},{"date":"2026-05-10","contributionCount":0},{"date":"2026-05-11","contributionCount":0},{"date":"2026-05-12","contributionCount":8},{"date":"2026-05-13","contributionCount":6},{"date":"2026-05-14","contributionCount":1},{"date":"2026-05-15","contributionCount":17},{"date":"2026-05-16","contributionCount":29},{"date":"2026-05-17","contributionCount":6},{"date":"2026-05-18","contributionCount":10},{"date":"2026-05-19","contributionCount":7},{"date":"2026-05-20","contributionCount":2},{"date":"2026-05-21","contributionCount":9},{"date":"2026-05-22","contributionCount":8},{"date":"2026-05-23","contributionCount":9},{"date":"2026-05-24","contributionCount":12},{"date":"2026-05-25","contributionCount":4},{"date":"2026-05-26","contributionCount":9},{"date":"2026-05-27","contributionCount":0},{"date":"2026-05-28","contributionCount":7},{"date":"2026-05-29","contributionCount":24},{"date":"2026-05-30","contributionCount":7},{"date":"2026-05-31","contributionCount":36},{"date":"2026-06-01","contributionCount":0},{"date":"2026-06-02","contributionCount":13},{"date":"2026-06-03","contributionCount":9},{"date":"2026-06-04","contributionCount":1},{"date":"2026-06-05","contributionCount":7},{"date":"2026-06-06","contributionCount":7},{"date":"2026-06-07","contributionCount":2},{"date":"2026-06-08","contributionCount":11},{"date":"2026-06-09","contributionCount":13},{"date":"2026-06-10","contributionCount":11},{"date":"2026-06-11","contributionCount":12},{"date":"2026-06-12","contributionCount":3},{"date":"2026-06-13","contributionCount":14},{"date":"2026-06-14","contributionCount":3},{"date":"2026-06-15","contributionCount":44},{"date":"2026-06-16","contributionCount":7},{"date":"2026-06-17","contributionCount":2},{"date":"2026-06-18","contributionCount":0},{"date":"2026-06-19","contributionCount":13},{"date":"2026-06-20","contributionCount":31},{"date":"2026-06-21","contributionCount":24},{"date":"2026-06-22","contributionCount":0},{"date":"2026-06-23","contributionCount":1},{"date":"2026-06-24","contributionCount":1},{"date":"2026-06-25","contributionCount":0},{"date":"2026-06-26","contributionCount":0},{"date":"2026-06-27","contributionCount":15},{"date":"2026-06-28","contributionCount":21},{"date":"2026-06-29","contributionCount":3},{"date":"2026-06-30","contributionCount":0},{"date":"2026-07-01","contributionCount":2},{"date":"2026-07-02","contributionCount":4},{"date":"2026-07-03","contributionCount":12},{"date":"2026-07-04","contributionCount":3},{"date":"2026-07-05","contributionCount":4},{"date":"2026-07-06","contributionCount":0},{"date":"2026-07-07","contributionCount":15},{"date":"2026-07-08","contributionCount":12},{"date":"2026-07-09","contributionCount":18},{"date":"2026-07-10","contributionCount":20},{"date":"2026-07-11","contributionCount":35},{"date":"2026-07-12","contributionCount":8},{"date":"2026-07-13","contributionCount":8},{"date":"2026-07-14","contributionCount":0},{"date":"2026-07-15","contributionCount":7},{"date":"2026-07-16","contributionCount":7},{"date":"2026-07-17","contributionCount":0},{"date":"2026-07-18","contributionCount":19},{"date":"2026-07-19","contributionCount":7},{"date":"2026-07-20","contributionCount":21},{"date":"2026-07-21","contributionCount":9},{"date":"2026-07-22","contributionCount":7},{"date":"2026-07-23","contributionCount":15},{"date":"2026-07-24","contributionCount":17},{"date":"2026-07-25","contributionCount":41},{"date":"2026-07-26","contributionCount":45},{"date":"2026-07-27","contributionCount":13},{"date":"2026-07-28","contributionCount":23},{"date":"2026-07-29","contributionCount":33},{"date":"2026-07-30","contributionCount":24},{"date":"2026-07-31","contributionCount":45},{"date":"2026-08-01","contributionCount":47},{"date":"2026-08-02","contributionCount":49},{"date":"2026-08-03","contributionCount":15},{"date":"2026-08-04","contributionCount":19},{"date":"2026-08-05","contributionCount":2},{"date":"2026-08-06","contributionCount":6},{"date":"2026-08-07","contributionCount":9},{"date":"2026-08-08","contributionCount":25},{"date":"2026-08-09","contributionCount":14},{"date":"2026-08-10","contributionCount":9},{"date":"2026-08-11","contributionCount":6},{"date":"2026-08-12","contributionCount":8},{"date":"2026-08-13","contributionCount":8},{"date":"2026-08-14","contributionCount":10},{"date":"2026-08-15","contributionCount":28},{"date":"2026-08-16","contributionCount":60},{"date":"2026-08-17","contributionCount":70},{"date":"2026-08-18","contributionCount":3},{"date":"2026-08-19","contributionCount":2},{"date":"2026-08-20","contributionCount":4},{"date":"2026-08-21","contributionCount":2},{"date":"2026-08-22","contributionCount":1},{"date":"2026-08-23","contributionCount":8},{"date":"2026-08-24","contributionCount":11},{"date":"2026-08-25","contributionCount":1},{"date":"2026-08-26","contributionCount":0},{"date":"2026-08-27","contributionCount":12},{"date":"2026-08-28","contributionCount":19},{"date":"2026-08-29","contributionCount":10},{"date":"2026-08-30","contributionCount":13},{"date":"2026-08-31","contributionCount":3},{"date":"2026-09-01","contributionCount":1},{"date":"2026-09-02","contributionCount":5},{"date":"2026-09-03","contributionCount":1},{"date":"2026-09-04","contributionCount":3},{"date":"2026-09-05","contributionCount":5},{"date":"2026-09-06","contributionCount":2},{"date":"2026-09-07","contributionCount":11},{"date":"2026-09-08","contributionCount":5},{"date":"2026-09-09","contributionCount":4},{"date":"2026-09-10","contributionCount":6},{"date":"2026-09-11","contributionCount":8},{"date":"2026-09-12","contributionCount":25},{"date":"2026-09-13","contributionCount":37},{"date":"2026-09-14","contributionCount":1},{"date":"2026-09-15","contributionCount":5},{"date":"2026-09-16","contributionCount":37},{"date":"2026-09-17","contributionCount":6},{"date":"2026-09-18","contributionCount":13},{"date":"2026-09-19","contributionCount":2},{"date":"2026-09-20","contributionCount":3},{"date":"2026-09-21","contributionCount":28},{"date":"2026-09-22","contributionCount":16},{"date":"2026-09-23","contributionCount":1},{"date":"2026-09-24","contributionCount":1},{"date":"2026-09-25","contributionCount":39},{"date":"2026-09-26","contributionCount":34},{"date":"2026-09-27","contributionCount":8},{"date":"2026-09-28","contributionCount":4},{"date":"2026-09-29","contributionCount":18},{"date":"2026-09-30","contributionCount":4},{"date":"2026-10-01","contributionCount":33},{"date":"2026-10-02","contributionCount":4},{"date":"2026-10-03","contributionCount":21},{"date":"2026-10-04","contributionCount":2},{"date":"2026-10-05","contributionCount":4},{"date":"2026-10-06","contributionCount":7},{"date":"2026-10-07","contributionCount":11},{"date":"2026-10-08","contributionCount":16},{"date":"2026-10-09","contributionCount":11},{"date":"2026-10-10","contributionCount":3},{"date":"2026-10-11","contributionCount":7},{"date":"2026-10-12","contributionCount":22},{"date":"2026-10-13","contributionCount":11},{"date":"2026-10-14","contributionCount":3},{"date":"2026-10-15","contributionCount":26},{"date":"2026-10-16","contributionCount":6},{"date":"2026-10-17","contributionCount":0},{"date":"2026-10-18","contributionCount":34}]}</script>
+<script>
+const PROJECTS = [
+  {t:"Büchli", ctx:"Hack Apertus 2026 · Track 2A", tags:["research","eval"], d:"Checks campaign claims against the official Swiss voting booklet in German, French and Italian with Apertus 70B, quoting the sentences it relied on.", proof:"0.930 macro-F1 · 976 held-out claims · 1/9 of the tokens", code:"https://github.com/kaiser-data/hack-apertus-booklet-nli"},
+  {t:"Sayproof", ctx:"Nebius × NVIDIA Global AI Hackathon", tags:["live","agents","eval"], d:"Fact-checks a talk before the audience does. A quote guard drops any verdict whose evidence is not verbatim in the source.", proof:"no source, no verdict", code:"https://github.com/kaiser-data/sayproof", live:"https://sayproof.vercel.app"},
+  {t:"reaction-dynamics", ctx:"1st place · Cognee × Qdrant Hack Night", tags:["win","live","agents"], d:"Team-behaviour analytics from live Slack reaction timing: KS-test classifier plus a Cognee/Qdrant knowledge graph. Solo entry.", proof:"1st place, solo", code:"https://github.com/kaiser-data/reaction-dynamics", live:"https://reaction-dynamics-berlin.netlify.app"},
+  {t:"Soteria", ctx:"3rd place · Collaborative Agent Hackathon, Flower Labs", tags:["win","agents"], d:"Federated multi-party incident response. Parties answer with traffic lights, never raw values; two-key human approval, chained receipts.", proof:"3rd place", code:"https://github.com/kaiser-data/Soteria", live:"https://soteria-monad-rho.vercel.app"},
+  {t:"fraudmind", ctx:"GDPdU audit dossiers", tags:["live","agents","eval"], d:"Deterministic fraud hunting with 22 rule families, cross-checked against a Cognee knowledge graph, with constrained AI explanations.", proof:"no number without a source", code:"https://github.com/kaiser-data/fraudmind", live:"https://fraudmind.netlify.app"},
+  {t:"mloda-gdpdu-provenance", ctx:"mloda plugin grant · Sept 2026", tags:["win","oss"], d:"Provenance-carrying aggregation: a total that names its rows, or no total. Follow-up PR to the official mloda registry is open.", proof:"grant winner", code:"https://github.com/mloda-ai/mloda-registry/pulls?q=author%3Akaiser-data"},
+  {t:"Coherence Without Content", ctx:"Apart Research · Digital Minds Sprint", tags:["research","eval"], d:"Replace every outcome in a values benchmark with an invented word and the coherence score barely moves: a missing control for LLM preference metrics.", proof:"negative control", code:"https://github.com/kaiser-data/do_models_have_minds"},
+  {t:"kitsune-mcp", ctx:"Claude Code tooling", tags:["oss","agents"], d:"MCP hub that shapeshift()s into servers from a 10,000+ catalogue at runtime: one entry point, no restarts.", proof:"one entry point", code:"https://github.com/kaiser-data/kitsune-mcp"},
+  {t:"claude-code-langfuse-tracing", ctx:"Observability", tags:["oss"], d:"A Stop hook replays Claude Code transcripts into Langfuse as backdated, session-grouped traces with token and cost data. Fail-open by design.", proof:"zero-intrusion", code:"https://github.com/kaiser-data/claude-code-langfuse-tracing"},
+  {t:"jetson-headless-inference", ctx:"Edge AI", tags:["edge"], d:"Headless AI API on a Jetson Orin 8GB with model switching and power management, reachable across a private Tailscale mesh.", proof:"8 GB edge box", code:"https://github.com/kaiser-data/jetson-headless-inference"},
+  {t:"hot-repos", ctx:"GitHub landscape analyser", tags:["live"], d:"Surfaces trends across a corpus of starred repositories: topics, momentum and gaps.", proof:"live", live:"https://hot-repos.netlify.app/"},
+  {t:"featherless-bench", ctx:"Benchmarking", tags:["eval"], d:"Systematic LLM benchmarking with DeepEval: Pareto frontier, Vision Arena, 19 text models.", proof:"19 models", code:"https://github.com/kaiser-data/featherless-bench"},
+];
+const FILTERS = [["all","All"],["win","Awards"],["live","Live demos"],["eval","Evaluation"],["research","Research"],["agents","Agents & LLM apps"],["oss","Open source"],["edge","Edge AI"]];
+const AWARDS = [
+  ["1st","Cognee × Qdrant Hack Night, Berlin","2026 · reaction-dynamics, solo"],
+  ["1st","Agentic FinAI Hackathon, Berlin","2026 · Dify Open Track"],
+  ["Track win","AI Agents Hackathon, Berlin","2026 · Blockchain for Good Alliance bonus track"],
+  ["2nd","AI Builders Open Claw Hackathon","2026"],
+  ["3rd","Collaborative Agent Hackathon, Flower Labs","2026 · Soteria"],
+  ["3rd","Needle Hackathon","2026 · Main track"],
+  ["1st","ElevenLabs Hackathon","2025 · n8n category"],
+  ["1st","NEAR AI Hackathon","2025 · Shade AI agent"],
+  ["1st","AI Hardcore Hackathon","2025 · LLM prediction"],
+  ["1st","Masterschool Hackathon","2025 · SMS service"],
+  ["2nd","Distributed AI Hack Berlin","2025 · Open track"],
+  ["2nd","IronHack DevOps Hackashow","2025 · DevOps"],
+];
+
+const $ = (s) => document.querySelector(s);
+const NS = "http://www.w3.org/2000/svg";
+const el = (tag, attrs = {}, parent) => { const n = document.createElementNS(NS, tag); for (const k in attrs) n.setAttribute(k, attrs[k]); parent && parent.appendChild(n); return n; };
+const fmt = (n) => n.toLocaleString("en-US");
+const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const longDate = (iso) => { const d = new Date(iso + "T00:00:00Z"); return d.toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short", year: "numeric", timeZone: "UTC" }); };
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+// ---------- Projects ----------
+let active = "all";
+function renderFilters() {
+  $("#filters").innerHTML = FILTERS.map(([k, l]) => `<button class="chip" type="button" data-k="${k}" aria-pressed="${k === active}">${l}</button>`).join("");
+}
+function renderProjects() {
+  const list = PROJECTS.filter((p) => active === "all" || p.tags.includes(active));
+  $("#projects").innerHTML = list.map((p) => `
+    <article class="card">
+      <h3>${esc(p.t)}</h3>
+      <div class="ctx">${esc(p.ctx)}</div>
+      <p>${esc(p.d)}</p>
+      <div class="proof">${esc(p.proof)}</div>
+      <div class="links">${p.live ? `<a href="${p.live}">Live demo →</a>` : ""}${p.code ? `<a href="${p.code}">Code →</a>` : ""}</div>
+    </article>`).join("");
+}
+$("#filters").addEventListener("click", (e) => {
+  const b = e.target.closest(".chip"); if (!b) return;
+  active = b.dataset.k; renderFilters(); renderProjects();
+});
+
+// ---------- Awards ----------
+$("#awards").innerHTML = AWARDS.map(([r, e, s]) => `<li><span class="r ${r === "1st" || r === "Track win" ? "win" : ""}">${r}</span><span class="e">${esc(e)}<br><span>${esc(s)}</span></span></li>`).join("");
+
+// ---------- Activity ----------
+const tip = $("#tip");
+function showTip(html, x, y) { tip.innerHTML = html; tip.style.left = x + "px"; tip.style.top = y + "px"; tip.style.opacity = 1; }
+function hideTip() { tip.style.opacity = 0; }
+
+const logScore = (x, t) => Math.min(1, Math.log1p(x) / Math.log1p(t));
+const BANDS = [[90, "S"], [80, "A+"], [70, "A"], [60, "B+"], [50, "B"], [0, "C"]];
+let S, targets, published;
+
+function parts() {
+  const m = S.metrics;
+  return [
+    { k: "Output", d: `${fmt(m.contributions)} contributions`, s: logScore(m.contributions, targets.contributions), slider: ["contributions", 250, 8000, 50, "contributions / year"] },
+    { k: "Consistency", d: `${m.activeDays} active days`, s: Math.min(1, m.activeDays / targets.activeDays), slider: ["activeDays", 60, 365, 5, "active days / year"] },
+    { k: "Collaboration", d: `${m.mergedPRs} merged PRs · ${m.contributedTo} repos`, s: (logScore(m.mergedPRs, targets.mergedPRs) + logScore(m.contributedTo, targets.contributedTo)) / 2, slider: ["mergedPRs", 10, 500, 10, "merged PRs / year"] },
+    { k: "Reach", d: `${m.stars} stars · ${m.followers} followers`, s: logScore(m.stars + m.followers, targets.reach), slider: ["reach", 50, 5000, 50, "stars + followers"] },
+  ].map((p) => ({ ...p, pts: Math.floor(p.s * 25) }));
+}
+
+function renderGrade() {
+  const ps = parts(), total = ps.reduce((a, p) => a + p.pts, 0), letter = BANDS.find(([m]) => total >= m)[1];
+  const svg = $("#ring"); svg.innerHTML = "";
+  const r = 66, c = 2 * Math.PI * r;
+  el("circle", { cx: 84, cy: 84, r, fill: "none", stroke: "var(--empty)", "stroke-width": 10 }, svg);
+  el("circle", { cx: 84, cy: 84, r, fill: "none", stroke: "var(--accent)", "stroke-width": 10, "stroke-linecap": "round", "stroke-dasharray": c.toFixed(1), "stroke-dashoffset": (c * (1 - total / 100)).toFixed(1), transform: "rotate(-90 84 84)", style: "transition:stroke-dashoffset .4s" }, svg);
+  const t1 = el("text", { x: 84, y: 92, "text-anchor": "middle", "font-size": 46, "font-weight": 800, fill: "var(--accent-ink)" }, svg); t1.textContent = letter;
+  const t2 = el("text", { x: 84, y: 116, "text-anchor": "middle", "font-size": 14, "font-weight": 700, fill: "var(--ink2)" }, svg); t2.textContent = `${total} / 100`;
+  svg.setAttribute("aria-label", `Grade ${letter}, ${total} of 100`);
+  $("#sliders").innerHTML = ps.map((p) => {
+    const [key, min, max, step, unit] = p.slider;
+    return `<div class="sl">
+      <label for="sl-${key}">${p.k}<b>${p.pts}/25</b></label>
+      <div class="meter"><i style="width:${(p.s * 100).toFixed(1)}%"></i></div>
+      <input id="sl-${key}" type="range" min="${min}" max="${max}" step="${step}" value="${targets[key]}" data-key="${key}" aria-describedby="h-${key}">
+      <div class="hint" id="h-${key}">${esc(p.d)} · full marks at <b>${fmt(targets[key])}</b> ${unit}</div>
+    </div>`;
+  }).join("");
+}
+$("#sliders").addEventListener("input", (e) => {
+  const k = e.target.dataset.key; if (!k) return;
+  targets[k] = +e.target.value;
+  if (k === "mergedPRs") targets.contributedTo = Math.max(5, Math.round(targets.mergedPRs / 5));
+  const id = e.target.id; renderGrade(); const n = document.getElementById(id); n && n.focus();
+});
+$("#reset").addEventListener("click", () => { targets = { ...published }; renderGrade(); });
+
+function renderKpis() {
+  const m = S.metrics;
+  const k = [[fmt(m.contributions), "contributions"], [fmt(m.commits), "public commits"], [fmt(m.privateContribs), "private contributions"], [m.activeDays, "active days"], [m.longest + " d", "longest streak"], [m.mergedPRs, "merged PRs"]];
+  $("#kpis").innerHTML = k.map(([v, l]) => `<div class="kpi"><div class="v">${v}</div><div class="l">${l}</div></div>`).join("");
+  $("#actSub").textContent = `Last 12 months, public and private repositories · updated ${longDate(S.updated)}`;
+}
+
+function levelOf(c, max) { return c === 0 ? 0 : Math.max(1, Math.ceil(Math.sqrt(c / max) * 4)); }
+const OPAC = [0, .28, .52, .76, 1];
+function fillFor(l) { return l ? "var(--accent)" : "var(--empty)"; }
+document.querySelectorAll(".legend i").forEach((i) => { const l = +i.dataset.l; i.style.background = fillFor(l); i.style.opacity = l ? OPAC[l] : 1; });
+
+function renderHeat() {
+  const days = S.days, max = Math.max(1, ...days.map((d) => d.contributionCount));
+  const cell = 12, gap = 3, left = 28, top = 18;
+  const first = new Date(days[0].date + "T00:00:00Z"), offset = first.getUTCDay();
+  const weeks = Math.ceil((days.length + offset) / 7);
+  const svg = $("#heat"); svg.innerHTML = "";
+  const W = left + weeks * (cell + gap), H = top + 7 * (cell + gap);
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`); svg.setAttribute("width", W); svg.setAttribute("height", H);
+  ["Mon", "Wed", "Fri"].forEach((d, i) => { const t = el("text", { x: 0, y: top + (1 + i * 2) * (cell + gap) + 9, class: "axis" }, svg); t.textContent = d; });
+  let lastMonth = -1;
+  days.forEach((d, i) => {
+    const idx = i + offset, w = Math.floor(idx / 7), dow = idx % 7, x = left + w * (cell + gap), y = top + dow * (cell + gap);
+    const mo = +d.date.slice(5, 7) - 1;
+    if (dow === 0 && mo !== lastMonth) { lastMonth = mo; const t = el("text", { x, y: 11, class: "axis" }, svg); t.textContent = MONTHS[mo]; }
+    const l = levelOf(d.contributionCount, max);
+    const r = el("rect", { x, y, width: cell, height: cell, rx: 2.5, class: "d", fill: fillFor(l), "fill-opacity": l ? OPAC[l] : 1, tabindex: -1 }, svg);
+    r.dataset.i = i;
+  });
+  svg.onmousemove = (e) => {
+    const i = e.target.dataset && e.target.dataset.i; if (i === undefined) return hideTip();
+    const d = S.days[i], b = e.target.getBoundingClientRect();
+    showTip(`<b>${d.contributionCount}</b> contribution${d.contributionCount === 1 ? "" : "s"} · ${longDate(d.date)}`, b.left + b.width / 2, b.top);
+  };
+  svg.onmouseleave = hideTip;
+}
+
+function monthly() {
+  const map = new Map();
+  for (const d of S.days) { const k = d.date.slice(0, 7); map.set(k, (map.get(k) || 0) + d.contributionCount); }
+  return [...map.entries()];
+}
+function renderMonths() {
+  const data = monthly(), max = Math.max(...data.map(([, v]) => v));
+  const W = 760, H = 200, left = 36, bottom = 24, top = 10, bw = (W - left) / data.length;
+  const svg = $("#months"); svg.innerHTML = ""; svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  const y = (v) => top + (H - top - bottom) * (1 - v / max);
+  const step = Math.pow(10, Math.floor(Math.log10(max))) * (max / Math.pow(10, Math.floor(Math.log10(max))) > 4 ? 1 : .5);
+  for (let v = 0; v <= max; v += step) {
+    el("line", { x1: left, x2: W, y1: y(v), y2: y(v), stroke: "var(--border)", "stroke-width": v ? .5 : 1 }, svg);
+    const t = el("text", { x: left - 6, y: y(v) + 4, "text-anchor": "end", class: "axis" }, svg); t.textContent = v;
+  }
+  data.forEach(([k, v], i) => {
+    const x = left + i * bw + 2, w = bw - 4, h = Math.max(0, H - bottom - y(v));
+    // rounded data-end only, anchored to the baseline
+    const r = Math.min(4, w / 2, h);
+    const yy = H - bottom - h;
+    el("path", { d: `M${x},${H - bottom}V${yy + r}Q${x},${yy} ${x + r},${yy}H${x + w - r}Q${x + w},${yy} ${x + w},${yy + r}V${H - bottom}Z`, fill: "var(--accent)", "fill-opacity": .85 }, svg);
+    const hit = el("rect", { x: left + i * bw, y: top, width: bw, height: H - top - bottom, fill: "transparent", class: "m" }, svg);
+    hit.dataset.k = k; hit.dataset.v = v;
+    const t = el("text", { x: x + w / 2, y: H - 8, "text-anchor": "middle", class: "axis" }, svg); t.textContent = MONTHS[+k.slice(5) - 1];
+  });
+  svg.onmousemove = (e) => {
+    const t = e.target; if (!t.dataset || !t.dataset.k) return hideTip();
+    const b = t.getBoundingClientRect(), [yy, mm] = t.dataset.k.split("-");
+    showTip(`<b>${fmt(+t.dataset.v)}</b> contributions · ${MONTHS[+mm - 1]} ${yy}`, b.left + b.width / 2, e.clientY - 6);
+  };
+  svg.onmouseleave = hideTip;
+}
+
+function renderTable() {
+  const rows = monthly().map(([k, v]) => `<tr><td>${MONTHS[+k.slice(5) - 1]} ${k.slice(0, 4)}</td><td class="n">${fmt(v)}</td></tr>`).join("");
+  $("#tableWrap").innerHTML = `<table class="data"><thead><tr><th>Month</th><th class="n" style="text-align:right">Contributions</th></tr></thead><tbody>${rows}</tbody></table>`;
+}
+$("#tableToggle").addEventListener("click", (e) => {
+  const w = $("#tableWrap"), open = w.hidden; w.hidden = !open;
+  e.target.setAttribute("aria-expanded", open); e.target.textContent = open ? "Hide table" : "Show as table";
+});
+
+function boot(data) {
+  S = data; published = { ...data.targets }; targets = { ...published };
+  renderGrade(); renderKpis(); renderHeat(); renderMonths(); renderTable();
+}
+renderFilters(); renderProjects();
+boot(JSON.parse(document.getElementById("stats").textContent));
+// On GitHub Pages, pick up the daily refresh written next to this page.
+fetch("stats.json", { cache: "no-store" }).then((r) => (r.ok ? r.json() : null)).then((d) => d && d.updated > S.updated && boot(d)).catch(() => {});
+</script>
+</body>
+</html>

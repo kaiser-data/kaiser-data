@@ -21,11 +21,13 @@ jobs:
         env:
           STATS_TOKEN: ${{ secrets.STATS_TOKEN }}
           GH_USER: ${{ github.repository_owner }}
-        run: node scripts/generate-stats-card.mjs --user "${GH_USER}" --out assets/stats-card.svg
+        run: |
+          node scripts/generate-stats-card.mjs --user "${GH_USER}" --out assets/stats-card.svg --json docs/stats.json
+          node scripts/inline-stats.mjs
       - name: Commit refreshed card
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/stats-card.svg
-          git diff --staged --quiet || git commit -m "chore: refresh stats grade card [skip ci]"
+          git add assets/stats-card.svg docs/stats.json docs/index.html
+          git diff --staged --quiet || git commit -m "chore: refresh stats card and portfolio data [skip ci]"
           git push
