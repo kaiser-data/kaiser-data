@@ -128,6 +128,12 @@ async function main() {
     }),
   });
   const json = await res.json();
+  // An expired or revoked PAT returns 401 {"message":"Bad credentials"} with no `data`.
+  if (!res.ok || !json.data) {
+    throw new Error(
+      `GitHub API ${res.status}: ${json.message || JSON.stringify(json)} — renew the STATS_TOKEN secret`,
+    );
+  }
   if (json.errors) throw new Error(JSON.stringify(json.errors));
   const u = json.data.user;
 

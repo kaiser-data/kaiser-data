@@ -8,9 +8,9 @@
 
 <br/>
 
-| 🏆 **7 wins · 13 podiums** | 🔬 **Top 10%** | 🌸 **Grant winner** | 📈 **0.930 macro-F1** |
+| 🏆 **7 wins · 13 podiums** | 🔬 **Top 10%** | 💰 **Grant winner** | 📈 **0.930 macro-F1** |
 |:--:|:--:|:--:|:--:|
-| hackathons, 2025–2026 | Apart Research sprint, 230+ projects | mloda open-source plugin grant | Büchli, 976 held-out claims |
+| hackathons 2025–2026 · **15 top finishes** | Apart Research sprint, 230+ projects | mloda open-source plugin grant | Büchli, 976 held-out claims |
 
 <a href="https://linkedin.com/in/martin-kaiser-ai">
   <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0d1117" alt="LinkedIn" />
@@ -45,11 +45,11 @@
 
 <div align="center">
 
-**7 wins · 13 podiums · 2025–2026** — only 1st places and track wins count as wins
+**7 wins · 13 podiums · 15 top finishes · 2025–2026**
 
 </div>
 
-### 2026 — 3 wins · 7 podiums
+### 2026 — 3 wins · 7 podiums · 9 top finishes
 
 | Result | Event | Project / Track |
 |:--|:--|:--|
@@ -60,16 +60,15 @@
 | 🥈 **2nd place** | **AI Builders Open Claw Hackathon** | Open Claw |
 | 🥉 **3rd place** | **[Collaborative Agent Hackathon](https://github.com/kaiser-data/Soteria)** · Flower Labs, Berlin | *[Soteria](https://github.com/kaiser-data/Soteria)* — privacy-preserving multi-party incident response |
 | 🥉 **3rd place** | **Needle Hackathon** | Main Track |
-| 4️⃣ **4th · Runner-up** | **Superchat × Needle AI Builder Event** | Salesbot |
-
-<sub>Also in 2026: Top-7 finalist — Cognee AI-Memory Hackathon</sub>
+| 🏅 **Runner-up · 4th place** | **Superchat × Needle AI Builder Event** | Salesbot |
+| 🏅 **Top-7 finalist** | **Cognee AI-Memory Hackathon** | Finals |
 
 ### Research & grants
 
 | Result | Programme | Project |
 |:--|:--|:--|
 | 🏅 **Top 10%** of 230+ | **[Apart](https://apartresearch.com) AI Incident Response Sprint** · Containment · Sept 2026 | *GLiNER2 as a fast action classifier for agent monitoring* *(private)* |
-| 🌸 **Grant winner** | **[mloda](https://mloda.ai) monthly plugin grant** · Sept 2026 | *mloda-gdpdu-provenance* *(private)* — a total that names its rows, or no total |
+| 💰 **Grant winner** | **[mloda](https://mloda.ai) monthly plugin grant** · Sept 2026 | *mloda-gdpdu-provenance* *(private)* — a total that names its rows, or no total |
 | 📝 Submitted | **Apart AI Collusion Sprint** · Track 2 · Oct 2026 | *[auditing-llm-pricing-agents](https://github.com/kaiser-data/auditing-llm-pricing-agents)* — legal price rules mimic the punish-and-recover pattern collusion audits look for |
 | 📝 Submitted | **Apart Digital Minds Sprint** · Aug 2026 | *[Coherence Without Content](https://github.com/kaiser-data/do_models_have_minds)* — a missing content control for preference-coherence metrics |
 | 📝 Submitted | **Apart Secret Loyalties Hackathon** · Berlin, July 2026 | *[secret-localities-strategies](https://github.com/kaiser-data/secret-localities-strategies)* — activation forensics for hidden loyalties |
@@ -187,7 +186,7 @@ Claude Code is my daily driver, paired with **[claude-mem](https://github.com/th
 <img src="https://komarev.com/ghpvc/?username=kaiser-data&label=Profile+views&color=00ff88&style=for-the-badge&labelColor=0d1117" alt="Profile views" />
 <img src="https://img.shields.io/github/followers/kaiser-data?style=for-the-badge&logo=github&label=Followers&color=00ff88&labelColor=0d1117" alt="Followers" />
 <img src="https://img.shields.io/badge/Public_Repos-117-00ff88?style=for-the-badge&logo=github&labelColor=0d1117" alt="Public repos" />
-<img src="https://img.shields.io/badge/Contributions_(12mo)-3,100+-00ff88?style=for-the-badge&logo=github&labelColor=0d1117" alt="3,100+ contributions in the last 12 months" />
+<img src="https://img.shields.io/badge/Contributions_(12mo)-3,300+-00ff88?style=for-the-badge&logo=github&labelColor=0d1117" alt="3,300+ contributions in the last 12 months" />
 
 <br/><br/>
 
