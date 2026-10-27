@@ -6,7 +6,7 @@
 
 **I build LLM applications, agents and document pipelines.**<br/>
 Featured: **[Büchli](https://github.com/kaiser-data/hack-apertus-booklet-nli)** — 0.930 macro-F1 on 976 held-out claims from 14 unseen vote dates<br/><br/>
-PhD in Physics · 3+ years shipping LLM systems · **7 hackathon wins · 12 podiums** (2025–2026)<br/>
+PhD in Physics · 3+ years shipping LLM systems · **7 hackathon wins · 13 podiums** (2025–2026)<br/>
 **mloda open-source plugin grant** winner · 3,100+ contributions in the last 12 months · 117 public repos
 
 <br/>
@@ -38,6 +38,7 @@ PhD in Physics · 3+ years shipping LLM systems · **7 hackathon wins · 12 podi
 | **[sayproof.vercel.app](https://sayproof.vercel.app)** | Fact-check a talk before the audience does: every verdict quotes its source word for word, or it says "can't verify" |
 | **[reaction-dynamics-berlin.netlify.app](https://reaction-dynamics-berlin.netlify.app)** | Team-behavior evidence dashboard + [interactive knowledge graph](https://reaction-dynamics-berlin.netlify.app/graph.html) |
 | **[fraudmind.netlify.app](https://fraudmind.netlify.app)** | Fraud hunting over GDPdU audit dossiers: 22 rule families, no number without a source |
+| **[friends-with-benefits.quest](https://www.friends-with-benefits.quest)** | 🥈 Referral engine for local businesses: ambassadors earn rewards only when friends actually pay (Stripe test mode) |
 | **[soteria-monad-rho.vercel.app](https://soteria-monad-rho.vercel.app)** | Soteria on Monad: incident receipts on chain, no place, company or goods name ever written |
 
 </div>
@@ -48,6 +49,7 @@ PhD in Physics · 3+ years shipping LLM systems · **7 hackathon wins · 12 podi
 
 | | Project | Result |
 |:--|:--|:--|
+| 🥈 | **[Friends with Benefits](https://github.com/kaiser-data/friends-with-benefits)** · 2nd place, Stripe × Supabase Hack Berlin | One sentence from the owner becomes a booking page with an ambassador crew. Rewards fire only on a real Stripe payment, so fake sign-ups farm nothing. Stripe Connect + Supabase + Cloudflare. [Live](https://www.friends-with-benefits.quest) |
 | 🇨🇭 | **[Büchli](https://github.com/kaiser-data/hack-apertus-booklet-nli)** · Hack Apertus 2026, Track 2A | Checks campaign claims against the official Swiss voting booklet in DE/FR/IT with Apertus 70B. **0.930 macro-F1** on 976 held-out claims from 14 unseen vote dates, at a ninth of the tokens of whole-booklet prompting |
 | 🎤 | **[Sayproof](https://github.com/kaiser-data/sayproof)** · Nebius × NVIDIA Global AI Hackathon | Nemotron 120B + Tavily. A quote guard downgrades any verdict whose evidence isn't verbatim in the source. [Live](https://sayproof.vercel.app) |
 | 🧩 | **[mloda-community-german-ledger](https://github.com/mloda-ai/mloda-registry/pulls?q=author%3Akaiser-data)** · open-source PR | Follow-up to the mloda grant: cited, admissible totals from GDPdU and DATEV exports, proposed to the official mloda registry (PR open) |
@@ -72,7 +74,7 @@ background:  PhD Physics → 3+ years shipping LLM systems
 
 <div align="center">
 
-**7 wins · 12 podiums · 2025–2026**
+**7 wins · 13 podiums · 2025–2026**
 
 </div>
 
@@ -82,13 +84,14 @@ background:  PhD Physics → 3+ years shipping LLM systems
 |:--|:--|:--|
 | 🏅 **Grant winner** | **[mloda](https://mloda.ai) monthly plugin grant** · Sept 2026 | *mloda-gdpdu-provenance* *(private)* — provenance-carrying aggregation: a total that names its rows, or no total |
 
-### 2026 — 3 wins · 6 podiums
+### 2026 — 3 wins · 7 podiums
 
 | Result | Event | Project / Track |
 |:--|:--|:--|
 | 🥇 **1st place** | **[Cognee × Qdrant Hack Night](https://luma.com/cognee-m078)** · Berlin | *[reaction-dynamics](https://github.com/kaiser-data/reaction-dynamics)* — solo entry |
 | 🥇 **1st place** | **Agentic FinAI Hackathon** · Berlin | Dify Open Track |
 | 🏆 **Track winner** | **AI Agents Hackathon** · Berlin | Blockchain for Good Alliance Bonus Track |
+| 🥈 **2nd place** | **Stripe × Supabase Hack: AI Payments for the Real Economy** · Berlin | *[Friends with Benefits](https://github.com/kaiser-data/friends-with-benefits)* — referral engine for local businesses; a friend only counts once they've paid |
 | 🥈 **2nd place** | **AI Builders Open Claw Hackathon** | Open Claw |
 | 🥉 **3rd place** | **[Collaborative Agent Hackathon](https://github.com/kaiser-data/Soteria)** · Flower Labs, Berlin | *[Soteria](https://github.com/kaiser-data/Soteria)* — privacy-preserving multi-party incident response on Flower |
 | 🥉 **3rd place** | **Needle Hackathon** | Main Track |
@@ -119,6 +122,7 @@ background:  PhD Physics → 3+ years shipping LLM systems
 
 **🧩 Agents & LLM apps**
 - [`reaction-dynamics`](https://github.com/kaiser-data/reaction-dynamics) — 🥇 team-behavior analytics from live Slack reaction timing; KS-test classifier + Cognee/Qdrant knowledge graph
+- [`friends-with-benefits`](https://github.com/kaiser-data/friends-with-benefits) — 🥈 ambassador programs for small businesses: LLM-generated booking pages, crew pricing, payment-verified rewards via Stripe Connect + Supabase Edge Functions
 - [`Soteria`](https://github.com/kaiser-data/Soteria) — 🥉 federated multi-party incident response (Flower ServerApp + ClientApp + AgentApp); parties answer with traffic lights, never raw values; tiered measures, two-key human approval, chained receipts
 - [`AngebotsBot`](https://github.com/kaiser-data/AngebotsBot) — AI deal scanner: kaufda.de + Qwen VL 32B + Supabase + LangGraph + Chainlit + Telegram
 - [`fraudmind`](https://github.com/kaiser-data/fraudmind) — deterministic fraud-hunting over GDPdU audit dossiers; 22 rule families + Cognee knowledge graph, "no number without a source"
