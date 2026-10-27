@@ -60,8 +60,9 @@
 | 🥈 **2nd place** | **AI Builders Open Claw Hackathon** | Open Claw |
 | 🥉 **3rd place** | **[Collaborative Agent Hackathon](https://github.com/kaiser-data/Soteria)** · Flower Labs, Berlin | *[Soteria](https://github.com/kaiser-data/Soteria)* — privacy-preserving multi-party incident response |
 | 🥉 **3rd place** | **Needle Hackathon** | Main Track |
+| 4️⃣ **4th · Runner-up** | **Superchat × Needle AI Builder Event** | Salesbot |
 
-<sub>Also in 2026: 4th place — Superchat × Needle AI Builder Event (Salesbot) · Top-7 finalist — Cognee AI-Memory Hackathon</sub>
+<sub>Also in 2026: Top-7 finalist — Cognee AI-Memory Hackathon</sub>
 
 ### Research & grants
 
