@@ -5,9 +5,11 @@
 ### AI/ML Engineer · PhD Physics · Berlin
 
 **I build LLM applications, agents and document pipelines.**<br/>
-Featured: **[Büchli](https://github.com/kaiser-data/hack-apertus-booklet-nli)** — 0.930 macro-F1 on 976 held-out claims from 14 unseen vote dates<br/><br/>
+Featured: 🥈 **[Friends with Benefits](https://github.com/kaiser-data/friends-with-benefits)** — 2nd place, Stripe × Supabase Hack Berlin · [live](https://www.friends-with-benefits.quest)<br/>
+**[Büchli](https://github.com/kaiser-data/hack-apertus-booklet-nli)** — 0.930 macro-F1 on 976 held-out claims from 14 unseen vote dates<br/><br/>
 PhD in Physics · 3+ years shipping LLM systems · **7 hackathon wins · 13 podiums** (2025–2026)<br/>
-**mloda open-source plugin grant** winner · 3,100+ contributions in the last 12 months · 117 public repos
+**mloda open-source plugin grant** winner · **Apart Research top 10%** (230+ projects)<br/>
+3,100+ contributions in the last 12 months · 117 public repos
 
 <br/>
 
@@ -49,12 +51,12 @@ PhD in Physics · 3+ years shipping LLM systems · **7 hackathon wins · 13 podi
 
 | | Project | Result |
 |:--|:--|:--|
-| 🥈 | **[Friends with Benefits](https://github.com/kaiser-data/friends-with-benefits)** · 2nd place, Stripe × Supabase Hack Berlin | One sentence from the owner becomes a booking page with an ambassador crew. Rewards fire only on a real Stripe payment, so fake sign-ups farm nothing. Stripe Connect + Supabase + Cloudflare. [Live](https://www.friends-with-benefits.quest) |
-| 🇨🇭 | **[Büchli](https://github.com/kaiser-data/hack-apertus-booklet-nli)** · Hack Apertus 2026, Track 2A | Checks campaign claims against the official Swiss voting booklet in DE/FR/IT with Apertus 70B. **0.930 macro-F1** on 976 held-out claims from 14 unseen vote dates, at a ninth of the tokens of whole-booklet prompting |
-| 🎤 | **[Sayproof](https://github.com/kaiser-data/sayproof)** · Nebius × NVIDIA Global AI Hackathon | Nemotron 120B + Tavily. A quote guard downgrades any verdict whose evidence isn't verbatim in the source. [Live](https://sayproof.vercel.app) |
-| 🧩 | **[mloda-community-german-ledger](https://github.com/mloda-ai/mloda-registry/pulls?q=author%3Akaiser-data)** · open-source PR | Follow-up to the mloda grant: cited, admissible totals from GDPdU and DATEV exports, proposed to the official mloda registry (PR open) |
-| 🧠 | **[Coherence Without Content](https://github.com/kaiser-data/do_models_have_minds)** · Apart Research sprint | Replace every outcome in a values benchmark with an invented word and the coherence score barely moves: a missing control for LLM preference metrics |
-| ♟️ | **[Zwischenzug](https://github.com/kaiser-data/zwischenzug)** · personal | Calculation-training dossier for a 2171-FIDE player chasing titles: write the whole line before the engine is allowed to speak |
+| 💹 | **[How Price-Aware Are AI Agents?](https://github.com/kaiser-data/auditing-llm-pricing-agents)** · Apart AI Collusion Sprint, Track 2 · submitted Oct 2026 | Legal price-change rules (offer holds, fuel-price locks) produce the same punish-and-recover pattern collusion audits look for. Logging proposed vs published prices separates the model from the rule. [Live](https://llm-pricing-audit.pages.dev) |
+| 🥈 | **[Friends with Benefits](https://github.com/kaiser-data/friends-with-benefits)** · 2nd place, Stripe × Supabase Hack Berlin · Oct 2026 | One sentence from the owner becomes a booking page with an ambassador crew. Rewards fire only on a real Stripe payment, so fake sign-ups farm nothing. Stripe Connect + Supabase + Cloudflare. [Live](https://www.friends-with-benefits.quest) |
+| 🇨🇭 | **[Büchli](https://github.com/kaiser-data/hack-apertus-booklet-nli)** · Hack Apertus 2026, Track 2A · Oct 2026 | Checks campaign claims against the official Swiss voting booklet in DE/FR/IT with Apertus 70B. **0.930 macro-F1** on 976 held-out claims from 14 unseen vote dates, at a ninth of the tokens of whole-booklet prompting |
+| 🎤 | **[Sayproof](https://github.com/kaiser-data/sayproof)** · Nebius × NVIDIA Global AI Hackathon · Sept 2026 | Nemotron 120B + Tavily. A quote guard downgrades any verdict whose evidence isn't verbatim in the source. [Live](https://sayproof.vercel.app) |
+| 🏅 | **GLiNER2 as a fast action classifier for agent monitoring** *(private)* · **top 10%**, Apart AI Incident Response Sprint · Sept 2026 | A fine-tuned 307M encoder flags agent action commitments in 18 ms median vs 520 ms for a hosted Qwen baseline, catching 14 of 15 actions vs 10 on a 30-message dev set. Its errors came at >0.99999 confidence, so it fits as a high-recall tripwire, not a confidence router |
+| 🧠 | **[Coherence Without Content](https://github.com/kaiser-data/do_models_have_minds)** · Apart Digital Minds Sprint · Aug 2026 | Replace every outcome in a values benchmark with an invented word and the coherence score barely moves: a missing control for LLM preference metrics |
 
 <br/>
 
@@ -83,6 +85,15 @@ background:  PhD Physics → 3+ years shipping LLM systems
 | Result | Programme | Project |
 |:--|:--|:--|
 | 🏅 **Grant winner** | **[mloda](https://mloda.ai) monthly plugin grant** · Sept 2026 | *mloda-gdpdu-provenance* *(private)* — provenance-carrying aggregation: a total that names its rows, or no total |
+
+### 🔬 Research sprints · [Apart Research](https://apartresearch.com)
+
+| Result | Sprint | Project |
+|:--|:--|:--|
+| 🏅 **Top 10%** of 230+ | **AI Incident Response Sprint** · Track: Containment · Sept 2026 | *Potential of GLiNER2 encoder model as a fast action classifier for agent monitoring* *(private)* — encoder–LLM cascade for monitoring agent communications |
+| 📝 Submitted | **AI Collusion Sprint** · Track 2: Detection & Audit · Oct 2026 | *[auditing-llm-pricing-agents](https://github.com/kaiser-data/auditing-llm-pricing-agents)* — legal price rules confound collusion audits |
+| 📝 Submitted | **Digital Minds Sprint** · Aug 2026 | *[Coherence Without Content](https://github.com/kaiser-data/do_models_have_minds)* — content control for preference-coherence metrics |
+| 📝 Submitted | **Secret Loyalties Hackathon** · Berlin, July 2026 | *[secret-localities-strategies](https://github.com/kaiser-data/secret-localities-strategies)* — activation forensics for model organisms with hidden loyalties |
 
 ### 2026 — 3 wins · 7 podiums
 
@@ -130,6 +141,7 @@ background:  PhD Physics → 3+ years shipping LLM systems
 - [`multi-agent-research`](https://github.com/kaiser-data/multi-agent-research) — research automation with LangGraph + Claude + SerpAPI
 
 **🔬 Evaluation & safety research**
+- [`auditing-llm-pricing-agents`](https://github.com/kaiser-data/auditing-llm-pricing-agents) — fork-before-feedback audit of LLM pricing agents: do legal execution rules mimic collusion? Scripted controls with known answers + browser playground (Apart AI Collusion Sprint)
 - [`hack-apertus-booklet-nli`](https://github.com/kaiser-data/hack-apertus-booklet-nli) — multilingual NLI with evidence: 16 retrieved passages beat the whole booklet on accuracy *and* cost; bootstrapped CIs over vote dates
 - [`do_models_have_minds`](https://github.com/kaiser-data/do_models_have_minds) — content control for preference-coherence metrics (Apart Digital Minds Sprint)
 - [`secret-localities-strategies`](https://github.com/kaiser-data/secret-localities-strategies) — activation-forensics pipeline for model organisms with hidden loyalties (Apart Secret Loyalties hackathon)
