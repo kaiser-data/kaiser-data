@@ -2,23 +2,23 @@
  "name": "Martin Kaiser",
  "updated": "2026-10-28",
  "metrics": {
-  "commits": 1955,
-  "privateContribs": 1243,
-  "contributions": 3359,
+  "commits": 1957,
+  "privateContribs": 1258,
+  "contributions": 3377,
   "issues": 46,
-  "mergedPRs": 46,
-  "prs": 60,
+  "mergedPRs": 47,
+  "prs": 61,
   "issuesAllTime": 46,
   "reviews": 0,
   "starsAll": 46,
-  "mergedAllTime": 53,
+  "mergedAllTime": 54,
   "contributedTo": 15,
-  "followers": 158,
+  "followers": 152,
   "repos": 97,
   "stars": 46,
   "activeDays": 260,
   "longest": 63,
-  "last30": 555,
+  "last30": 573,
   "best": {
    "date": "2026-10-18",
    "contributionCount": 101
@@ -72,17 +72,17 @@
   "parts": [
    {
     "key": "Commits",
-    "detail": "1,955 · median 250",
-    "s": 0.9955746723230633,
+    "detail": "1,957 · median 250",
+    "s": 0.9955991436386825,
     "w": 2,
-    "pts": 1.9911493446461266
+    "pts": 1.991198287277365
    },
    {
     "key": "Pull requests",
-    "detail": "60 · median 50",
-    "s": 0.5647247183519379,
+    "detail": "61 · median 50",
+    "s": 0.5707172817811231,
     "w": 3,
-    "pts": 1.6941741550558138
+    "pts": 1.7121518453433695
    },
    {
     "key": "Issues",
@@ -107,13 +107,13 @@
    },
    {
     "key": "Followers",
-    "detail": "158 · median 10",
-    "s": 0.9404761904761905,
+    "detail": "152 · median 10",
+    "s": 0.9382716049382716,
     "w": 1,
-    "pts": 0.9404761904761905
+    "pts": 0.9382716049382716
    }
   ],
-  "percentile": 39.47379523061048,
+  "percentile": 39.34194483576986,
   "total": 61,
   "letter": "B+"
  },
@@ -1584,11 +1584,11 @@
   },
   {
    "date": "2026-10-27",
-   "contributionCount": 9
+   "contributionCount": 11
   },
   {
    "date": "2026-10-28",
-   "contributionCount": 6
+   "contributionCount": 22
   }
  ]
 }
