@@ -8,9 +8,9 @@
 
 <br/>
 
-| 🏆 **7 wins · 13 podiums** | 🔬 **Top 10%** | 💰 **Grant winner** | 📈 **0.930 macro-F1** |
-|:--:|:--:|:--:|:--:|
-| hackathons 2025–2026 · **15 top finishes** | Apart Research sprint, 230+ projects | mloda open-source plugin grant | Büchli, 976 held-out claims |
+| 🏆 **7 wins · 13 podiums** | 🦊 **Awesome MCP Servers** | 🔬 **Top 10%** | 💰 **Grant winner** | 📈 **0.930 macro-F1** |
+|:--:|:--:|:--:|:--:|:--:|
+| hackathons 2025–2026 · **15 top finishes** | kitsune-mcp listed · ~1.9k downloads/mo | Apart Research sprint, 230+ projects | mloda open-source plugin grant | Büchli, 976 held-out claims |
 
 <a href="https://linkedin.com/in/martin-kaiser-ai">
   <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0d1117" alt="LinkedIn" />
@@ -26,6 +26,29 @@
 
 <br/>
 
+## 📦 Open source in use
+
+### 🦊 [kitsune-mcp](https://github.com/kaiser-data/kitsune-mcp) — hot-reload for MCP servers
+
+Your agent edits an MCP tool, calls `reload("dev")` and tests the fix in the same session, with no client restart. It also mounts any of **130,000+ servers from 7 registries** mid-session, and runs community packages inside a hardened Docker cage.
+
+[![Listed in Awesome MCP Servers](https://img.shields.io/badge/Awesome_MCP_Servers-listed-fc60a8?style=flat-square&logo=awesomelists&logoColor=white)](https://github.com/punkpeye/awesome-mcp-servers#aggregators)
+[![MCP Registry](https://img.shields.io/badge/MCP_Registry-official-8a2be2?style=flat-square)](https://registry.modelcontextprotocol.io/v0/servers?search=io.github.kaiser-data%2Fkitsune-mcp)
+[![Glama score](https://glama.ai/mcp/servers/kaiser-data/kitsune-mcp/badges/score.svg)](https://glama.ai/mcp/servers/kaiser-data/kitsune-mcp)
+[![PyPI downloads](https://img.shields.io/pypi/dm/kitsune-mcp?style=flat-square&label=PyPI&color=3775A9)](https://pypi.org/project/kitsune-mcp/)
+[![npm downloads](https://img.shields.io/npm/dm/kitsune-mcp?style=flat-square&label=npm&color=cb3837)](https://www.npmjs.com/package/kitsune-mcp)
+[![Stars](https://img.shields.io/github/stars/kaiser-data/kitsune-mcp?style=flat-square&color=00ff88&labelColor=0d1117)](https://github.com/kaiser-data/kitsune-mcp)
+
+<sub>Merged into [punkpeye/awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers) (97k★, Oct 2026) · v0.22, 270+ commits, CI + coverage · `claude mcp add -s user kitsune -- uvx kitsune-mcp`</sub>
+
+| Tool | What it does |
+|:--|:--|
+| [`free-llm-proxy-router`](https://github.com/kaiser-data/free-llm-proxy-router) | One Go binary turns every free LLM tier (Groq, Gemini, OpenRouter, Cerebras, GitHub Models…) into a single OpenAI-compatible endpoint with automatic fallback |
+| [`claude-code-langfuse-tracing`](https://github.com/kaiser-data/claude-code-langfuse-tracing) | A Stop hook replays Claude Code transcripts into Langfuse as backdated, session-grouped traces with token and cost; fail-open, secret in the macOS Keychain |
+| [**Astrolab**](https://github.com/kaiser-data/github-stars-analyzer) · [▶ Live](https://star-astrolab.vercel.app) | Your GitHub stars as a decision tool: **2,400+ starred repos** in a 3D knowledge graph (39 communities), health and lifecycle scores, and **29 landscape reports** that answer *"which tool should I use for X?"*. Built offline, no LLM in the hot path, refreshed weekly |
+
+<br/>
+
 ## ⭐ Highlights
 
 | | Project | Why it matters | |
@@ -34,10 +57,9 @@
 | 🥇 | **[reaction-dynamics](https://github.com/kaiser-data/reaction-dynamics)**<br/><sub>1st · Cognee × Qdrant Hack Night · solo</sub> | Team-behavior analytics from Slack reaction timing: KS-test classifier + Cognee/Qdrant knowledge graph | [▶ Live](https://reaction-dynamics-berlin.netlify.app) · [graph](https://reaction-dynamics-berlin.netlify.app/graph.html) |
 | 🇨🇭 | **[Büchli](https://github.com/kaiser-data/hack-apertus-booklet-nli)**<br/><sub>Hack Apertus 2026 · Track 2A · Oct 2026</sub> | Checks campaign claims against the Swiss voting booklet in DE/FR/IT with Apertus 70B. **0.930 macro-F1** on 976 claims from 14 unseen vote dates, at **1/9 the tokens** of whole-booklet prompting | |
 | 🏅 | **GLiNER2 action classifier** *(private)*<br/><sub>Top 10% · Apart AI Incident Response Sprint · Sept 2026</sub> | A fine-tuned 307M encoder flags agent action commitments in **18 ms vs 520 ms** for a hosted Qwen baseline, catching 14 of 15 actions vs 10 — a high-recall tripwire for agent monitoring | |
-| 🦊 | **[kitsune-mcp](https://github.com/kaiser-data/kitsune-mcp)**<br/><sub>Open source · Claude Code ecosystem</sub> | MCP hub that `shapeshift()`s into **10,000+ MCP servers** at runtime — one entry point, no restarts | |
 | 🎤 | **[Sayproof](https://github.com/kaiser-data/sayproof)**<br/><sub>Nebius × NVIDIA Global AI Hackathon · Sept 2026</sub> | Fact-check a talk before the audience does: every verdict quotes its source verbatim, or says "can't verify". Nemotron 120B + Tavily | [▶ Live](https://sayproof.vercel.app) |
 
-<sub>More live: [hot-repos](https://hot-repos.netlify.app/) — trends across a starred-repo corpus · [fraudmind](https://fraudmind.netlify.app) — fraud hunting over GDPdU audit dossiers, 22 rule families · [Soteria on Monad](https://soteria-monad-rho.vercel.app) — incident receipts on chain · [LLM pricing audit](https://llm-pricing-audit.pages.dev)</sub>
+<sub>More live: [fraudmind](https://fraudmind.netlify.app) — fraud hunting over GDPdU audit dossiers, 22 rule families · [Soteria on Monad](https://soteria-monad-rho.vercel.app) — incident receipts on chain · [LLM pricing audit](https://llm-pricing-audit.pages.dev)</sub>
 
 <br/>
 
@@ -118,7 +140,6 @@
 
 **🔁 Automation & infra**
 - [`inbox-inferno-n8n`](https://github.com/kaiser-data/inbox-inferno-n8n-community-challenge) — AI email agent with LLM-as-judge — scored **20/20**
-- [`free-llm-proxy-router`](https://github.com/kaiser-data/free-llm-proxy-router) — Go OpenAI-compatible proxy routing across free-tier providers (Groq, Gemini, OpenRouter, Cerebras…)
 - [`aws-terraform-devops-infrastructure`](https://github.com/kaiser-data/aws-terraform-devops-infrastructure) — AWS VPC infrastructure defined with Terraform
 - [`kaiser-echo`](https://github.com/kaiser-data/kaiser-echo) — bilingual voice agent with memory (React + Cloudflare Workers)
 
@@ -138,8 +159,7 @@ Claude Code is my daily driver, paired with **[claude-mem](https://github.com/th
 
 </div>
 
-- 🦊 [`kitsune-mcp`](https://github.com/kaiser-data/kitsune-mcp) — shape-shifting MCP hub: one entry point into 10,000+ servers, no restarts
-- 🔭 [`claude-code-langfuse-tracing`](https://github.com/kaiser-data/claude-code-langfuse-tracing) — a Stop hook replays transcripts into Langfuse as backdated, session-grouped traces with token/cost
+- 🦊 [`kitsune-mcp`](https://github.com/kaiser-data/kitsune-mcp) and 🔭 [`claude-code-langfuse-tracing`](https://github.com/kaiser-data/claude-code-langfuse-tracing) — see [Open source in use](#-open-source-in-use)
 - 📡 [`claude-A2A-Comm`](https://github.com/kaiser-data/claude-A2A-Comm) — A2A-protocol messaging between Claude Code sessions, local or over a Pi/VPS hub
 - 🧰 [`marty-skills`](https://github.com/kaiser-data/marty-skills) · [`kogitsune`](https://github.com/kaiser-data/kogitsune) — personal skills, commands & harness
 
