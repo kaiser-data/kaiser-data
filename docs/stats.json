@@ -1,24 +1,24 @@
 {
  "name": "Martin Kaiser",
- "updated": "2026-10-30",
+ "updated": "2026-10-31",
  "metrics": {
-  "commits": 1950,
-  "privateContribs": 1288,
-  "contributions": 3399,
+  "commits": 1977,
+  "privateContribs": 1289,
+  "contributions": 3436,
   "issues": 46,
-  "mergedPRs": 47,
-  "prs": 61,
+  "mergedPRs": 56,
+  "prs": 70,
   "issuesAllTime": 46,
   "reviews": 0,
-  "starsAll": 46,
-  "mergedAllTime": 54,
+  "starsAll": 48,
+  "mergedAllTime": 63,
   "contributedTo": 15,
-  "followers": 152,
+  "followers": 150,
   "repos": 97,
-  "stars": 46,
-  "activeDays": 262,
-  "longest": 65,
-  "last30": 575,
+  "stars": 48,
+  "activeDays": 263,
+  "longest": 66,
+  "last30": 579,
   "best": {
    "date": "2026-10-18",
    "contributionCount": 101
@@ -72,17 +72,17 @@
   "parts": [
    {
     "key": "Commits",
-    "detail": "1,950 · median 250",
-    "s": 0.9955128970507928,
+    "detail": "1,977 · median 250",
+    "s": 0.9958365361872346,
     "w": 2,
-    "pts": 1.9910257941015856
+    "pts": 1.9916730723744691
    },
    {
     "key": "Pull requests",
-    "detail": "61 · median 50",
-    "s": 0.5707172817811231,
+    "detail": "70 · median 50",
+    "s": 0.6210708583724005,
     "w": 3,
-    "pts": 1.7121518453433695
+    "pts": 1.8632125751172015
    },
    {
     "key": "Issues",
@@ -100,21 +100,21 @@
    },
    {
     "key": "Stars",
-    "detail": "46 · median 50",
-    "s": 0.4791666666666667,
+    "detail": "48 · median 50",
+    "s": 0.4897959183673469,
     "w": 4,
-    "pts": 1.9166666666666667
+    "pts": 1.9591836734693877
    },
    {
     "key": "Followers",
-    "detail": "152 · median 10",
-    "s": 0.9382716049382716,
+    "detail": "150 · median 10",
+    "s": 0.9375,
     "w": 1,
-    "pts": 0.9382716049382716
+    "pts": 0.9375
    }
   ],
-  "percentile": 39.34338227890135,
-  "total": 61,
+  "percentile": 37.731270529641634,
+  "total": 62,
   "letter": "B+"
  },
  "days": [
@@ -1596,7 +1596,11 @@
   },
   {
    "date": "2026-10-30",
-   "contributionCount": 4
+   "contributionCount": 25
+  },
+  {
+   "date": "2026-10-31",
+   "contributionCount": 16
   }
  ]
 }
