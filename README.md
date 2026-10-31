@@ -8,9 +8,9 @@
 
 <br/>
 
-| 🏆 **7 wins · 13 podiums** | 🦊 **Awesome MCP Servers** | 🔬 **Top 10%** | 💰 **Grant winner** | 📈 **0.930 macro-F1** |
-|:--:|:--:|:--:|:--:|:--:|
-| hackathons 2025–2026 · **15 top finishes** | kitsune-mcp listed · ~1.9k downloads/mo | Apart Research sprint, 230+ projects | mloda open-source plugin grant | Büchli, 976 held-out claims |
+| 🏆 **7 wins · 13 podiums** | 🦊 **Awesome MCP Servers** | 🔬 **Top 10%** | 💰 **Grant winner** |
+|:--:|:--:|:--:|:--:|
+| hackathons 2025–2026 · **15 top finishes** | kitsune-mcp listed · ~1.9k downloads/mo | Apart Research sprint, 230+ projects | mloda open-source plugin grant |
 
 <a href="https://linkedin.com/in/martin-kaiser-ai">
   <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0d1117" alt="LinkedIn" />
