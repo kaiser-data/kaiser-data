@@ -1,24 +1,24 @@
 {
  "name": "Martin Kaiser",
- "updated": "2026-10-31",
+ "updated": "2026-11-01",
  "metrics": {
-  "commits": 1977,
-  "privateContribs": 1289,
-  "contributions": 3436,
+  "commits": 1989,
+  "privateContribs": 1295,
+  "contributions": 3359,
   "issues": 46,
-  "mergedPRs": 56,
-  "prs": 70,
+  "mergedPRs": 59,
+  "prs": 76,
   "issuesAllTime": 46,
   "reviews": 0,
   "starsAll": 48,
-  "mergedAllTime": 63,
+  "mergedAllTime": 66,
   "contributedTo": 15,
-  "followers": 150,
+  "followers": 156,
   "repos": 97,
   "stars": 48,
-  "activeDays": 263,
-  "longest": 66,
-  "last30": 579,
+  "activeDays": 258,
+  "longest": 67,
+  "last30": 599,
   "best": {
    "date": "2026-10-18",
    "contributionCount": 101
@@ -72,17 +72,17 @@
   "parts": [
    {
     "key": "Commits",
-    "detail": "1,977 · median 250",
-    "s": 0.9958365361872346,
+    "detail": "1,989 · median 250",
+    "s": 0.9959727800047079,
     "w": 2,
-    "pts": 1.9916730723744691
+    "pts": 1.9919455600094158
    },
    {
     "key": "Pull requests",
-    "detail": "70 · median 50",
-    "s": 0.6210708583724005,
+    "detail": "76 · median 50",
+    "s": 0.6513140834123987,
     "w": 3,
-    "pts": 1.8632125751172015
+    "pts": 1.9539422502371961
    },
    {
     "key": "Issues",
@@ -107,45 +107,17 @@
    },
    {
     "key": "Followers",
-    "detail": "150 · median 10",
-    "s": 0.9375,
+    "detail": "156 · median 10",
+    "s": 0.9397590361445782,
     "w": 1,
-    "pts": 0.9375
+    "pts": 0.9397590361445782
    }
   ],
-  "percentile": 37.731270529641634,
-  "total": 62,
-  "letter": "B+"
+  "percentile": 36.95409387214564,
+  "total": 63,
+  "letter": "A-"
  },
  "days": [
-  {
-   "date": "2025-10-26",
-   "contributionCount": 20
-  },
-  {
-   "date": "2025-10-27",
-   "contributionCount": 17
-  },
-  {
-   "date": "2025-10-28",
-   "contributionCount": 10
-  },
-  {
-   "date": "2025-10-29",
-   "contributionCount": 14
-  },
-  {
-   "date": "2025-10-30",
-   "contributionCount": 20
-  },
-  {
-   "date": "2025-10-31",
-   "contributionCount": 20
-  },
-  {
-   "date": "2025-11-01",
-   "contributionCount": 0
-  },
   {
    "date": "2025-11-02",
    "contributionCount": 0
@@ -1600,7 +1572,11 @@
   },
   {
    "date": "2026-10-31",
-   "contributionCount": 16
+   "contributionCount": 29
+  },
+  {
+   "date": "2026-11-01",
+   "contributionCount": 11
   }
  ]
 }
