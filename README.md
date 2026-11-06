@@ -18,7 +18,7 @@
 <a href="mailto:martinkaiser.bln@gmail.com">
   <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0d1117" alt="Email" />
 </a>
-<img src="https://img.shields.io/badge/Open_to_Roles_&_Collabs-00FF88?style=for-the-badge&logo=handshake&logoColor=0d1117&labelColor=0d1117" alt="Open to roles and collaborations" />
+<img src="https://img.shields.io/badge/Open_to_Collabs-00FF88?style=for-the-badge&logo=handshake&logoColor=0d1117&labelColor=0d1117" alt="Open to collaborations" />
 
 **🎯 Looking for:** AI/ML engineering roles · agent & LLM product teams · contract work — Berlin or remote
 
@@ -258,6 +258,6 @@ Levels by percentile: **S** ≤ 1 · **A+** ≤ 12.5 · **A** ≤ 25 · **A-** �
 
 <br/><br/>
 
-<sub>💬 Berlin-based · open to AI/ML engineering roles, contract work and hackathon teams — <a href="mailto:martinkaiser.bln@gmail.com">martinkaiser.bln@gmail.com</a></sub>
+<sub>💬 Berlin-based · open to hackathon teams and open-source collabs — <a href="mailto:martinkaiser.bln@gmail.com">martinkaiser.bln@gmail.com</a></sub>
 
 </div>
