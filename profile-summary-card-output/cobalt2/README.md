@@ -52,3 +52,13 @@
 ```
 
     
+
+---
+
+![](./4-productive-time.svg)
+
+```
+![](https://raw.githubusercontent.com/kaiser-data/kaiser-data/main/profile-summary-card-output/cobalt2/4-productive-time.svg)
+```
+
+    
