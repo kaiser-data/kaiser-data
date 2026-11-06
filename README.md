@@ -20,7 +20,7 @@
 </a>
 <img src="https://img.shields.io/badge/Open_to_Collabs-00FF88?style=for-the-badge&logo=handshake&logoColor=0d1117&labelColor=0d1117" alt="Open to collaborations" />
 
-**🎯 Looking for:** AI/ML engineering roles · agent & LLM product teams · contract work — Berlin or remote
+**🎯 Open to:** hackathon teams · open-source collabs on agents & LLM tooling — Berlin or remote
 
 </div>
 
