@@ -1,24 +1,24 @@
 {
  "name": "Martin Kaiser",
- "updated": "2026-11-07",
+ "updated": "2026-11-08",
  "metrics": {
-  "commits": 2046,
-  "privateContribs": 1262,
-  "contributions": 3493,
+  "commits": 2110,
+  "privateContribs": 1289,
+  "contributions": 3561,
   "issues": 47,
-  "mergedPRs": 69,
-  "prs": 87,
+  "mergedPRs": 83,
+  "prs": 99,
   "issuesAllTime": 47,
-  "reviews": 0,
-  "starsAll": 54,
-  "mergedAllTime": 76,
+  "reviews": 1,
+  "starsAll": 56,
+  "mergedAllTime": 90,
   "contributedTo": 16,
-  "followers": 156,
-  "repos": 97,
-  "stars": 54,
-  "activeDays": 263,
+  "followers": 158,
+  "repos": 100,
+  "stars": 56,
+  "activeDays": 260,
   "longest": 68,
-  "last30": 662,
+  "last30": 746,
   "best": {
    "date": "2026-10-18",
    "contributionCount": 101
@@ -72,17 +72,17 @@
   "parts": [
    {
     "key": "Commits",
-    "detail": "2,046 · median 250",
-    "s": 0.996561488228269,
+    "detail": "2,110 · median 250",
+    "s": 0.9971205679349783,
     "w": 2,
-    "pts": 1.993122976456538
+    "pts": 1.9942411358699565
    },
    {
     "key": "Pull requests",
-    "detail": "87 · median 50",
-    "s": 0.7006303238452678,
+    "detail": "99 · median 50",
+    "s": 0.7465101300524928,
     "w": 3,
-    "pts": 2.1018909715358034
+    "pts": 2.239530390157478
    },
    {
     "key": "Issues",
@@ -93,59 +93,31 @@
    },
    {
     "key": "Reviews",
-    "detail": "0 · median 2",
-    "s": 0,
+    "detail": "1 · median 2",
+    "s": 0.29289321881345254,
     "w": 1,
-    "pts": 0
+    "pts": 0.29289321881345254
    },
    {
     "key": "Stars",
-    "detail": "54 · median 50",
-    "s": 0.5192307692307693,
+    "detail": "56 · median 50",
+    "s": 0.5283018867924528,
     "w": 4,
-    "pts": 2.076923076923077
+    "pts": 2.1132075471698113
    },
    {
     "key": "Followers",
-    "detail": "156 · median 10",
-    "s": 0.9397590361445782,
+    "detail": "158 · median 10",
+    "s": 0.9404761904761905,
     "w": 1,
-    "pts": 0.9397590361445782
+    "pts": 0.9404761904761905
    }
   ],
-  "percentile": 34.66656378809597,
-  "total": 65,
+  "percentile": 30.761126942871886,
+  "total": 69,
   "letter": "A-"
  },
  "days": [
-  {
-   "date": "2025-11-02",
-   "contributionCount": 0
-  },
-  {
-   "date": "2025-11-03",
-   "contributionCount": 0
-  },
-  {
-   "date": "2025-11-04",
-   "contributionCount": 12
-  },
-  {
-   "date": "2025-11-05",
-   "contributionCount": 5
-  },
-  {
-   "date": "2025-11-06",
-   "contributionCount": 14
-  },
-  {
-   "date": "2025-11-07",
-   "contributionCount": 5
-  },
-  {
-   "date": "2025-11-08",
-   "contributionCount": 0
-  },
   {
    "date": "2025-11-09",
    "contributionCount": 0
@@ -592,7 +564,7 @@
   },
   {
    "date": "2026-02-28",
-   "contributionCount": 15
+   "contributionCount": 14
   },
   {
    "date": "2026-03-01",
@@ -604,7 +576,7 @@
   },
   {
    "date": "2026-03-03",
-   "contributionCount": 26
+   "contributionCount": 23
   },
   {
    "date": "2026-03-04",
@@ -1560,7 +1532,7 @@
   },
   {
    "date": "2026-10-28",
-   "contributionCount": 38
+   "contributionCount": 52
   },
   {
    "date": "2026-10-29",
@@ -1572,7 +1544,7 @@
   },
   {
    "date": "2026-10-31",
-   "contributionCount": 35
+   "contributionCount": 41
   },
   {
    "date": "2026-11-01",
@@ -1600,7 +1572,11 @@
   },
   {
    "date": "2026-11-07",
-   "contributionCount": 27
+   "contributionCount": 68
+  },
+  {
+   "date": "2026-11-08",
+   "contributionCount": 47
   }
  ]
 }
