@@ -10,7 +10,7 @@
 
 | 🏆 **7 wins · 13 podiums** | 🦊 **Awesome MCP Servers** | 🔬 **Top 10%** | 💰 **Grant winner** |
 |:--:|:--:|:--:|:--:|
-| hackathons 2025–2026 · **15 top finishes** | kitsune-mcp listed · ~1.9k downloads/mo | Apart Research sprint, 230+ projects | mloda open-source plugin grant |
+| hackathons 2025–2026 · **15 top finishes** | kitsune-mcp listed · ~2.8k downloads/mo | Apart Research sprint, 230+ projects | mloda open-source plugin grant |
 
 <a href="https://linkedin.com/in/martin-kaiser-ai">
   <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0d1117" alt="LinkedIn" />
@@ -115,7 +115,7 @@ Your agent edits an MCP tool, calls `reload("dev")` and tests the fix in the sam
 
 ## 🗂️ More projects
 
-<sub>A slice of 160+ repos (117 public).</sub>
+<sub>A slice of 189 repos (127 public).</sub>
 
 **🧩 Agents & LLM apps**
 - [`Soteria`](https://github.com/kaiser-data/Soteria) — 🥉 federated multi-party incident response on Flower; parties answer with traffic lights, never raw values; two-key human approval, chained receipts
@@ -149,7 +149,16 @@ Your agent edits an MCP tool, calls `reload("dev")` and tests the fix in the sam
 
 ## 🤖 How I work with Claude Code
 
-Claude Code is my daily driver, paired with **[claude-mem](https://github.com/thedotmack/claude-mem)**, **[ECC](https://github.com/affaan-m/ECC)** and **[superpowers](https://github.com/obra/superpowers)** — and I measure the result instead of guessing. Numbers from my own [Langfuse tracing](https://github.com/kaiser-data/claude-code-langfuse-tracing), 30 days to September 2026:
+Claude Code is my daily driver. Each layer below does one job, and I measure the result instead of guessing:
+
+| Layer | What it does in my sessions |
+|:--|:--|
+| **[superpowers](https://github.com/obra/superpowers)** | The process: brainstorm → written plan → test-first → verify with evidence before anything is called done |
+| **[ECC](https://github.com/affaan-m/ECC)** | Code-quality rules for Python and TypeScript, switched on per session when I write or review code |
+| **[claude-mem](https://github.com/thedotmack/claude-mem)** | Memory across sessions: what was tried, decided and shipped, so a new session starts where the last one stopped |
+| **[32 public skills](https://github.com/kaiser-data/marty-skills)** of my own | Built with my `skill-forge`, mostly research methodology learned the hard way in eval sprints: `systematic-study`, `seed-replicates-before-effects`, `detection-needs-a-denominator`, `numbers-from-primary-sources` |
+
+Numbers from my own [Langfuse tracing](https://github.com/kaiser-data/claude-code-langfuse-tracing), 30 days to September 2026:
 
 <div align="center">
 
@@ -161,7 +170,7 @@ Claude Code is my daily driver, paired with **[claude-mem](https://github.com/th
 
 - 🦊 [`kitsune-mcp`](https://github.com/kaiser-data/kitsune-mcp) and 🔭 [`claude-code-langfuse-tracing`](https://github.com/kaiser-data/claude-code-langfuse-tracing) — see [Open source in use](#-open-source-in-use)
 - 📡 [`claude-A2A-Comm`](https://github.com/kaiser-data/claude-A2A-Comm) — A2A-protocol messaging between Claude Code sessions, local or over a Pi/VPS hub
-- 🧰 [`marty-skills`](https://github.com/kaiser-data/marty-skills) · [`kogitsune`](https://github.com/kaiser-data/kogitsune) — personal skills, commands & harness
+- 🧰 [`kogitsune`](https://github.com/kaiser-data/kogitsune) — my session launcher: starts each project with a lean kit of skills and plugins, so sessions spend fewer tokens
 
 <br/>
 
@@ -205,8 +214,8 @@ Claude Code is my daily driver, paired with **[claude-mem](https://github.com/th
 <!-- Reliable badges (always render) -->
 <img src="https://komarev.com/ghpvc/?username=kaiser-data&label=Profile+views&color=00ff88&style=for-the-badge&labelColor=0d1117" alt="Profile views" />
 <img src="https://img.shields.io/github/followers/kaiser-data?style=for-the-badge&logo=github&label=Followers&color=00ff88&labelColor=0d1117" alt="Followers" />
-<img src="https://img.shields.io/badge/Public_Repos-117-00ff88?style=for-the-badge&logo=github&labelColor=0d1117" alt="Public repos" />
-<img src="https://img.shields.io/badge/Contributions_(12mo)-3,800+-00ff88?style=for-the-badge&logo=github&labelColor=0d1117" alt="3,800+ contributions in the last 12 months" />
+<img src="https://img.shields.io/badge/Public_Repos-127-00ff88?style=for-the-badge&logo=github&labelColor=0d1117" alt="Public repos" />
+<img src="https://img.shields.io/badge/Contributions_(12mo)-3,800+_·_top_1%25-00ff88?style=for-the-badge&logo=github&labelColor=0d1117" alt="3,800+ contributions in the last 12 months, top 1% of GitHub accounts" />
 
 <br/><br/>
 
