@@ -53,7 +53,7 @@ Your agent edits an MCP tool, calls `reload("dev")` and tests the fix in the sam
 
 | | Project | Why it matters | |
 |:--|:--|:--|:--|
-| 🥈 | **[Friends with Benefits](https://github.com/kaiser-data/friends-with-benefits)**<br/><sub>2nd · Stripe × Supabase Hack Berlin · Oct 2026</sub> | One sentence from a shop owner becomes a booking page with an ambassador crew. Rewards fire only on a real Stripe payment, so fake sign-ups farm nothing | [▶ Live](https://www.friends-with-benefits.quest) |
+| 🥈 | **Friends with Benefits** *(private)*<br/><sub>2nd · Stripe × Supabase Hack Berlin · Oct 2026</sub> | One sentence from a shop owner becomes a booking page with an ambassador crew. Rewards fire only on a real Stripe payment, so fake sign-ups farm nothing | [▶ Live](https://www.friends-with-benefits.quest) |
 | 🥇 | **[reaction-dynamics](https://github.com/kaiser-data/reaction-dynamics)**<br/><sub>1st · Cognee × Qdrant Hack Night · solo</sub> | Team-behavior analytics from Slack reaction timing: KS-test classifier + Cognee/Qdrant knowledge graph | [▶ Live](https://reaction-dynamics-berlin.netlify.app) · [graph](https://reaction-dynamics-berlin.netlify.app/graph.html) |
 | 🇨🇭 | **[Büchli](https://github.com/kaiser-data/hack-apertus-booklet-nli)**<br/><sub>Hack Apertus 2026 · Track 2A · Oct 2026</sub> | Checks campaign claims against the Swiss voting booklet in DE/FR/IT with Apertus 70B. **0.930 macro-F1** on 976 claims from 14 unseen vote dates, at **1/9 the tokens** of whole-booklet prompting | |
 | 🏅 | **GLiNER2 action classifier** *(private)*<br/><sub>Top 10% · Apart AI Incident Response Sprint · Sept 2026</sub> | A fine-tuned 307M encoder flags agent action commitments in **18 ms vs 520 ms** for a hosted Qwen baseline, catching 14 of 15 actions vs 10 — a high-recall tripwire for agent monitoring | |
@@ -78,7 +78,7 @@ Your agent edits an MCP tool, calls `reload("dev")` and tests the fix in the sam
 | 🥇 **1st place** | **[Cognee × Qdrant Hack Night](https://luma.com/cognee-m078)** · Berlin | *[reaction-dynamics](https://github.com/kaiser-data/reaction-dynamics)* — solo entry |
 | 🥇 **1st place** | **Agentic FinAI Hackathon** · Berlin | Dify Open Track |
 | 🏆 **Track winner** | **AI Agents Hackathon** · Berlin | Blockchain for Good Alliance Bonus Track |
-| 🥈 **2nd place** | **Stripe × Supabase Hack: AI Payments for the Real Economy** · Berlin | *[Friends with Benefits](https://github.com/kaiser-data/friends-with-benefits)* |
+| 🥈 **2nd place** | **Stripe × Supabase Hack: AI Payments for the Real Economy** · Berlin | *[Friends with Benefits](https://www.friends-with-benefits.quest)* |
 | 🥈 **2nd place** | **AI Builders Open Claw Hackathon** | Open Claw |
 | 🥉 **3rd place** | **[Collaborative Agent Hackathon](https://github.com/kaiser-data/Soteria)** · Flower Labs, Berlin | *[Soteria](https://github.com/kaiser-data/Soteria)* — privacy-preserving multi-party incident response |
 | 🥉 **3rd place** | **Needle Hackathon** | Main Track |
