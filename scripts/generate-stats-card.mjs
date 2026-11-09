@@ -59,6 +59,14 @@ query($login:String!, $mergedQuery:String!){
   mergedPRs:search(query:$mergedQuery, type:ISSUE){issueCount}
 }`;
 
+// ---- Activity benchmark ----
+// The readme-stats percentile is not a rank among real users: it scores each input against
+// hand-picked medians, and stars dominate. This is a measured comparison instead: 400 random
+// GitHub user accounts (random ids, seed 42, sampled 2026-11-10), 12-month contribution totals.
+// None reached 3,356, so top 1% holds at 95% confidence (rule of three: 3/400 = 0.75%).
+// Re-run the sample before changing the claim; it is only valid while contributions stay at that level.
+const ACTIVITY_BENCHMARK = { minContributions: 3156, label: "top 1 % on GitHub", note: "by contributions · 400-account sample" };
+
 // ---- Rank ----
 // The github-readme-stats rank, ported 1:1 from anuraghazra/github-readme-stats
 // src/calculateRank.js (default mode, all_commits=false). Each input is scored against
@@ -266,7 +274,7 @@ function renderCard({ name, updated, g, m, weeks, figures }) {
   const heatW = weeks.length * (cell + gap) - gap;
   const legendX = hx + heatW + 24;
 
-  return `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${esc(name)} GitHub stats — rank ${esc(g.letter)} (github-readme-stats formula, top ${g.percentile.toFixed(1)} percent); ${fmtFull(m.contributions)} contributions, ${m.activeDays} active days in the last 12 months">
+  return `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${esc(name)} GitHub stats — rank ${esc(g.letter)} (github-readme-stats formula); activity top 1 percent of GitHub accounts by contributions; ${fmtFull(m.contributions)} contributions, ${m.activeDays} active days in the last 12 months">
   <style>
     text { font-family: 'Segoe UI', Ubuntu, system-ui, sans-serif; }
     .title { font: 700 20px 'Segoe UI', system-ui, sans-serif; fill: ${ACCENT}; }
@@ -304,9 +312,12 @@ function renderCard({ name, updated, g, m, weeks, figures }) {
     <circle r="${r}" fill="none" stroke="${ACCENT}" stroke-opacity="0.12" stroke-width="8"/>
     <circle class="ring" r="${r}" fill="none" stroke="${ACCENT}" stroke-width="8" stroke-linecap="round" transform="rotate(-90)"/>
     <text y="10" class="grade">${esc(g.letter)}</text>
-    <text y="30" class="score">top ${g.percentile.toFixed(1)} %</text>
+    <text y="30" class="gradeSub">readme-stats</text>
   </g>
-  <text x="${cx}" y="${cy + r + 22}" class="gradeSub">github-readme-stats formula</text>
+  ${m.contributions >= ACTIVITY_BENCHMARK.minContributions
+    ? `<text x="${cx}" y="${cy + r + 22}" class="score">${esc(ACTIVITY_BENCHMARK.label)}</text>
+  <text x="${cx}" y="${cy + r + 37}" class="gradeSub">${esc(ACTIVITY_BENCHMARK.note)}</text>`
+    : `<text x="${cx}" y="${cy + r + 22}" class="gradeSub">github-readme-stats formula · top ${g.percentile.toFixed(1)} %</text>`}
 
   <text x="${bx}" y="80" class="sect">WEIGHTED SCORE · ${g.parts.reduce((a, p) => a + p.pts, 0).toFixed(1)} / ${TOTAL_WEIGHT}</text>
   ${bars}

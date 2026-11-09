@@ -1,27 +1,27 @@
 {
  "name": "Martin Kaiser",
- "updated": "2026-11-09",
+ "updated": "2026-11-10",
  "metrics": {
   "commits": 2099,
-  "privateContribs": 1289,
-  "contributions": 3585,
+  "privateContribs": 1536,
+  "contributions": 3828,
   "issues": 47,
-  "mergedPRs": 83,
-  "prs": 99,
-  "issuesAllTime": 47,
+  "mergedPRs": 113,
+  "prs": 135,
+  "issuesAllTime": 48,
   "reviews": 1,
-  "starsAll": 57,
-  "mergedAllTime": 90,
+  "starsAll": 59,
+  "mergedAllTime": 121,
   "contributedTo": 16,
-  "followers": 157,
+  "followers": 156,
   "repos": 101,
   "stars": 57,
-  "activeDays": 261,
+  "activeDays": 260,
   "longest": 68,
   "last30": 764,
   "best": {
-   "date": "2026-10-18",
-   "contributionCount": 101
+   "date": "2026-08-17",
+   "contributionCount": 140
   }
  },
  "rankParts": [
@@ -79,42 +79,42 @@
    },
    {
     "key": "Pull requests",
-    "detail": "99 · median 50",
-    "s": 0.7465101300524928,
+    "detail": "135 · median 50",
+    "s": 0.8461069483318855,
     "w": 3,
-    "pts": 2.239530390157478
+    "pts": 2.5383208449956562
    },
    {
     "key": "Issues",
-    "detail": "47 · median 25",
-    "s": 0.7283162843684854,
+    "detail": "48 · median 25",
+    "s": 0.7357454898596549,
     "w": 1,
-    "pts": 0.7283162843684854
+    "pts": 0.7357454898596549
    },
    {
     "key": "Reviews",
     "detail": "1 · median 2",
-    "s": 0.29289321881345254,
+    "s": 0.2928932188134524,
     "w": 1,
-    "pts": 0.29289321881345254
+    "pts": 0.2928932188134524
    },
    {
     "key": "Stars",
-    "detail": "57 · median 50",
-    "s": 0.5327102803738318,
+    "detail": "59 · median 50",
+    "s": 0.5412844036697249,
     "w": 4,
-    "pts": 2.1308411214953273
+    "pts": 2.1651376146788994
    },
    {
     "key": "Followers",
-    "detail": "157 · median 10",
-    "s": 0.9401197604790419,
+    "detail": "156 · median 10",
+    "s": 0.9397590361445782,
     "w": 1,
-    "pts": 0.9401197604790419
+    "pts": 0.9397590361445782
    }
   ],
-  "percentile": 30.618636926304433,
-  "total": 69,
+  "percentile": 27.784008349817313,
+  "total": 72,
   "letter": "A-"
  },
  "days": [
@@ -584,7 +584,7 @@
   },
   {
    "date": "2026-03-05",
-   "contributionCount": 22
+   "contributionCount": 21
   },
   {
    "date": "2026-03-06",
@@ -620,7 +620,7 @@
   },
   {
    "date": "2026-03-14",
-   "contributionCount": 2
+   "contributionCount": 1
   },
   {
    "date": "2026-03-15",
@@ -628,7 +628,7 @@
   },
   {
    "date": "2026-03-16",
-   "contributionCount": 16
+   "contributionCount": 15
   },
   {
    "date": "2026-03-17",
@@ -644,7 +644,7 @@
   },
   {
    "date": "2026-03-20",
-   "contributionCount": 1
+   "contributionCount": 0
   },
   {
    "date": "2026-03-21",
@@ -656,7 +656,7 @@
   },
   {
    "date": "2026-03-23",
-   "contributionCount": 12
+   "contributionCount": 11
   },
   {
    "date": "2026-03-24",
@@ -912,7 +912,7 @@
   },
   {
    "date": "2026-05-26",
-   "contributionCount": 9
+   "contributionCount": 12
   },
   {
    "date": "2026-05-27",
@@ -1100,11 +1100,11 @@
   },
   {
    "date": "2026-07-12",
-   "contributionCount": 8
+   "contributionCount": 9
   },
   {
    "date": "2026-07-13",
-   "contributionCount": 8
+   "contributionCount": 11
   },
   {
    "date": "2026-07-14",
@@ -1164,15 +1164,15 @@
   },
   {
    "date": "2026-07-28",
-   "contributionCount": 23
+   "contributionCount": 43
   },
   {
    "date": "2026-07-29",
-   "contributionCount": 33
+   "contributionCount": 73
   },
   {
    "date": "2026-07-30",
-   "contributionCount": 24
+   "contributionCount": 28
   },
   {
    "date": "2026-07-31",
@@ -1232,19 +1232,19 @@
   },
   {
    "date": "2026-08-14",
-   "contributionCount": 10
+   "contributionCount": 13
   },
   {
    "date": "2026-08-15",
-   "contributionCount": 28
+   "contributionCount": 44
   },
   {
    "date": "2026-08-16",
-   "contributionCount": 60
+   "contributionCount": 111
   },
   {
    "date": "2026-08-17",
-   "contributionCount": 70
+   "contributionCount": 140
   },
   {
    "date": "2026-08-18",
@@ -1332,11 +1332,11 @@
   },
   {
    "date": "2026-09-08",
-   "contributionCount": 5
+   "contributionCount": 21
   },
   {
    "date": "2026-09-09",
-   "contributionCount": 4
+   "contributionCount": 13
   },
   {
    "date": "2026-09-10",
@@ -1416,7 +1416,7 @@
   },
   {
    "date": "2026-09-29",
-   "contributionCount": 18
+   "contributionCount": 19
   },
   {
    "date": "2026-09-30",
@@ -1576,11 +1576,15 @@
   },
   {
    "date": "2026-11-08",
-   "contributionCount": 58
+   "contributionCount": 63
   },
   {
    "date": "2026-11-09",
-   "contributionCount": 16
+   "contributionCount": 22
+  },
+  {
+   "date": "2026-11-10",
+   "contributionCount": 0
   }
  ]
 }

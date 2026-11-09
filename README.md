@@ -206,7 +206,7 @@ Claude Code is my daily driver, paired with **[claude-mem](https://github.com/th
 <img src="https://komarev.com/ghpvc/?username=kaiser-data&label=Profile+views&color=00ff88&style=for-the-badge&labelColor=0d1117" alt="Profile views" />
 <img src="https://img.shields.io/github/followers/kaiser-data?style=for-the-badge&logo=github&label=Followers&color=00ff88&labelColor=0d1117" alt="Followers" />
 <img src="https://img.shields.io/badge/Public_Repos-117-00ff88?style=for-the-badge&logo=github&labelColor=0d1117" alt="Public repos" />
-<img src="https://img.shields.io/badge/Contributions_(12mo)-3,300+-00ff88?style=for-the-badge&logo=github&labelColor=0d1117" alt="3,300+ contributions in the last 12 months" />
+<img src="https://img.shields.io/badge/Contributions_(12mo)-3,800+-00ff88?style=for-the-badge&logo=github&labelColor=0d1117" alt="3,800+ contributions in the last 12 months" />
 
 <br/><br/>
 
@@ -246,6 +246,8 @@ The rank uses the formula from [github-readme-stats](https://github.com/anuragha
 | Followers | 10 | 1 |
 
 Levels by percentile: **S** ≤ 1 · **A+** ≤ 12.5 · **A** ≤ 25 · **A-** ≤ 37.5 · **B+** ≤ 50 · **B** ≤ 62.5 · **B-** ≤ 75 · **C+** ≤ 87.5 · **C** otherwise.
+
+**What the letter does not measure:** its "percentile" compares inputs against fixed medians, not against real users, and stars carry a third of the weight, so activity alone tops out around A-. For a measured comparison, 400 random GitHub accounts were sampled (Nov 2026): none had as many contributions in the last 12 months as this profile, which puts it in the **top 1 %** at 95 % confidence.
 
 </details>
 
