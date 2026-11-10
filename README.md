@@ -158,13 +158,13 @@ Claude Code is my daily driver. Each layer below does one job, and I measure the
 | **[claude-mem](https://github.com/thedotmack/claude-mem)** | Memory across sessions: what was tried, decided and shipped, so a new session starts where the last one stopped |
 | **[32 public skills](https://github.com/kaiser-data/marty-skills)** of my own | Built with my `skill-forge`, mostly research methodology learned the hard way in eval sprints: `systematic-study`, `seed-replicates-before-effects`, `detection-needs-a-denominator`, `numbers-from-primary-sources` |
 
-Numbers from my own [Langfuse tracing](https://github.com/kaiser-data/claude-code-langfuse-tracing), 30 days to September 2026:
+Numbers from my own [Langfuse tracing](https://github.com/kaiser-data/claude-code-langfuse-tracing), 30 days to 9 Nov 2026:
 
 <div align="center">
 
-| Traces | Observations | Tokens (30d) | Models in rotation |
-|:------:|:------------:|:------------:|:------------------:|
-| **1.45K** | **18.4K** | **~1.7B** | Opus 4.8 · Sonnet 5 · Haiku 4.5 · Fable 5 |
+| Traces | Observations | Tokens (30d) | Model |
+|:------:|:------------:|:------------:|:-----:|
+| **5.6K** | **67K** | **~4.0B** | Opus 5.5 for 99.9 % of tokens |
 
 </div>
 
