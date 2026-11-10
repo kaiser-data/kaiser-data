@@ -2,23 +2,23 @@
  "name": "Martin Kaiser",
  "updated": "2026-11-10",
  "metrics": {
-  "commits": 2099,
-  "privateContribs": 1536,
-  "contributions": 3828,
+  "commits": 2139,
+  "privateContribs": 1518,
+  "contributions": 3857,
   "issues": 47,
-  "mergedPRs": 113,
-  "prs": 135,
-  "issuesAllTime": 48,
+  "mergedPRs": 89,
+  "prs": 105,
+  "issuesAllTime": 47,
   "reviews": 1,
-  "starsAll": 59,
-  "mergedAllTime": 121,
+  "starsAll": 58,
+  "mergedAllTime": 96,
   "contributedTo": 16,
   "followers": 156,
-  "repos": 101,
-  "stars": 57,
-  "activeDays": 260,
+  "repos": 102,
+  "stars": 58,
+  "activeDays": 261,
   "longest": 68,
-  "last30": 764,
+  "last30": 793,
   "best": {
    "date": "2026-08-17",
    "contributionCount": 140
@@ -72,38 +72,38 @@
   "parts": [
    {
     "key": "Commits",
-    "detail": "2,099 · median 250",
-    "s": 0.9970313967648408,
+    "detail": "2,139 · median 250",
+    "s": 0.9973430256788947,
     "w": 2,
-    "pts": 1.9940627935296815
+    "pts": 1.9946860513577893
    },
    {
     "key": "Pull requests",
-    "detail": "135 · median 50",
-    "s": 0.8461069483318855,
+    "detail": "105 · median 50",
+    "s": 0.7667417521157982,
     "w": 3,
-    "pts": 2.5383208449956562
+    "pts": 2.3002252563473946
    },
    {
     "key": "Issues",
-    "detail": "48 · median 25",
-    "s": 0.7357454898596549,
+    "detail": "47 · median 25",
+    "s": 0.7283162843684854,
     "w": 1,
-    "pts": 0.7357454898596549
+    "pts": 0.7283162843684854
    },
    {
     "key": "Reviews",
     "detail": "1 · median 2",
-    "s": 0.2928932188134524,
+    "s": 0.29289321881345254,
     "w": 1,
-    "pts": 0.2928932188134524
+    "pts": 0.29289321881345254
    },
    {
     "key": "Stars",
-    "detail": "59 · median 50",
-    "s": 0.5412844036697249,
+    "detail": "58 · median 50",
+    "s": 0.537037037037037,
     "w": 4,
-    "pts": 2.1651376146788994
+    "pts": 2.148148148148148
    },
    {
     "key": "Followers",
@@ -113,8 +113,8 @@
     "pts": 0.9397590361445782
    }
   ],
-  "percentile": 27.784008349817313,
-  "total": 72,
+  "percentile": 29.966433373501257,
+  "total": 70,
   "letter": "A-"
  },
  "days": [
@@ -1584,7 +1584,7 @@
   },
   {
    "date": "2026-11-10",
-   "contributionCount": 0
+   "contributionCount": 29
   }
  ]
 }
