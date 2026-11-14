@@ -1,10 +1,10 @@
 {
  "name": "Martin Kaiser",
- "updated": "2026-11-13",
+ "updated": "2026-11-14",
  "metrics": {
   "commits": 2164,
-  "privateContribs": 1523,
-  "contributions": 3886,
+  "privateContribs": 1530,
+  "contributions": 3892,
   "issues": 47,
   "mergedPRs": 90,
   "prs": 105,
@@ -12,13 +12,13 @@
   "reviews": 1,
   "starsAll": 58,
   "mergedAllTime": 97,
-  "contributedTo": 16,
-  "followers": 154,
+  "contributedTo": 18,
+  "followers": 153,
   "repos": 103,
   "stars": 58,
-  "activeDays": 263,
+  "activeDays": 265,
   "longest": 68,
-  "last30": 754,
+  "last30": 733,
   "best": {
    "date": "2026-08-17",
    "contributionCount": 140
@@ -107,13 +107,13 @@
    },
    {
     "key": "Followers",
-    "detail": "154 · median 10",
-    "s": 0.9390243902439025,
+    "detail": "153 · median 10",
+    "s": 0.9386503067484663,
     "w": 1,
-    "pts": 0.9390243902439025
+    "pts": 0.9386503067484663
    }
   ],
-  "percentile": 29.969589928976102,
+  "percentile": 29.972707291438063,
   "total": 70,
   "letter": "A-"
  },
@@ -708,7 +708,7 @@
   },
   {
    "date": "2026-04-05",
-   "contributionCount": 24
+   "contributionCount": 23
   },
   {
    "date": "2026-04-06",
@@ -1596,7 +1596,11 @@
   },
   {
    "date": "2026-11-13",
-   "contributionCount": 0
+   "contributionCount": 6
+  },
+  {
+   "date": "2026-11-14",
+   "contributionCount": 1
   }
  ]
 }
