@@ -1,10 +1,10 @@
 {
  "name": "Martin Kaiser",
- "updated": "2026-11-14",
+ "updated": "2026-11-15",
  "metrics": {
-  "commits": 2164,
-  "privateContribs": 1530,
-  "contributions": 3892,
+  "commits": 2189,
+  "privateContribs": 1547,
+  "contributions": 3872,
   "issues": 47,
   "mergedPRs": 90,
   "prs": 105,
@@ -13,12 +13,12 @@
   "starsAll": 58,
   "mergedAllTime": 97,
   "contributedTo": 18,
-  "followers": 153,
-  "repos": 103,
+  "followers": 154,
+  "repos": 105,
   "stars": 58,
-  "activeDays": 265,
+  "activeDays": 262,
   "longest": 68,
-  "last30": 733,
+  "last30": 761,
   "best": {
    "date": "2026-08-17",
    "contributionCount": 140
@@ -72,10 +72,10 @@
   "parts": [
    {
     "key": "Commits",
-    "detail": "2,164 · median 250",
-    "s": 0.9975209553007426,
+    "detail": "2,189 · median 250",
+    "s": 0.9976869695080983,
     "w": 2,
-    "pts": 1.9950419106014852
+    "pts": 1.9953739390161966
    },
    {
     "key": "Pull requests",
@@ -107,45 +107,17 @@
    },
    {
     "key": "Followers",
-    "detail": "153 · median 10",
-    "s": 0.9386503067484663,
+    "detail": "154 · median 10",
+    "s": 0.9390243902439025,
     "w": 1,
-    "pts": 0.9386503067484663
+    "pts": 0.9390243902439025
    }
   ],
-  "percentile": 29.972707291438063,
+  "percentile": 29.966823025520174,
   "total": 70,
   "letter": "A-"
  },
  "days": [
-  {
-   "date": "2025-11-09",
-   "contributionCount": 0
-  },
-  {
-   "date": "2025-11-10",
-   "contributionCount": 0
-  },
-  {
-   "date": "2025-11-11",
-   "contributionCount": 0
-  },
-  {
-   "date": "2025-11-12",
-   "contributionCount": 10
-  },
-  {
-   "date": "2025-11-13",
-   "contributionCount": 3
-  },
-  {
-   "date": "2025-11-14",
-   "contributionCount": 11
-  },
-  {
-   "date": "2025-11-15",
-   "contributionCount": 38
-  },
   {
    "date": "2025-11-16",
    "contributionCount": 0
@@ -724,7 +696,7 @@
   },
   {
    "date": "2026-04-09",
-   "contributionCount": 3
+   "contributionCount": 2
   },
   {
    "date": "2026-04-10",
@@ -756,7 +728,7 @@
   },
   {
    "date": "2026-04-17",
-   "contributionCount": 20
+   "contributionCount": 19
   },
   {
    "date": "2026-04-18",
@@ -1176,7 +1148,7 @@
   },
   {
    "date": "2026-07-31",
-   "contributionCount": 45
+   "contributionCount": 55
   },
   {
    "date": "2026-08-01",
@@ -1600,7 +1572,11 @@
   },
   {
    "date": "2026-11-14",
-   "contributionCount": 1
+   "contributionCount": 18
+  },
+  {
+   "date": "2026-11-15",
+   "contributionCount": 17
   }
  ]
 }
