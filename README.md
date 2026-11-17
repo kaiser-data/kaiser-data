@@ -8,9 +8,9 @@
 
 <br/>
 
-| 🏆 **7 wins · 13 podiums** | 🦊 **Awesome MCP Servers** | 🔬 **Top 10%** | 💰 **Grant winner** |
+| 🏆 **7 wins · 13 podiums** | 🦊 **Awesome MCP Servers** | 🔬 **Top 10% · twice** | 💰 **Grant winner** |
 |:--:|:--:|:--:|:--:|
-| hackathons 2025–2026 · **15 top finishes** | kitsune-mcp listed · ~2.8k downloads/mo | Apart Research sprint, 230+ projects | mloda open-source plugin grant |
+| hackathons 2025–2026 · **15 top finishes** | kitsune-mcp listed · ~2.8k downloads/mo | Apart Research sprints, 390+ and 230+ projects | mloda open-source plugin grant |
 
 <a href="https://linkedin.com/in/martin-kaiser-ai">
   <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0d1117" alt="LinkedIn" />
@@ -56,10 +56,11 @@ Your agent edits an MCP tool, calls `reload("dev")` and tests the fix in the sam
 | 🥈 | **[Friends with Benefits](https://github.com/kaiser-data/friends-with-benefits)**<br/><sub>2nd · Stripe × Supabase Hack Berlin · Oct 2026</sub> | One sentence from a shop owner becomes a booking page with an ambassador crew. Rewards fire only on a real Stripe payment, so fake sign-ups farm nothing | [▶ Live](https://www.friends-with-benefits.quest) |
 | 🥇 | **[reaction-dynamics](https://github.com/kaiser-data/reaction-dynamics)**<br/><sub>1st · Cognee × Qdrant Hack Night · solo</sub> | Team-behavior analytics from Slack reaction timing: KS-test classifier + Cognee/Qdrant knowledge graph | [▶ Live](https://reaction-dynamics-berlin.netlify.app) · [graph](https://reaction-dynamics-berlin.netlify.app/graph.html) |
 | 🇨🇭 | **[Büchli](https://github.com/kaiser-data/hack-apertus-booklet-nli)**<br/><sub>Hack Apertus 2026 · Track 2A · Oct 2026</sub> | Checks campaign claims against the Swiss voting booklet in DE/FR/IT with Apertus 70B. **0.930 macro-F1** on 976 claims from 14 unseen vote dates, at **1/9 the tokens** of whole-booklet prompting | |
+| 🔬 | **[How Price-Aware Are AI Agents?](https://github.com/kaiser-data/auditing-llm-pricing-agents)**<br/><sub>Top 10% of 390+ · Apart AI Collusion Sprint · Oct 2026</sub> | Legal price rules such as offer holds and fuel-price locks make a non-collusive agent look like it punishes rivals. An open-loop replay separates the market rule from the agent's policy, so collusion audits stop flagging the rule | [▶ Live](https://llm-pricing-audit.pages.dev) |
 | 🏅 | **GLiNER2 action classifier** *(private)*<br/><sub>Top 10% · Apart AI Incident Response Sprint · Sept 2026</sub> | A fine-tuned 307M encoder flags agent action commitments in **18 ms vs 520 ms** for a hosted Qwen baseline, catching 14 of 15 actions vs 10 — a high-recall tripwire for agent monitoring | |
 | 🎤 | **[Sayproof](https://github.com/kaiser-data/sayproof)**<br/><sub>Nebius × NVIDIA Global AI Hackathon · Sept 2026</sub> | Fact-check a talk before the audience does: every verdict quotes its source verbatim, or says "can't verify". Nemotron 120B + Tavily | [▶ Live](https://sayproof.vercel.app) |
 
-<sub>More live: [fraudmind](https://fraudmind.netlify.app) — fraud hunting over GDPdU audit dossiers, 22 rule families · [Soteria on Monad](https://soteria-monad-rho.vercel.app) — incident receipts on chain · [LLM pricing audit](https://llm-pricing-audit.pages.dev)</sub>
+<sub>More live: [fraudmind](https://fraudmind.netlify.app) — fraud hunting over GDPdU audit dossiers, 22 rule families · [Soteria on Monad](https://soteria-monad-rho.vercel.app) — incident receipts on chain</sub>
 
 <br/>
 
@@ -89,9 +90,9 @@ Your agent edits an MCP tool, calls `reload("dev")` and tests the fix in the sam
 
 | Result | Programme | Project |
 |:--|:--|:--|
+| 🏅 **Top 10%** of 390+ | **[Apart](https://apartresearch.com) AI Collusion Sprint** · Markets & collusion + Detection & audit · Oct 2026 | *[How Price-Aware Are AI Agents? Rival Cuts and Legal Rules](https://github.com/kaiser-data/auditing-llm-pricing-agents)* — legal price rules mimic the punish-and-recover pattern collusion audits look for |
 | 🏅 **Top 10%** of 230+ | **[Apart](https://apartresearch.com) AI Incident Response Sprint** · Containment · Sept 2026 | *GLiNER2 as a fast action classifier for agent monitoring* *(private)* |
 | 💰 **Grant winner** | **[mloda](https://mloda.ai) monthly plugin grant** · Sept 2026 | *mloda-gdpdu-provenance* *(private)* — a total that names its rows, or no total |
-| 📝 Submitted | **Apart AI Collusion Sprint** · Track 2 · Oct 2026 | *[auditing-llm-pricing-agents](https://github.com/kaiser-data/auditing-llm-pricing-agents)* — legal price rules mimic the punish-and-recover pattern collusion audits look for |
 | 📝 Submitted | **Apart Digital Minds Sprint** · Aug 2026 | *[Coherence Without Content](https://github.com/kaiser-data/do_models_have_minds)* — a missing content control for preference-coherence metrics |
 | 📝 Submitted | **Apart Secret Loyalties Hackathon** · Berlin, July 2026 | *[secret-localities-strategies](https://github.com/kaiser-data/secret-localities-strategies)* — activation forensics for hidden loyalties |
 
