@@ -1,24 +1,24 @@
 {
  "name": "Martin Kaiser",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "metrics": {
-  "commits": 2244,
-  "privateContribs": 1570,
-  "contributions": 4088,
-  "issues": 58,
+  "commits": 2248,
+  "privateContribs": 1573,
+  "contributions": 4098,
+  "issues": 60,
   "mergedPRs": 153,
   "prs": 169,
-  "issuesAllTime": 58,
+  "issuesAllTime": 60,
   "reviews": 2,
-  "starsAll": 72,
+  "starsAll": 69,
   "mergedAllTime": 160,
   "contributedTo": 20,
-  "followers": 151,
-  "repos": 105,
-  "stars": 72,
-  "activeDays": 268,
+  "followers": 152,
+  "repos": 106,
+  "stars": 69,
+  "activeDays": 270,
   "longest": 68,
-  "last30": 764,
+  "last30": 739,
   "best": {
    "date": "2026-08-17",
    "contributionCount": 140
@@ -72,10 +72,10 @@
   "parts": [
    {
     "key": "Commits",
-    "detail": "2,244 · median 250",
-    "s": 0.9980141119662267,
+    "detail": "2,248 · median 250",
+    "s": 0.9980360144914092,
     "w": 2,
-    "pts": 1.9960282239324534
+    "pts": 1.9960720289828184
    },
    {
     "key": "Pull requests",
@@ -86,10 +86,10 @@
    },
    {
     "key": "Issues",
-    "detail": "58 · median 25",
-    "s": 0.7997325306025944,
+    "detail": "60 · median 25",
+    "s": 0.8105354291862003,
     "w": 1,
-    "pts": 0.7997325306025944
+    "pts": 0.8105354291862003
    },
    {
     "key": "Reviews",
@@ -100,21 +100,21 @@
    },
    {
     "key": "Stars",
-    "detail": "72 · median 50",
-    "s": 0.5901639344262295,
+    "detail": "69 · median 50",
+    "s": 0.5798319327731092,
     "w": 4,
-    "pts": 2.360655737704918
+    "pts": 2.3193277310924367
    },
    {
     "key": "Followers",
-    "detail": "151 · median 10",
-    "s": 0.9378881987577639,
+    "detail": "152 · median 10",
+    "s": 0.9382716049382716,
     "w": 1,
-    "pts": 0.9378881987577639
+    "pts": 0.9382716049382716
    }
   ],
-  "percentile": 22.448828379114783,
-  "total": 78,
+  "percentile": 22.6996441857648,
+  "total": 77,
   "letter": "A"
  },
  "days": [
@@ -772,7 +772,7 @@
   },
   {
    "date": "2026-05-05",
-   "contributionCount": 16
+   "contributionCount": 15
   },
   {
    "date": "2026-05-06",
@@ -804,7 +804,7 @@
   },
   {
    "date": "2026-05-13",
-   "contributionCount": 6
+   "contributionCount": 5
   },
   {
    "date": "2026-05-14",
@@ -1584,7 +1584,11 @@
   },
   {
    "date": "2026-11-24",
-   "contributionCount": 0
+   "contributionCount": 3
+  },
+  {
+   "date": "2026-11-25",
+   "contributionCount": 9
   }
  ]
 }
