@@ -8,16 +8,10 @@
 
 <br/>
 
-| 🏆 **7 wins · 13 podiums** | 🦊 **Awesome MCP Servers** | 🔬 **Top 10% · twice** | 💰 **Grant winner** |
+| 🏆 **7 wins · 14 podiums** | 🦊 **Awesome MCP Servers** | 🔬 **Top 10% · twice** | 💰 **Grant winner** |
 |:--:|:--:|:--:|:--:|
-| hackathons 2025–2026 · **15 top finishes** | kitsune-mcp listed · ~2.8k downloads/mo | Apart Research sprints, 390+ and 230+ projects | mloda open-source plugin grant |
+| hackathons 2025–2026 · **16 top finishes** | kitsune-mcp listed · ~2.8k downloads/mo | Apart Research sprints, 390+ and 230+ projects | mloda open-source plugin grant |
 
-<a href="https://www.martin-kaiser-ai.de">
-  <img src="https://img.shields.io/badge/Portfolio-00FF88?style=for-the-badge&logo=googlechrome&logoColor=0d1117&labelColor=0d1117" alt="Portfolio website" />
-</a>
-<a href="https://kaiser-data-ai.de">
-  <img src="https://img.shields.io/badge/Kaiser_Data_%26_AI-kaiser--data--ai.de-FFFFFF?style=for-the-badge&logo=googlechrome&logoColor=0d1117&labelColor=0d1117" alt="Consulting: kaiser-data-ai.de" />
-</a>
 <a href="https://linkedin.com/in/martin-kaiser-ai">
   <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0d1117" alt="LinkedIn" />
 </a>
@@ -51,7 +45,7 @@ Your agent edits an MCP tool, calls `reload("dev")` and tests the fix in the sam
 |:--|:--|
 | [`free-llm-proxy-router`](https://github.com/kaiser-data/free-llm-proxy-router) | One Go binary turns every free LLM tier (Groq, Gemini, OpenRouter, Cerebras, GitHub Models…) into a single OpenAI-compatible endpoint with automatic fallback |
 | [`claude-code-langfuse-tracing`](https://github.com/kaiser-data/claude-code-langfuse-tracing) | A Stop hook replays Claude Code transcripts into Langfuse as backdated, session-grouped traces with token and cost; fail-open, secret in the macOS Keychain |
-| [**Astrolab**](https://github.com/kaiser-data/star-astrolab) · [▶ Live](https://star-astrolab.vercel.app) | Your GitHub stars as a decision tool: **2,400+ starred repos** in a 3D knowledge graph (39 communities), health and lifecycle scores, and **29 landscape reports** that answer *"which tool should I use for X?"*. Built offline, no LLM in the hot path, refreshed weekly |
+| [**Astrolab**](https://github.com/kaiser-data/github-stars-analyzer) · [▶ Live](https://star-astrolab.vercel.app) | Your GitHub stars as a decision tool: **2,400+ starred repos** in a 3D knowledge graph (39 communities), health and lifecycle scores, and **29 landscape reports** that answer *"which tool should I use for X?"*. Built offline, no LLM in the hot path, refreshed weekly |
 
 <br/>
 
@@ -59,6 +53,7 @@ Your agent edits an MCP tool, calls `reload("dev")` and tests the fix in the sam
 
 | | Project | Why it matters | |
 |:--|:--|:--|:--|
+| 🥉 | **[Dream Orchestra](https://github.com/kaiser-data/Dream-Orchestra)**<br/><sub>3rd · Dream Labs track · Robotics × AI HackLab Berlin · Nov 2026</sub> | Robot cells drawn as workflows (skills, machine steps, sensors, error paths) and run in MuJoCo. A Dream-1 fine-tune lifts cell success from **6/40 to 14–17/40** across three trainings but forgets an outside skill (6/20 → 0/20), so the app decides per task which checkpoint may run | [▶ Live](https://dream-orchestra.vercel.app) · [results](https://cell-finetune-results.martinkaiser-bln.workers.dev) |
 | 🥈 | **[Friends with Benefits](https://github.com/kaiser-data/friends-with-benefits)**<br/><sub>2nd · Stripe × Supabase Hack Berlin · Oct 2026</sub> | One sentence from a shop owner becomes a booking page with an ambassador crew. Rewards fire only on a real Stripe payment, so fake sign-ups farm nothing | [▶ Live](https://www.friends-with-benefits.quest) |
 | 🥇 | **[reaction-dynamics](https://github.com/kaiser-data/reaction-dynamics)**<br/><sub>1st · Cognee × Qdrant Hack Night · solo</sub> | Team-behavior analytics from Slack reaction timing: KS-test classifier + Cognee/Qdrant knowledge graph | [▶ Live](https://reaction-dynamics-berlin.netlify.app) · [graph](https://reaction-dynamics-berlin.netlify.app/graph.html) |
 | 🇨🇭 | **[Büchli](https://github.com/kaiser-data/hack-apertus-booklet-nli)**<br/><sub>Hack Apertus 2026 · Track 2A · Oct 2026</sub> | Checks campaign claims against the Swiss voting booklet in DE/FR/IT with Apertus 70B. **0.930 macro-F1** on 976 claims from 14 unseen vote dates, at **1/9 the tokens** of whole-booklet prompting | |
@@ -74,11 +69,11 @@ Your agent edits an MCP tool, calls `reload("dev")` and tests the fix in the sam
 
 <div align="center">
 
-**7 wins · 13 podiums · 15 top finishes · 2025–2026**
+**7 wins · 14 podiums · 16 top finishes · 2025–2026**
 
 </div>
 
-### 2026 — 3 wins · 7 podiums · 9 top finishes
+### 2026 — 3 wins · 8 podiums · 10 top finishes
 
 | Result | Event | Project / Track |
 |:--|:--|:--|
@@ -87,6 +82,7 @@ Your agent edits an MCP tool, calls `reload("dev")` and tests the fix in the sam
 | 🏆 **Track winner** | **AI Agents Hackathon** · Berlin | Blockchain for Good Alliance Bonus Track |
 | 🥈 **2nd place** | **Stripe × Supabase Hack: AI Payments for the Real Economy** · Berlin | *[Friends with Benefits](https://github.com/kaiser-data/friends-with-benefits)* |
 | 🥈 **2nd place** | **AI Builders Open Claw Hackathon** | Open Claw |
+| 🥉 **3rd place** | **[Robotics × AI HackLab #2](https://luma.com/h0mcaqio)** · CIC Berlin | *[Dream Orchestra](https://github.com/kaiser-data/Dream-Orchestra)* — Dream Labs track |
 | 🥉 **3rd place** | **[Collaborative Agent Hackathon](https://github.com/kaiser-data/Soteria)** · Flower Labs, Berlin | *[Soteria](https://github.com/kaiser-data/Soteria)* — privacy-preserving multi-party incident response |
 | 🥉 **3rd place** | **Needle Hackathon** | Main Track |
 | 🏅 **Runner-up · 4th place** | **Superchat × Needle AI Builder Event** | Salesbot |
@@ -122,7 +118,7 @@ Your agent edits an MCP tool, calls `reload("dev")` and tests the fix in the sam
 
 ## 🗂️ More projects
 
-<sub>A slice of 195 repos (132 public).</sub>
+<sub>A slice of 189 repos (128 public).</sub>
 
 **🧩 Agents & LLM apps**
 - [`Soteria`](https://github.com/kaiser-data/Soteria) — 🥉 federated multi-party incident response on Flower; parties answer with traffic lights, never raw values; two-key human approval, chained receipts
@@ -133,7 +129,7 @@ Your agent edits an MCP tool, calls `reload("dev")` and tests the fix in the sam
 **⚡ Edge & self-hosted AI**
 - [`jetson-headless-inference`](https://github.com/kaiser-data/jetson-headless-inference) — Jetson Orin 8GB headless AI API with model switching & power management
 - `comm-buddy` *(private)* — local-first meeting analysis: whisperX + pyannote + Ollama across Mac + Jetson over Tailscale
-- [`mac-ram-manager`](https://github.com/kaiser-data/mac-ram-manager) · [`cleandrive`](https://github.com/kaiser-data/agent-cleandrive) — zero-dependency macOS system tools
+- [`mac-ram-manager`](https://github.com/kaiser-data/mac-ram-manager) · [`cleandrive`](https://github.com/kaiser-data/cleandrive) — zero-dependency macOS system tools
 
 <details>
 <summary><b>📊 ML & benchmarking · 🔁 Automation & infra</b> <sub>(click to expand)</sub></summary>
@@ -221,7 +217,7 @@ Numbers from my own [Langfuse tracing](https://github.com/kaiser-data/claude-cod
 <!-- Reliable badges (always render) -->
 <img src="https://komarev.com/ghpvc/?username=kaiser-data&label=Profile+views&color=00ff88&style=for-the-badge&labelColor=0d1117" alt="Profile views" />
 <img src="https://img.shields.io/github/followers/kaiser-data?style=for-the-badge&logo=github&label=Followers&color=00ff88&labelColor=0d1117" alt="Followers" />
-<img src="https://img.shields.io/badge/Public_Repos-132-00ff88?style=for-the-badge&logo=github&labelColor=0d1117" alt="132 public repos" />
+<img src="https://img.shields.io/badge/Public_Repos-128-00ff88?style=for-the-badge&logo=github&labelColor=0d1117" alt="Public repos" />
 <img src="https://img.shields.io/badge/Contributions_(12mo)-3,800+_·_top_1%25-00ff88?style=for-the-badge&logo=github&labelColor=0d1117" alt="3,800+ contributions in the last 12 months, top 1% of GitHub accounts" />
 
 <br/><br/>
